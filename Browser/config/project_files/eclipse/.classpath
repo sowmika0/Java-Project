@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+        <classpathentry kind="src" path="T24Browser"/>
+        <classpathentry kind="src" path="Tests/java"/>
+        <classpathentry kind="src" path="BrowserWeb/Java Source"/>
+        <classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+        <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.4"/>
+        <classpathentry kind="var" path="TEMENOS_SHARED_HOME/lib/rhino/js.jar"/>
+        <classpathentry kind="var" path="TEMENOS_SHARED_HOME/lib/junit/4.1/junit-4.1.jar"/>
+        <classpathentry kind="var" path="TEMENOS_SHARED_HOME/lib/glassfish/9.0.b48/javaee.jar"/>
+        <classpathentry kind="output" path="BrowserWeb/Web Content/WEB-INF/classes"/>
+</classpath>

@@ -1,0 +1,79 @@
+<html>
+
+<head>
+<title>ARC-IB Performance Test</title>
+<SCRIPT type="text/javascript" language="Javascript" SRC="../scripts/ARC/PerfLog.js"></SCRIPT>
+
+<SCRIPT type="text/javascript">
+function init() {
+	showBoth();
+
+	// Set up the global variable used by the logging methods
+	var outputDiv=document.getElementById("output");
+	top.setPerfOutputElement(outputDiv);
+
+	// Write out some browser details
+	writeBrowserDetails(outputDiv);
+
+	// Now that everything is set up, load the page ..
+	top.resetStartTime("Load login page");
+
+	// TODO: This is fragile code, but using the name does not work in Firefox
+	//window.frames["iframe"].location="one.html";
+	window.frames[0].location="http://localhost:4510/BrowserWeb/servlet/BrowserServlet";
+};
+
+function writeBrowserDetails(outputDiv) {
+	var navName = navigator.appName;
+	var platform = navigator.platform;
+
+	outputDiv.appendChild(document.createTextNode("Browser Name: " + navName));
+	outputDiv.appendChild(document.createElement('br'));
+	outputDiv.appendChild(document.createTextNode("Platform: " + platform));
+	outputDiv.appendChild(document.createElement('br'));
+	outputDiv.appendChild(document.createTextNode("Browser version: " + navigator.userAgent));
+}
+
+function showPerfLog() {
+	_setSize(600, 0);
+};
+
+function showBoth() {
+	_setSize(300,300);
+};
+
+function showAppFrame() {
+	_setSize(1,600);
+};
+
+
+function _setSize(divSize, frameSize) {
+	var outputDiv=document.getElementById("output");
+	outputDiv.style.height = divSize;
+
+	var iframeElement = parent.document.getElementById('iframe');
+	iframeElement.style.height = frameSize;
+}
+
+</script>
+
+</head>
+
+<body onload="init();">
+
+<a href="javascript: showAppFrame();"> Show app frame </a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript: showBoth();"> Show both </a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript: showPerfLog();"> Show perf log </a>
+<p>
+
+<IFRAME id="iframe" width="800" scrolling="auto" frameborder="2">
+No IFrame support
+</IFRAME>
+
+<div id="output" style="border : solid 2px #ff0000; background : #000000; color : #ffffff; padding : 4px; width : 800px; overflow : auto; " />
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+<project name="arc_4tress_management" default="build">
+    <property name="authentication.root.dir" value="${basedir}" />
+    <property file="${authentication.root.dir}/build.common.properties" />
+	
+    <!-- Common Classpath -->
+    <path id="common.classpath">
+        <pathelement path="${authentication.test.classes.dir}" />
+        <pathelement path="${authentication.main.classes.dir}" />
+
+        <fileset file="${authentication.root.dir}/lib/junit-3.8.1.jar" />
+        <fileset file="${authentication.root.dir}/lib/jbossall-client.jar" />
+        <fileset file="${authentication.root.dir}/lib/SS_4TRESS_PUBLIC_Client.jar" />
+    	<fileset file="${authentication.root.dir}/lib/SS_4TRESS_PUBLIC_Client70.jar" />  	
+    	<fileset file="${authentication.root.dir}/lib/axis.jar"/>
+    	<fileset file="${authentication.root.dir}/lib/axis-ant.jar"/>
+    	<fileset file="${authentication.root.dir}/lib/saaj.jar"/>
+    	<fileset file="${authentication.root.dir}/lib/wsdl4j.jar"/>
+        <fileset file="${authentication.root.dir}/lib/commons-0.2.jar" />
+        <fileset file="${authentication.root.dir}/lib/commons-codec-1.3.jar" />
+    	<fileset file="${authentication.root.dir}/lib/commons-discovery.jar"/>
+        <fileset file="${authentication.root.dir}/lib/authapi.jar" />
+    </path>
+
+    <!-- Main clean task -->
+    <target name="clean" description="Delete target and junit files">
+        <delete includeEmptyDirs="true" quiet="true">
+            <fileset dir="${authentication.target.dir}" />
+            <fileset file="${authentication.root.dir}/junit*.*" />
+        </delete>
+    </target>
+
+    <!-- Main build task -->
+    <target name="build" description="Run the main build" depends="package-server-jar, package-userinit-jar, package-webapp-jar" />
+
+    <!-- Main test task -->
+    <target name="test" description="Build and run the unit tests" depends="test-build" />
+
+    <!-- Main package task -->
+    <target name="package" description="Builds the jar and ear files" depends="package-server-jar, package-userinit-jar, package-test-jar" />
+
+    <target name="build-from-source" >
+        <mkdir dir="${authentication.from-src.classes.dir}" />
+        <javac debug="true" srcdir="${authentication.src.java.main}" destdir="${authentication.from-src.classes.dir}" source="1.5">
+            <classpath refid="common.classpath" />
+        </javac>
+    </target>
+
+    <target name="authentication-build" depends="build-from-source">
+        <mkdir dir="${authentication.main.classes.dir}" />
+
+        <copy todir="${authentication.main.classes.dir}">
+            <fileset dir="${authentication.from-src.classes.dir}" />
+        </copy>
+
+    </target>
+
+    <!-- Test build and run -->
+    <target name="test-build">
+        <mkdir dir="${authentication.test.classes.dir}" />
+        <javac debug="true" srcdir="${authentication.src.java.test}" destdir="${authentication.test.classes.dir}" classpathref="common.classpath" source="1.5"/>
+    </target>
+
+    <target name="fail-if-junit-failed" if="test.failure">
+        <fail message="One or more unit tests failed. See target/results for details." />
+    </target>
+
+    <!-- Packaging tasks -->
+    <target name="package-server-jar" depends="authentication-build" >
+        <jar destfile="${authentication.target.dir}/${authentication.server.jar.name}" 
+        					basedir="${authentication.main.classes.dir}" 
+        					excludes="**/web/** **/filter/** **/listener/** **/jaas/** **/MockUserManagement.class" />
+    </target>
+
+    <target name="package-userinit-jar" depends="authentication-build" >
+        <jar destfile="${authentication.target.dir}/${authentication.userinit.jar.name}" 
+        				basedir="${authentication.main.classes.dir}" 
+        				excludes="**/server/** **/filter/** **/listener/**" />
+    </target>
+
+    <target name="package-webapp-jar" depends="authentication-build" >
+        <jar destfile="${authentication.target.dir}/${authentication.webapp.jar.name}" 
+        				basedir="${authentication.main.classes.dir}" 
+        				excludes="**/server/** **/web/** **/jaas/** **/common/** **/rsa/**" />
+    </target>
+	
+	<target name="package-test-jar" depends="test-build">
+        <jar destfile="${authentication.target.dir}/${authentication.test.jar.name}" basedir="${authentication.test.classes.dir}">
+            <include name="**/*.class" />
+        </jar>
+    </target>
+
+    <target name="package-mock-jar" depends="authentication-build, test-build">
+        <jar destfile="${authentication.target.dir}/${authentication.mock.jar.name}" basedir="${authentication.test.classes.dir}">
+            <include name="**/MockUserManagement.class" />
+        </jar>
+        <jar destfile="${authentication.target.dir}/${authentication.mock.jar.name}" update="true"
+			basedir="${authentication.main.classes.dir}" 
+			excludes="**/web/** **/filter/** **/listener/** **/jaas/** **/UserManagement.class" />
+    </target>
+
+</project>

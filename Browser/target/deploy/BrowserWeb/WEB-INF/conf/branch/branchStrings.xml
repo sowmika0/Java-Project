@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<branchStrings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<messageData>
+		<parameter>
+			<parameterName>BRANCH_ADMIN_LOGIN_TITLE</parameterName>
+			<parameterValue>Branch Administrator Login</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>MESSAGE_STATE_CHANGED</parameterName>
+			<parameterValue>Branch status changed - Please re-authenticate yourself</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>ERROR_NOT_BRANCH_SERVER</parameterName>
+			<parameterValue>The Web Server is not running as a Branch Server</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>ERROR_NOT_BRANCH_ADMIN</parameterName>
+			<parameterValue>User not a Branch Administrator</parameterValue>
+		</parameter>
+	</messageData>
+</branchStrings>

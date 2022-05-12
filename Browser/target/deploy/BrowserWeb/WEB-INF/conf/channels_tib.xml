@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<!-- T24 Connector communications channels definitions -->
+
+<CHANNELS>
+
+	<CHANNEL>
+		<NAME> gib.enquiry </NAME>
+		<TIMEOUT> 120 </TIMEOUT>
+		<ADAPTER>
+			<TYPE> tcp </TYPE>
+			<PORT> 8003 </PORT>
+			<SUPPLIER>
+				<INITIATOR>
+					<HOSTNAME> 127.0.0.1 </HOSTNAME>
+				</INITIATOR>
+			</SUPPLIER>
+		</ADAPTER>
+	</CHANNEL>
+
+
+</CHANNELS>

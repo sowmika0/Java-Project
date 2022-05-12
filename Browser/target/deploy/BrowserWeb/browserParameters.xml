@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<browserParameters>
+	<messageData>
+		<parameter>
+			<parameterName>Product</parameterName>
+			<parameterValue>BROWSER</parameterValue>
+			<!-- Options: BROWSER / ARC-IB -->
+		</parameter>
+		<parameter>
+			<parameterName>Server Connection Method</parameterName>
+			<parameterValue>JMS</parameterValue>
+			<!-- Options: INSTANCE / AGENT / JMS / AGENT_JREMOTE  -->
+		</parameter>
+		<parameter>
+			<parameterName>ConnectionTimeout</parameterName>
+			<parameterValue>60</parameterValue> <!-- Number of seconds. -->
+		</parameter>
+		<parameter>
+			<parameterName>RetryCount</parameterName>
+			<parameterValue>5</parameterValue> <!-- Counter value -->
+			<!-- This is applicable only for Agent Architecture -->
+		</parameter>
+		<parameter>
+			<parameterName>RetryWait</parameterName>
+			<parameterValue>2</parameterValue> <!-- Number of seconds. -->
+			<!-- This is applicable only for Agent Architecture -->
+		</parameter>
+		<parameter>
+			<parameterName>Show Single Busy</parameterName>
+			<parameterValue>YES</parameterValue><!-- YES / NO -->
+			<!-- This is applicable only for ARC-IB -->
+		</parameter>
+		<parameter>
+			<parameterName>Show User Name</parameterName>
+			<parameterValue>YES</parameterValue><!-- YES / NO -->
+			<!-- Show user name in login screen -->
+		</parameter>
+		<parameter>
+			<parameterName>NewEnquirySelTool</parameterName>
+			<parameterValue>NO</parameterValue><!-- YES / NO -->
+			<!-- To remove clear select and sort options and place the find button below the enquiry selection box -->
+			<!-- This is applicable only for ARC-IB -->
+		</parameter>
+		<parameter>
+			<parameterName>Instance</parameterName>
+			<parameterValue>production</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>Document Service Channel</parameterName>
+			<parameterValue>downloadChannel</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>fileUploadChannel</parameterName>
+			<parameterValue>browser.1</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>DBUpDownLoadServiceChannel</parameterName>
+			<parameterValue>imageChannel</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>Branch</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>Allow Resize</parameterName>
+			<parameterValue>YES</parameterValue>
+			<!-- Toggle whether windows should keep last saved position -->
+		</parameter>
+		<parameter>
+			<parameterName>Web Server Skins</parameterName>
+			<parameterValue>default:R08default:arc-ib:offline</parameterValue>
+			<!-- Skin Names separated by : character -->
+		</parameter>
+		<parameter>
+			<parameterName>CALL_CENTRE_CLASS</parameterName>
+			<parameterValue>TestAPI</parameterValue>
+		</parameter>
+		<!--
+		Determines whether the no frames param will be stuffed
+		into the frames xml. It will not be required when no frames support is added to T24 and toolbox.
+		-->
+		<parameter>
+			<parameterName>noframes</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		Use log4js as a logger, only for debugging.		
+		-->
+		<parameter>
+			<parameterName>clientLogging</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		Determines whether the no new arc-ib skin will be stuffed
+		nto the frames xml in place of the specified skin.
+		-->
+		<parameter>
+			<parameterName>useArcIbSkin</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		Determines how the menu is displayed.
+		Options are: DEFAULT, TABBED, POPDOWN, 
+		-->
+		<parameter>
+			<parameterName>menuStyle</parameterName>
+			<parameterValue>DEFAULT</parameterValue>
+		</parameter>
+		<!--
+		Determines whether obfuscation of T24 commands should
+		be used or not.
+		-->
+		<parameter>
+			<parameterName>useInternalObfuscation</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		Determines whether obfuscation and compression of
+		JavaScript should be used or not.
+		-->
+		<parameter>
+			<parameterName>useExternalObfuscation</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		Stops the standard missing help response when we have no help 
+		files, as this fouls up the context-sensitive displays on the page
+		-->
+		<parameter>
+			<parameterName>suppressMissingHelp</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		Determines whether the nice printing feature should be active or not
+		-->
+		<parameter>
+			<parameterName>cleanPrint</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<!--
+		Determines whether to enable keepalive
+		-->
+		<parameter>
+			<parameterName>useKeepaliveHandling</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		Determines XFRAME Header value to add in HTTP Header
+		-->
+		<parameter>
+			<parameterName>X-FRAME-OPTIONS</parameterName>
+			<parameterValue>SAMEORIGIN</parameterValue>
+		</parameter>
+		<!--
+		Determines whether to enable automatic holding of contract transactions
+		-->
+		<parameter>
+			<parameterName>useAutoHoldDeals</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		Determines whether toolbar buttons and dropdown are present 
+		in fragments (contract applications)
+		-->
+		<parameter>
+			<parameterName>stripFrameToolbars</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		Determines whether to disable hot fields
+		-->
+		<parameter>
+			<parameterName>enableHotfields</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<!--
+		The Reg-ex used as a filter for T24 XML - anything that matches will be stripped out.
+		Empty parameter is not legal, comment it instead. 
+		-->
+		<!--parameter>
+			<parameterName>T24XmlFilterRegEx</parameterName>
+			<parameterValue></parameterValue>
+		</parameter-->		
+		<!--
+		If set, the T24 user name will be not be sent to the client
+		-->
+		<parameter>
+			<parameterName>stripUserName</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>showStatusInfo</parameterName>
+			<parameterValue>YES</parameterValue>
+			<!--
+				Options are: YES, NO
+				If 'YES', information will be displayed on the browser Status Bar
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>graphDisplayType</parameterName>
+			<parameterValue>svgObject</parameterValue>
+			<!--
+				Options are: svgObject, pngImage
+				Determines whether charts will be displayed as an SVG graphic or as a PNG image.
+				The SVG graphic supports drilldowns but requires the user to have an SVG viewer installed.
+				The PNG image supports less functionality but can be displayed in browsers that don't have an SVG viewer.
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>graphWorkDirectory</parameterName>
+			<parameterValue>./work/graphImages/</parameterValue>
+			<!--
+				Only applies if graphDisplayType is 'pngImage'.
+				Specifies a working directory for graph images to be stored between being created and being viewed.
+				Paths beginning with '.' will be treated as relative to BrowserWeb/, otherwise treated as absolute.
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>doNochangeFieldsCheck</parameterName>
+			<parameterValue>yes</parameterValue>
+			<!--
+				Options are: yes, no
+				If 'yes', will validate that noedit fields sent to the user are not modified on their return.
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>AllowToolbox</parameterName>
+			<parameterValue>yes</parameterValue>
+			<!--
+				Options are: yes, no
+				If 'yes', users will be able to login and use Toolbox
+			-->
+		</parameter>
+		
+		<parameter>
+                  <parameterName>hostName</parameterName>
+                  <parameterValue>No</parameterValue>
+				<!--
+				Should set be set 
+				Options are: yes, no  
+				If 'IP'        - Only IP Address will be added to request header
+				If 'hostName'  - Only Host Name will be added to request header
+				If 'default'   - Both IP and Host Name will be added to request header
+				If 'No'        - No information will be sent with request header
+				If Server Connection Method is equal to "INSTANCE" IpAdress will be sent for all the options
+				only hostName information can be customized
+				-->
+        </parameter>
+         <parameter>
+			<parameterName>None option</parameterName>
+			<parameterValue>NO</parameterValue>
+			<!-- 
+			Options: NO / YES  
+			NO  - blank option for mandatory combo box will be suppressed
+			YES - blank option for mandatory combo box will appear
+			-->
+		</parameter>
+        <parameter>
+        		  <parameterName>enquirySelectionBox</parameterName>
+                  <parameterValue>Yes</parameterValue>
+                    <!--
+               		Allowed options: Yes,No
+               		Yes - Will display an icon to show the Enquiry selection box 
+               		No - Enquiry selection box display icon will not be displayed
+            		-->
+        </parameter>
+        <parameter>
+			<parameterName>ASSOC_REQ_COMBO</parameterName>
+			<parameterValue>NO</parameterValue>
+			<!-- 
+			Options: NO / YES  
+			NO  - Default setting.Blank option will appear for assoc mandatory combo box(less than 3 options) 
+			      if None option parameter is set to YES. 
+			YES - Blank option is suppressed for assoc mandatory combo box(less than 3 options)and the first 
+			      value in the list is defaulted if None option parameter is set to YES.
+			-->
+		</parameter>   
+        <parameter>
+			<parameterName>IP ADDRESS CHECK</parameterName>
+			<parameterValue>YES</parameterValue>
+			<!-- 
+			Options: NO / YES  
+			NO  - Tampered IP Address check will not be done
+			YES - Tampered IP Address check is done
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>EnquiryDataScroll</parameterName>
+			<parameterValue>YES</parameterValue>
+			<!-- 
+			Options: NO / YES  
+			NO  - Scrolls will not come in enquiry data part
+			YES - Scrolls will come in enquiry data part.
+			-->
+		</parameter>
+		
+		<!-- Parameters for Windows Azure Cloud -->
+		<parameter>
+			<!-- Enable using cloud for Image upload-->
+			<parameterName>enableCloud</parameterName>
+			<parameterValue>NO</parameterValue>
+			<!-- Options: YES / NO
+			YES - To enable document upload to cloud
+			No  - To use local upload of documents 
+			 -->			
+		</parameter>
+		<parameter>
+			<!-- ID of the Azure Account-->
+			<parameterName>azureAccountName</parameterName>
+			<parameterValue>validAzureAccountName</parameterValue>
+			<!-- Options: Value should be a valid Azure Account name-->			
+		</parameter>
+		<parameter>
+			<!-- Key for the Azure Account -->
+			<parameterName>azureAccountKey</parameterName>
+			<parameterValue>validAzureAccountKey</parameterValue>
+			<!-- Options: Value should be a valid key for above configured account-->			
+		</parameter>
+		<parameter>
+			<!-- Key for the Azure Account -->
+			<parameterName>imageContainer</parameterName>
+			<parameterValue>conatinernameinlowercase</parameterValue>
+			<!-- Options: Name of the container used to store uploaded images
+				 Note : No Special characters are allowed and only lower case characters are allowed.
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>AUTOLAUNCH_CONTEXT_ENQUIRY_DISPLAY</parameterName>
+			<parameterValue>NO</parameterValue>
+			<!-- 
+			Options: NO / YES  
+			NO  - auto launch context enquiry will be displayed in a new window
+			YES - auto launch context enquiry display will be displayed in the desired target
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>showReleaseInfo</parameterName>
+			<parameterValue>NO</parameterValue>
+			<!--
+				Options are: YES, NO
+				If 'YES', information on release details will be displayed on the browser window title bar.
+			-->
+		</parameter>
+	</messageData>
+</browserParameters>

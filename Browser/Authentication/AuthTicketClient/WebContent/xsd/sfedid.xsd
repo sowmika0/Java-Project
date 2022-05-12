@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:sfedid="http://www.swedbank.se/2008/sfedid" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.swedbank.se/2008/sfedid" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<element name="Extension">
+		<annotation>
+			<documentation>An element that contains arbitrary content extensions from other namespaces</documentation>
+		</annotation>
+	</element>
+	<element name="Subject" type="sfedid:SubjectType"/>
+	<complexType name="SubjectType">
+		<attribute name="UserID" type="string" use="required"/>
+	</complexType>
+
+	<element name="Assertion" type="sfedid:AssertionType"/>
+	<complexType name="AssertionType">
+		<sequence>
+			<element ref="sfedid:Subject"/>
+			<element ref="sfedid:Extension" minOccurs="0"/>
+		</sequence>
+		<attribute name="Version" type="string" use="required"/>
+		<attribute name="UniqueID" type="int" use="required"/>
+		<attribute name="IssueInstant" type="dateTime" use="required"/>
+		<attribute name="ExpireTime" type="dateTime" use="required"/>
+	</complexType>
+</schema>

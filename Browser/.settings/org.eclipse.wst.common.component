@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+<wb-module deploy-name="BrowserWeb">
+<wb-resource deploy-path="/" source-path="/BrowserWeb/Web Content"/>
+<wb-resource deploy-path="/BrowserWeb/WEB-INF/classes" source-path="/BrowserWeb/Java Source"/>
+<property name="java-output-path" value="/BrowserWeb/WEB-INF/classes"/>
+        <property name="context-root" value="BrowserWeb"/>
+</wb-module>
+</project-modules>

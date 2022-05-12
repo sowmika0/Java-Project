@@ -1,0 +1,27 @@
+<ofsSessionResponse>
+	<token></token>
+	<styleSheet>/transforms/APIMessage.xsl</styleSheet>
+	<responseType>XML.MSG</responseType>
+	<responseData>
+		<responseDetails>
+			<userDetails>
+				<company></company>
+				<companyId></companyId>
+				<user></user>
+				<userRole></userRole>
+				<skin></skin>
+				<today></today>
+				<globusRelease></globusRelease>
+			</userDetails>
+			<messages>
+				<msg></msg>
+				<title></title>
+				<poll>
+					<doPoll/>
+					<time/>
+					<command/>
+				</poll>
+			</messages>
+		</responseDetails>
+	</responseData>
+</ofsSessionResponse>

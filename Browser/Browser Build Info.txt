@@ -1,0 +1,1946 @@
+------------------------------------------------------
+		TEMENOS T24 TM
+          T24 Browser Release Build Information 
+------------------------------------------------------
+
+(c) TEMENOS HOLDINGS NV, 2004, 2005, 2006, 2007 , 2008 & 2009
+
+This document provides details of the patches that are
+available for TEMENOS T24 Browser
+
+----------
+Components
+----------
+
+The T24 Browser consists of the following components :-
+- BrowserWeb.war		- for installation on the Web Server
+
+
+Pre-requisites for T24 :-
+- T24 Server Product		- main T24 product
+- A Web Server			- for example : Tomcat, WebSphere, etc.
+
+Documentation :-
+- Browser Build Info.txt	- this document detailing what's in the builds
+- Browser User Guides		- the T24 Browser User Guides
+	- T24 Browser - Enquiries
+	- T24 Browser - Installation & Configuration
+	- T24 Browser - Navigation
+	- T24 Browser - Screen Versions
+	- T24 Browser - User Customisation
+	- T24 Browser - Security
+-----------------------------
+Browser 2.1 Build Information
+-----------------------------
+Build R15 201409.01 Release
+
+Server Only Changes :
+
+Client Only Changes :
+
+Server & Client Changes :
+Fix : Calendar Issue (Defect 1063118 / Task 1068235)
+
+--------------------------------------------------------------------------------------------------------------------
+Build R15 201408.01 Release
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Secure Message attachments (Enhancement 956564 / Task 1039722)
+Fix : Enquiry Refresh do not work (Defect 1047613 / Task 1050402)
+Fix : Error message is shown in WebSphere log (Defect 1039580 / Task 1042862)
+Fix : Screen  Freezes  after selecting a contract available under composite screen in browser.(Defect 1033147 / Task 1041878)
+Fix : System does not raise any error message while inputting chinese character in GB name (Defect 1028565 /Task 1038134)
+Fix : User is able to upload a 0KB file in IM (Defect 800907 /Task 1030583)
+Fix : SMS level restriction is not working for enquiry selection dropdown. (Defect 1054103 / Task 1058447)
+Fix : Screen freeze while performing Print to Server action (Defect 1067585 / Task 1069206)
+Fix : Records in a dropdown which is part of a composite screen cannot be viewed in browser (Defect 1068239 / Task 1071524)
+Fix : Login t24 browser using LDAP with Weblogic(Defect : 1063109 / Task : 1071439)
+
+Server & Client Changes :
+Fix : Screen is not replaced on committing the version with replace all set in composite screen (Defect 1039718)
+Fix : Unable to Generate TRN for Order Entry in T-PAY (Defect 1068596 / Task 1070753)
+
+--------------------------------------------------------------------------------------------------------------------
+Build R15 201407.01 Release
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Local class styles applied to fields in verison is not reflected on viewing the record in browser. (Defect 1025610 / Task 1026794)
+Fix : Check box cannot be enabled in IE11 (Defect 1018396 /Task 1022623)
+Fix : User not able to view TZ account from the KE profile (Defect 982904 /Task 1007099)
+
+Server & Client Changes :
+
+--------------------------------------------------------------------------------------------------------------------
+Build R15 201406.01 Release
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Column headers disappear while printing the enquiry output. (Defect 983019 / Task 999625)
+Fix : Options Under EnquiryActions icon are not enabled in Internet Explorer. (Defect 992349 / Task 996533)
+
+Server & Client Changes :
+
+--------------------------------------------------------------------------------------------------------------------
+Build R14 201405.01 Release
+
+Server Only Changes :
+Fix : After log off the browser , the link which are present in home page get disable.(Defect 937585 / Task 939968)
+Fix : Context enquiry does not work when chinese characters are used as field values (Defect 934400 / Task 939958)
+Fix : PngImage displayed in T24 browser is not descriptive for pie charts (Defect 933225 / Task 946186)
+
+Client Only Changes :
+Fix : Scroll Bar in 201404 Browser: Firefox & Chrome (Defect 985895 / Task 986109)
+Fix : Radio type fields are not defaulted on creating a new forward dated condition (Defect 907236 / Task 975534)
+Fix : HTTP Session size - XIB Performance Testing (Defect 969236 / Task 977159)
+Fix : ICON missing in Customer SCV Screen (Defect 953047 / Task 953408)
+Fix : The next field in the version is not focussed on tabbing out from a hot field. (Defect 951887 / Task 954980)
+Fix : Chinese characters are not displayed properly for version records in T24 Browser (Defect 946483 / Task 952863)
+
+Server & Client Changes :
+Fix : Release details are updated in the browser window title bar based on a global switch in the war file. (Defect 905200 / Task 914683)
+--------------------------------------------------------------------------------------------------------------------
+Build R14 201404.01 Release
+
+Server Only Changes :
+Fix : Instances of Cross Site Scripting Vulnerabilities (Defect 901845 / Task 907073)
+Fix : JAWS Screen Reader – reads Command line as “edit type and text” (Defect 918713 / Task 921420)
+Fix : Cyrillic characters in the enquiry output, is displayed as junk when exported to csv files(Defect 908791 / Task 912564)
+
+Client Only Changes :
+Fix : View Functionality not working for Uploaded image in Relative Path (Defect 739176 / Task 932046
+Fix:  Unable to view the whole window of an enquiry since it is cropped (Defect 856600 / Task 900115)
+Fix:  Image Management Document upload application allows documents of all types including “.exe” files. (Defect 749177 / Task 928121)
+Fix : Downloading the CSV and XML Enquiry results java script error is displaying(Defect 867067 / Task 926958)
+Fix : Requirement for customized buttons (Defect 912628 / Task 912701)
+Fix : Browser command line API doesn't work (Defect 905400 / Task 908557)
+Fix : Colour contrast made standard for messages/errors in login screen and banner text after login(Defect 902881 / Task 905163)
+
+Server & Client Changes :
+--------------------------------------------------------------------------------------------------------------------
+Build R14 201403.01 Release
+
+Server Only Changes :
+Fix	:  Custom parameter introduced in  Browser(Defect 884044 / Task 884196)
+
+Client Only Changes :
+Fix :  Resolved code merging delivered through the task 679395 (Defect 679237 / Task 914950) 
+Fix	:  To display enrichment only for the fields with check file (Task - 679395 / Defect-679237)
+Fix :  The pop up is not hidden when event occurs out of the container scope in frequency and inner calendars. (Defect 885271 / Task 893786)
+Fix :  Please contact the System Administrator error has been thrown in firefox while launching the enquiry. (Defect 856563 / Task 906178)
+Fix :  The screen is blank with no graphs displayed in the browser window (Defect 848194 / Task 903904)
+Fix :  AA.PRD.DES.PRICING.RULES-Validation problem ( Defect 883201/ Task 885056)
+Fix :  Fast Path enquiries with Tree Attribute set, does not display the last field label ( Defect 816863 / Task 880816)
+Fix :  Unable to Commit an Enquiry Record ( Defect 853067/ Task 897863)
+Fix :  Dropdown enrichment is not available in SL.LOANS ( Defect 657267/ Task 681141)
+Fix :  Forward dated conditions are not created ( Defect 868951 / Task 880565)
+Fix :  Empty screen pop-up while navigating in selection criteria screen(Defect 846111 / Task 884284)
+Fix :  Selecting enquiry record from the enquiry list “25” number gets amending (Defect 856520 /Task 899032)
+Fix :   KYC Amend icon should be changed (Defect 962507 / Task  977609)
+
+Server & Client Changes :
+--------------------------------------------------------------------------------------------------------------------
+Build R14 201402.01 Release
+
+Server Only Changes :
+
+Client Only Changes :
+Fix :  Basic Authentication is diverting to error page. (Defect 888979 / Task 892830)
+Fix :  Arabic characters appearing as junk while exporting as enquiry as csv in browser (Defect 878049 / Task 892087)	
+Fix :  System does not allow to create Forward dated condition at arrangement level (Defect 872155 / Task 878444)
+Fix :  Enquiry header appears now in each page of the output (Defect 878203 / Task 886308)
+Fix :  Problem in dropdown enquires which has BUILD routine with hot field  while launching as Pop-up Dropdown(Defect 866439 / Task 875118)
+
+Server & Client Changes :
+--------------------------------------------------------------------------------------------------------------------
+Build R14 201312.01 Release
+
+Server Only Changes :
+Fix : Cyrillic characters are replaced on saving a text file (Defect 829979 / Task 837159)
+
+Client Only Changes :
+Fix :  Value for field with attribute enrichment only was not displayed on validation (Defect 830310 / Task 835078)
+Fix :  Viewing any other MM record is not possible after a record is opened (Defect 793769 / Task 814211)
+Fix :  IP of proxy network is being fetched (Defect 775747 / Task 821251)
+Fix :  Cross Site Scripting (Defect 814241 / Task 829148)
+Fix :  Html file introduced for display the header details - TIME.ZONE(Defect 835672 / Task 835837)
+
+Server & Client Changes :
+--------------------------------------------------------------------------------------------------------------------
+Build R14 201311.01 Release
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Re deliver browser build info (Defect 824497 /Task 824512)
+Fix : Script error in Dropdown.js While running jslint-run-all (Defect 821531 /Task 821717)
+Fix : Browser issue on WebSphere 8.5, Login page is not loading.(Defect 806536 / Task 818569)
+Fix : User is not able to create a record in SPOT DEAL application (Defect 812670 / Task 817207)
+Fix : Document upload and download in browser (Defect 687950 / Task 703397)
+Fix : Failing to logon to ARCIB when SSL is enabled on Weblogic (Defect 818250 / Task 818286 )
+Fix : IP of proxy network is being fetched ( Defect 794494 /Task 807515)
+Fix : Enquiry headers missing (Defect 788943 / Task 794237)
+Fix : Value selected in a multi valued relative calendar points to incorrect field position (Defect 795519 / Task 800578)
+Fix : Modification of Servlet classes which has direct reference to 4TRESS name spaces.RMI-SOAP protocol conversion(Enhancement:575936/Task:655541)
+Fix : Build got failed, while running "ant all". (Defect 798631 / Task 798689)
+Fix : To address the browser side fix for defect 318153 in dev release. ( Defect 571731 / Task - 671515 )
+Fix : Image  shown directly  rather than hyperlink from external database. (Enhancement-743534 / Task-720031)
+Fix : SVG graph issue with label when formatting the amount ( Defect 770789 / Task 776510)
+Fix : IP of proxy network is being fetched ( Defect 775747 / Task 782100)
+Fix : Popup Enquiry-Display on the first page of all the maximum records -consequence on time for downloading (Defect 770912 /Task 776707)
+Fix : SVG graphs show letter Y in left bottom corner(Defect 768517 / Task 773750)
+Fix : FILE UPLOAD MECHANISM FOR ARCIB. (Defect:739696 / Task:748389)
+Fix : Updated XssChecker with few escaped sequences to avoid XSS attacks.(Defect 802087 / Task 811975)
+
+Server & Client Changes :
+Fix : Parameterization of auto launch context enquiry display (Defect 769289 / Task 775233)
+Fix : Ability to demonstrate a Remote deposit capture through Internet( Enhancement 706047 /Task 706765)
+--------------------------------------------------------------------------------------------------------------------
+Build R14 201310.01 Release
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Same type of graph is displayed when pie and bar graph are displayed in a COS screen(Defect 714759 / Task 749571)
+Fix : Opening of AR, AD and AL accounts fails (Defect:746927/Task:762823)
+Fix : Update of 4TRESS API to support the SOAP protocol- User level changes(Story:575936/Task:655534)
+
+Server & Client Changes :
+--------------------------------------------------------------------------------------------------------------------
+Build R14 201309.01 Release
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : EFS Print preview Viewing PDF within SCV (Defect:725292 / Task:727436)
+Fix : ARC-IB login error, with OTP as login method. (Defect:735654/Task:741753)
+Fix : Transaction Confirmation enhancements for OTP,CHRES and OOB methods. (Enhancement:633913/Task:633928,755055)
+
+Server & Client Changes :
+--------------------------------------------------------------------------------------------------------------------
+
+Build R14 201308.01 Release
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Script error in Dropdown.js While running jslint-run-all (Defect:739595/Task:739645)
+Fix	: Updated existing Regular Expression Patterns to avoid XSS attacks. (Defect:722874/Task:730208)
+Fix : Footers not aligned with NO.FOOTER.STYLE set in enquiry record(Defect-637859 /Task-700220)
+
+Server & Client Changes :
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+Build R14 201307.01 Release
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Provide link for the Images that are uploaded to server(Defect-689606/Task-694785)
+Fix : Browser war file is updated with lates tcclient jars (Defect-685027/Task-696814)
+Fix : Focus was not set for favourites after add/delete favourite links (Defect 404149 / Task 675278)  
+Fix :  Security Violation encountered when a counterparty is added to FX Broker Deal (Defect 615606 / Task 677706)
+Fix :  enquiry.js file check-in problem (Defect 704862 / Task 705014)
+Fix : Hiding of T24 commands or table names in the status bar (Defect 680947 / Task 690137)
+Fix : Problem with auto refresh enquiries in Composite screen(Defect-694656/Task-700030)
+Fix : System throws an error message “There is a problem with the system, Please contact the system administrator”, immediately in a new window. When composite screen is lanuched.(Defect : 690578 / Task : 694807 ) 
+Fix : Correcting problem with password contains ':' (Defect-688160/Task-693954)
+Fix : When a record is opened from menu second time the browser gives "TXN cOMPLETE" MESSAGE(Defect : 693078 / Task : 703294 )
+Fix : Unable to launch enquiry from the command line window in browser version(Defect-655416/Task-684554) 
+Fix : Text gets overlapped in ARC-IB screen (Defect 377458 /Task 469490)
+Fix : Popup dropdown restricted to 200 records (Defect 689591 / Task 691442)
+Fix : T24 does not popup all deal slips attached to version when a style sheet is attached (Defect 687193 /Task 692174)
+Fix : EB-Problem With Error message when Input a new password (Defect 663531 / Task 670604)
+Fix : Browser export enquiry data is saving with the default file name as ‘enquriy.csv’(Defect 685694 / Task 689992)
+Fix:Problem in finding unsupported browser version for opera browsers (Defect 660158 /Task 660263)
+Fix : Once click the Browser Tool, Display the enquiry results in a new window (Defect 680755 / Task 685946)
+
+Server & Client Changes :
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+Build R14 201306.01 Release
+
+Server Only Changes :
+Fix : Incorrect enrichment displayed after check file enrichment.(Defect 678185 / Task 685456)
+Fix : SecureDocs Download in Jboss 5.1 (Defect-654249/Task-659328)
+
+Client Only Changes :
+Fix : Existing beneficiary list gets duplicated (Defect- 641061/Task-660109)
+Fix : Context Enquiry within the AA.OVERVIEW.LENDING screen not working for INPUT / SEE mode using IE (Defect - 670066 / Task - 674112)
+Fix : Alignment for enquiry on printing the result (Defect 628551 / Task 673726)
+Fix : To block displaying multi value icons in confirm versions (Task-672122/Defect-647163) 
+Fix : Validation Exception thrown in AA screen when we mouse click from a check field to another property (Defect-666712 / Task-670076)
+Fix : Footers not aligned with NO.FOOTER.STYLE set in enquiry record (Defect 637859 / Task 646109)
+Fix : Unable to switch from a tab with contract (Defect-612569/Task-625162) 
+Fix : Enrichment is not updated in confirm version (Defect-641404/Task-659139)
+Fix :  Blank tab is displayed in the Main Menu tab in ARC-IB when the description of an adjacent tab is lengthy(Defect-641278/Task-660385)
+Fix : Mask the password information in log files (Defect-635627 / Task-647255)
+
+Server & Client Changes :
+Image Management in Cloud-Dev (Enhancement-580817 / Task-580818)
+
+--------------------------------------------------------------------------------------------------------------------
+Build R14 201305.01 Release
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Warning message appears while deploying BrowserWeb.war in WAS v8.5(Defect 635431 / 640455)
+Fix : Junk characters in downloaded CVS/ XML/HTML files(Defect 607621 / Task 638236)
+Fix : Unable to reverse the LD in Browser(Defect 604323 /Task 625119)
+Fix : Deal Slips not triggered at the time of committing a record(Defect 619962 / Task 634777)
+Fix : Unable to view any other MM record after one record is opened (Defect 615650 / Task 621551)
+Fix : Borders are not displayed for Enquiry Header on drilldown in tree enquiry(Defect 602296 / Task 620959)
+Fix : Correcting Problem in Browser build :201215.004.01(Defect-636689 / Task-636476)
+Fix : Expand/hide icon is not displayed in the ENQUIRY header(Defect 602315 / Task 618233)
+Fix : AA overview screens are misaligned. Font is different in some cases.(Defect 606037 / Task 630668)
+Fix : IE browser validation gets trigger while tabbing out of hot field only(Defect 618676 / Task 627432)
+Fix : System is populating the Enrichment value and not loading actual value(Defect-615637/Task-626930)
+Fix : Unable to pick value from the dropdown enquiry when the field is set as HOT.VALIDATE. ( Defect : 606400 / Task : 612829)
+Fix : Security Violation from Browser from local template (Task : 603153 / Defect : 584727)
+Fix : Sign in button and password fields are misaligned in login page. (Defect 535243 / Task 565083)
+Fix : The tabbed screen is getting replace when no frames attribute set in a composite screen (Defect 389892 / task 593779)
+Fix : The Tree enquiry  columns are not displayed correctly(Defect -539044 / Task 547215)
+Fix : Java script error is thrown while preview the delivery message(Defect 587760 / Task 595580)
+Fix : Modifying web.xml to disable security filters by default in BrowserWeb war file (Defect-580970 / Task-592267)
+Fix : Appropriate error page will be displayed if authenticator is disabled in 4TRESS (Defect-601007/Task-606954)
+
+Server & Client Changes :
+Fix : Images not displayed correctly through the enquiry when the images stored outside the Browserweb(Defect 577164 /Task 592594)
+Fix : Enquiry Display Problem (Defect 584767 / Task 595294)
+--------------------------------------------------------------------------------------------------------------------
+Build January 2013 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Modifying the display property of Enrichment Only fields (Defect-488348 / Task-572085)
+Fix : Unable to Open Help text files in latest DEV war file (Defect : 526034 /Task 559082) 
+Fix : Drilldown in an enquiry is not displayed with the attribute - 'drill down as hyperlink' set. (Defect 573671 / Task  582923)
+Fix : Input screen overwrites with the enquiry screen in role based home page(Task 580434/ Defect 553521)
+Fix : To support image uploading in ARC-IB (Defect-551249 / Task-554275)
+Fix : Focus falls on the field name on the initial launch of a Version using Safari(Defect:410348 / Task:423076)
+Fix : Paging tools display on local print. (Defect 572386 / Task 578192)
+Fix : Footer values are not displayed in HTML, XML and CSV formats. (Defect 456932 / Task 467164)
+Fix : Error is thrown on clicking the selection screen icon for some enquiries. (Defect 501431 / Task 506243)
+Fix : Bug in Enquiry Header Position.(Defect -530440 / Task -575735)
+Fix : ARC - IB - Cancel button in all version should redirect to the parent screen ( Defect 510240 / Task 521131)
+Fix : New blank window is getting opened when clicked on view button (Defect-579745 / Task-579777)
+Fix : ARC-IB: All tabs are having  same  help page ( Enhancement 78312/ Task 579994)
+Fix : All the overview screen enquiries are misaligned (Task : 575623 / Defect : 558248)
+Fix : WCAG Guidelines - TAB index support (Enhancement 543185 / Tasks 558358, 558427, 554284, 541763, 533365, 553429, 553446, 555563,539547)
+Fix : MB Role Based Pages : CSAGENT - Contact Log (Defect 509879 /Task 519190)
+Fix : Headers alignement in the downloaded html file (Defect:553194 / Task:555642)
+Fix : Resolving build errors (Defect:558469 / task:558855)
+Fix : Browser servlet sends hard coded x-frame-option HTTP header (Defect 534727/Task 549410)
+Fix : Adding header and footer to a version- Model configuring(Task 535046)
+Fix : System shows only  the date starts from 1900, not able to select the below  date(Defect 557310 / Task 566056)
+Fix : AI - In ARCIB The graph borders are not displaying in the Bar Graph.(Defect 554905 / Task 558990)
+
+Server & Client Changes :
+Fix : Customized error message for session time out. (Defect 559079 / Task 563189)
+--------------------------------------------------------------------------------------------------------------------
+Build December 2012 Release 1
+
+Server Only Changes :
+Fix : security violation in contract launched from field context enquiry (Defect-529354 / Task-534172)
+Fix : User clicks the hyperlink (T24Common Help Text Fields) security error message thrown(Defect - 507053 & 515642 / 513703)
+Fix : Unable to open the 2nd record for Authorisation of an contract after authorizing the first one(Defect - 452401 / Task - 515511)
+
+Client Only Changes :
+Fix : White Space is not preserved in header/footer(Defect 508317/ Task 550806)
+Fix : Selection Icon does not fit in to the enquiry selection frame - Firefox - Dev Coding (Defect:485201/ Task:522626)
+Fix : Enquiry Toolbar is not aligned properly when using in Composite Screen(Defect 499201 / Task 507307)
+Fix : Security Violation Error coming while launching context enquiry.(Defect 375024/Task 539202)
+Fix : Security violation thrown from browser after closing a tabbed window happens only from internet explorer.(Defect 545328/Task 549124)
+Fix : Problem in Dev browser build(Defect -544079 / Task - 545248)
+Fix : To correct display of helptext in browser (Defect - 497992 / Task - 520046)
+Fix : The dropdown box gets floating in the window (defect - 392384 / Task - 493648) 
+Fix : Keyboard - tab index for expanding and deleting multi-value fields (defect - 364797 / Task - 371221)
+Fix : HyperLink gets displayed for field name  in changes tab (Task : 459977 / Defect : 441821)
+Fix : T24 Portal in the Browser login Page (Defect 521732 /Task 523659)
+Fix : Browser Security violation when doing additional AA.SIMULATION through CREDIT.ASSESSMENT(Defect 540917 / Task 547712)
+Fix : Bug in Enquiry Drilldown 3.(Defect 511737/Task 546100)
+Fix : The portion of popup control box was getting hidden in IE(Defect 457787/Task 522209)
+Fix : Tearoff tool is not visible for an enquiry when "Scrolling" set to NO in composite screen definition.(Defect 517426/Task 542922)
+Fix : Enquiry result displayed on tear-off is over-written by the result displayed from fastpath enquiry(Defect 519298/Task 523338) 
+Fix : Encryption setup creating problem for Local ref(Defect 509491/Task 547332)
+Fix : Invocation of context enquiry inside the composite screen.(Defect 516388/Task 545173)
+Fix : Unable to launch context enquiry when there is Apostrophe character more than ones in field data (Defect 536518 / Task 538002) 
+Fix : To introduce number of mandatory selection in Enquiry (Task-539019 / Defect-527491)   
+Fix : Implementation of User Roles functionality in T24
+Fix : Implementation of No-Impersonation logic in PW, OTP-PIN and OTP login using 4tress(Defect 529814/Task 530915)
+Fix : MB : Help Text Edit Support (Defect 513265/Task 522618)
+Fix : Opening a screen as a new window or a tab for enquiries(EN 390858/Task 390865)
+Fix : ARC-IB does not refreshing the entire page when password is changed succsesfully(Defect 506147 / Task 513670)
+Fix : User's session timed out. Please re-login” error occurred after closing enquiry result window (Defect 504727  / Task 505893)
+Fix : When deposit  has tier interest rate, image is displayed instead of interest rate (Task 511942/Defect 506330)
+Fix : ARC-IB login page header mis-aligned for Private and Corporate users. (Task 510835/Defect 510832)
+Fix : ARC IB - Button not aligned (Task 511296/Defect 503177)
+Fix : PACS00226762 - AI - Once the session timeout, the dialog box will appear (Task : 505833 / Defect : 497415)
+Fix : Adding header and footer to a version (Enhancement 391628)
+Fix : Selected value not passed to contract screen when using favourites (Defect : 485875 / Task : 486951)
+Fix : Browser Security violation when we press Enter on Autorefresh enquiries (Defect : 529366 / Task : 535593)
+Fix : Blank spaces are displayed in the triggered deal-slip when the style sheet 'clientEnquiry.xsl' is attached  (Defect :390892 / Task : 473945)
+Fix : Script error is displayed on deleting an IHLD record  (Defect: 392154 / Task: 446124) 
+
+Server & Client Changes :
+Fix :  WCAG Guidelines development to be parameterised(Enhancement 494710/Task 494724)
+Fix :  Enable saving other file formats PDF, OFX and XLS  (Enhancement - 370238 / Task - 477510)
+--------------------------------------------------------------------------------------------------------------------
+Build November 2012 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Non inputable dropdown filed allows deleting the details in that field.(Task 507060 / Defect 506125)
+Fix : Transaction reference Id is not displayed in preview version (Task-473414 / Defect-468228)
+Fix : ARC IB Deposit Changes - Configuration for Create Deposits(Task 363015/ Enhancement 401662)
+Fix : Full width of the calendar control is not visible for the current month(Task 486745 / Defect 480844)
+Fix : In create term deposit , confirm and preview version values should be aligned properly (Task 478371 / Defect 468224)
+Fix : Update ARC IB  login page as per Model Bank(Task 464474/ Enhancement 411289)
+Fix : To resolve class sharing problem in JBoss 5.1(Defect-483041 / Task -485387)
+Fix : Fatal error in OPF leads all tafc agents to crash (Task : 503360 / Defect : 499795)
+Fix : New buttons ApplyNow,MaybeLater and NoThanks added(Task 504067/Defect 504019)
+Fix : 201209MB- There is an extra line appearing on the right hand side of the msg(Task 486759/Defect 485742)
+Fix : Enquiry selection in ARCIB (Task : 424695 / Enhancement : 422642)
+Fix : PACS00226762 - AI - Once the session timeout, the dialog box will appear (Task : 500709 / Defect : 497415)
+Fix : Changing images to buttons (Task : 367687 / Enhancement : 385711)
+Fix : ARC-IB - Making the Credit Account not the same as the Debit Account( Task 349481)
+Fix : ARC-IB does not refresh the entire page when password is changed.(Task 389750)
+Fix : Print button on the preview version(348114)
+Fix : Changing images to  buttons(Task 367687)
+Fix : In FireFox error message getting disappeared after selecting value from a drop down (Defect: 488698 / Task:499729)
+Fix : Enrichment value is populated /updated after validation of a record for frequency control in all application.(Defect 409103/Task 429448)
+Fix : Enquiry Column Header fields are not aligned if any column is hidden (Task : 473714 / Defect : 465368) 
+Fix : Audit field tab shown when commiting Arrangement record (Task : 482191 / Defect 483093)
+Fix : Context enquiry fails to launch from browser if the field value text contains apostrophe (Task : 498583 / Defect :495708)
+
+Server & Client Changes :
+
+--------------------------------------------------------------------------------------------------------------------
+Build October 2012 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Unable to commit Product condition record in browser (Defect : 493837 / Task 497512)
+Fix : Bug in Enquiry Drilldown 2 (Task : 492991 / Defect : 489185)
+Fix : Make tamper protection in ARC IB switchable (Default = on) (Enhancement 463097 / 476567)
+Fix : Missing Resource Exception with multiple users and prolonged usage of T24 Browser(Defect 484550 / Task 487522)
+Fix : To clean xml text for drill downs in context enquiry (Defect:485069 / Task:487149 )
+Fix : Error printing enquiry embedded in COS (Task : 486944 / Defect : 481703)
+Fix : Security violation error is thrown, when the secure document download enquiry is relaunched.(Defect 482491/Task 485540)
+Fix : Browser build with latest TCClient version 1.5.2_42 (Defect 478179 / Task 483547)
+Fix : Update Browser login page as per Model Bank(Enhancement ID: 370263)
+Fix : Browser Toolbar Enhancement  - Horizontal and Vertical menu's (Enhancement ID : 370255 / Task : 390832)
+Fix : Browser Tool Enhancement -  Browser / ARC IB (Enhancement ID : 370247 / Task : 390847)
+Fix : Parameterizing Combo box with less than three options through ASSOC_REQ_COMBO (Defect 478188 / Task 479018)
+Fix : Cookie value is being overwritten during login process in ARC-IB (Defect 471789/Task 481124)
+Fix : Unable to commit Arrangement Activity record when it is part of composite screen (Defect 462993 / Task 467730)
+
+Server & Client Changes :
+Fix : ARC CRM - Real-time opportunity generation- support (Enhancement : 393557/Task :401361)
+--------------------------------------------------------------------------------------------------------------------
+Build September 2012 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : selected value not passed to the enrichment only field (Defect:471208 / Task:472317)
+Fix : Browser build with latest TCClient version 1.5.2_41 (Defect 470795 / Task 473017)
+Fix : System failed to set focus, while tabbing out of hot field(Defect-469191 / Task-473115)
+Fix : Browser ver 10.136 and AA products (Task : 470661 / Defect : 468176)
+FIx : Setting Background border for composite screens(Defect-460573, Task- 462202) 
+Fix : POPUP.DROPDOWN attribute and ENQ.SELECTION cause 'Security Violation'.(Defect:457984/Task:464695)
+Fix : Unable to commit AA record (Defect 464729/Task 466357)
+Fix : Confirmation dialog is displayed twice during deletion of a record through a version to which an input routine is attached.(Task:441390/Defect:396884)
+Fix : Selected value not passed to the enrichment only field(Task 464480 / Defect 452399)
+Fix : Popup control not appear while clicking the “Recurrence Control" field & Date picking problem & Control box disappears while trying to scroll in IE(Defect:444972&446971/Task:458061)
+
+Server & Client Changes :
+Fix:  Pop-up selection box for Browser dropdown (Task 390855 / Enhancement 390851)
+--------------------------------------------------------------------------------------------------------------------
+Build August 2012 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Line wrap,Enquiry header and LC drawing value to be displayed properly (Defect 441532 / Task 448187)
+Fix : Unable to launch enquiry using pop-up window as Security Violation is shown (Defect 444505 / Task 446564)
+Fix : DBCH R11 Upgrade - javascript error in selecting date from calendar (Task : 446152/Defect : 442715)
+Fix : Input missing error thrown in AA.SIMULATION (Defect- 431657/ Task - 444003)
+Fix : Line wrap to work in browser (Defect 441532 / Task 443786)
+Fix : To bring focus to radio type error fields (Defect - 430007/Task- 443811)
+Fix : Transform error has occured - AA future dated condition (Defect 435702 / Task 440935)
+Fix : To parameterize the setting of blank option for mandatory combo box (Defect 428394 / Task 433063)
+Fix : To launch URL's in individual screen (Defect 421281 / Task 423153)
+Fix : User name not masked in T24 Browser after signed-off (Defect 441633 / Task 441881)
+Fix : PACS00206376 - netHSM problem in ARC-IB integrated environment (Defect 439214/Task 455864)
+Fix : Cross Site Scripting - Insufficient filtering in the enqname parameter (Defect 434262/Task 444734)
+Fix : Tooltip gets duplicated in Browser (Defect 414964 / Task 426180)
+Fix : Active tabs are not displayed properly ( Defect - 447933 / Task - 448346)
+Fix : "Loading" icon is displaying in far right corner in ARC-IB (Defect 447923 / Task 448173)
+Fix : Enquiries displaying colours unevenly spread out (Defect 450203 / Task 450981)
+Server & Client Changes :
+Fix : STANDING ORDER search via ENQ STO.BY.TYPE using Frequency - (Defect 437079 / Task 440023)
+Fix : Redesign Relative Date Control(EN 354155/Task 367830)
+Fix : Pages are not aligned properly when the advices are printed locally(Task:447977/Defect:437093)
+
+--------------------------------------------------------------------------------------------------------------------
+Build July 2012 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Formatting the graphic display (Defect-423654/Task-432822)
+Fix : Look & Feel improvements for AA in browser( Toolbar & Styles) (Enhancement Id : 354153 / Task : 367822)
+Fix : Context enquiry with selection criteria after launching the application alone (Defect 404082 / Task 421286)
+Fix : Drilldown operation not working for loans enquiry second time (Defect 417681 / Task 423490)
+Fix : Unable to capture image using IM.DOCUMENT.UPLOAD (Defect 360866 / Task 418628)
+Fix : commit button is miss-aligned (Defect-372047/Task-381452)
+Fix : XSS Attack using an event of onMouseOver should be prevented(Defect 413494/Task 414747)
+Fix : Url <contextroot>/servlet/BrowserServlet does not load login page after sign into fortress(Defect:359368/Task:364624)
+Fix : Java-Script error is displayed on clicking the links of an AA.ARRANGEMENT.ACTIVITY record. (Task :371943 / Defect :365307)
+Fix	: ARC-IB Screen fonts are too small. ( Task 401042 / Defect 397205)
+Fix : Changes tab when viewing history record is unreadable ( Task : 417638 / Defect : 413407 )	
+Fix	: The selection criteria frame expanded to the window size listing the entire fields.(Task 404187 / Defect 415072)	
+Fix : Record lock problem in tabbed screen ( Task : 380618 / Defect : 371062 )
+Fix	: Loading Screen with single spinning gears (Enhancement :  370372 / Task : 385898 )  
+
+-----------------------------------------------------------------------------------------
+Build June 2012 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : To apply custom style for deal slips (Defect-410996/Task-414950)
+Fix : TOCF Setup with Multiple Environments not working in Jboss 5(Defect:410992/Task:414541)
+Fix : System lists all the record in Dropdown enquiry if @ID EQ ‘’ at version level (Defect 403896 / Task 409120)
+Fix : LD Report by IE - documents not printed completly (Defect 407155/ Task 410330)
+Fix : Browser tool attached in the composite screen does not work properly in ARC IB(Task 407415/Defect 403705)
+Fix : PACS00193555-Using EB.EXTERNAL.USER record created with Spanish characters and special characters(Defect-395205/Task-405996)
+Fix : Tab Index related bug fixed and the,Scope and summary  enhancement (Task 370237 / Defect 342532 & 382691)
+Fix : “Changes not saved” confirm message is thrown, when the preview button.(Task:400256/Defect:394551)
+Fix : Focus made on favourites in enquiry application (Task 405066 / Task 382691)
+Fix : Login page icon does not work in Browser with display type:"IMAGE" (Defect 396571 / Task 399484)
+Fix : Deal slip is not triggered while having next version (Defect -388284 , Task - 392425)
+Fix : System continously fluctuates when the user clicks on a tab before the content is loaded ( Task : 396632 / Defect : 391318 )
+Fix : Issue with enquiry drilldowns & fastpath authorisations in COS screen (Task 386080 / Defect 382492)
+Fix : Asset Summary in Customer Overview needs to be refreshed to show data (Task 389152/Defect 386078)
+Fix : PACS00192243 - ARC IB failover results in an error when a user's session is failed over to another WebSphere server(Defect:392780/Task:394939)
+Fix : The DX.CO.MANUAL.INPUT newly created has old ID key.(Defect 373088 / Task 393690)
+Fix : PACS00192043 - ARC IB does not support the configuration of multiple 4TRESS appliances to provide redundancy (Defect 390624/ Task 395112)
+Fix : Block on multiple clicks in drilldown of an enquiry (Defect 365501 / Task 373118)
+Fix : Disabling Enter key on user id and password field of pwmw login (Defect 387712/Task 391692)
+Fix : Error message ‘ARRANGEMENT is a Mandatory Input' (Defect 377995/ Task 381735)
+Fix : Pop up message triggered when the user tries to delete the record. (Defect-374621/Task-378178 )
+Fix : When we click the change pin jsp menu and then click some other menu, the page is not loaded ( Task : 388153 / Defect : 384933 )
+Fix : Print Setup icon Doesn’t appear when xsl attached in version (Task 386297 / Defect 384222)
+
+Server & Client Changes :
+
+-----------------------------------------------------------------------------------------
+Build May 2012 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : problem in ENQUIRY.ACTION tool (Defect-383492/Task-385932)
+Fix :  System is throwing an error message “There is a problem with the system” (Defect:384809/Task-386768)
+Fix : REPLACE.ALL Functionality is not working in composite screen(Task : 380215 / Defect : 375114)
+Fix : Single special character is not getting allowed in ID creation ( Task : 383843 / Defect : 380101)	
+Fix : Transaction Signing Issue in R09(Defect-383228/Task-386956)
+Fix : AI - Issue in ARCIB with Firefox after an update(Defect 381789 /Task:384636) 
+Fix : If user will not input value in mandatory fields, then the system will not show error message (Defect 377952/ Task-384234)
+Fix : Mandatory change password page in not working with PW-MW login method (Defect 371847/ Task 382449)
+Fix : ARC IB - Javascript error on STO screen ( Task : 377446 / Defect : 376728 )
+Fix : Fix : ARC IB - "Please contact system administrator" message displayed when adding a beneficiary (Defect 376029/ Task-379397)
+Fix : Fix : Tool list is not getting disppeared while pressing ESC key (Defect-364870 / Task-371029)
+Fix : Keyboard - tabindex for navigating menus and submenus ( Defect 364750 / Task 369508)
+Fix : Issue in deleting associated sub value set in version record ( Defect 363027 / Task 365362 )
+Fix : Keyboard - tabindex for focus on 'Go' icon.(Defect:364770/Task:367888)
+Fix : When we change the text size the text size is increased in the browser(Defect:342555/Task:365829)
+Fix : Asset summary in customer overview needs to br refreshed to show data (Task:377455 / Defect 373695)
+Fix : HELP TEXT can't edited(Defect:345855 / Task:376412)
+Fix : PACS: Security Violation message (sign off) when backdating activities in AA ( Task : 383897 / Defect : 379649 )
+Fix : The Delete, Authorise, Reverse and Verify hyperlinks are enabled while inputting a transaction (Task : 385808  / Defect : 385062)
+-----------------------------------------------------------------------------------------
+Build April 2012 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix :  Back Button in ARCIB Screen(Defect 370963/ Task - 372504)
+Fix : Browser helptext issue ( Task : 370849 / Defect : 367549 )
+Fix : Browser with JMS configuration throws 'Null Pointer Exception' on modifying a parameter (Defect-365425/Task-368162)
+Fix : Favourite icon prompts for adding favourite link while tab out.(Defect:362969/Task:366321)
+Fix :  ARCIB Penetration Test – Content type Header value - 103 war file failed(Defect - 369358/ Task - 370926)
+Fix : AI - In Enquiry Drop down values is not displayed for the attributes SELECTION.HORIZONTAL.(Defect:363239/Task:365049)
+Fix : Url <contextroot>/servlet/BrowserServlet does not load login page after sign into fortress (Defect 360921/Task 362986)
+Fix : Continuation of the CSS report :(Defect-355315 / Task:364070)
+Fix : Blank page is getting displayed instead of security violation page(Defect : 361643 / Task 363826)
+Fix : Commit button inside the application enquiry is not working in composite screen(Defect 360822/Task 364085)
+Fix : Keyboard - tabindex - Development(Defect :342541 / Task :353838)
+Fix : Errors when monitoring through Microsoft SCOM (Defect 361779 / Task 363660)
+Fix : Dialogue box didn’t get open when focusing on “Browse” button during File upload. (Defect 355338 / Task 364050)
+Fix : Retrytime time can be configured for JMS from browserparameters.xml (Defect 354077 / Task 359270)
+Fix : Enquiry - tabindex for field labels in enquiry (Task:366056 / Defect : 364856)
+
+Server & Client Changes :
+Fix :  Auto refresh is not working when auto refresh value is given in Fixed selection and page navigation(Defect 320574/Task 328666)
+Fix : Reversal of External user record is not deleted from the 4TRESS server.(Defect 360874 - Task - 368203  ) 
+Fix : Reversal of External user record is not deleted from the 4TRESS server.(Defect 360874 - Task - 368600  ) 
+
+----------------------------------------------------------------------------------------------
+Build March 2012 Release 1
+
+Server Only Changes :
+Fix : To throw security violation exception if any changes is done on the data send to confirm version (Defect-349613/Task-351146)
+
+Client Only Changes :
+Fix : Content-Type content is missing in the response which comes from the Ftressformlogin.jsp(Defect:357701 / Task:361603)
+Fix : Back button not working in ARC-IB-DEBUG war file. (Defect:355275 / Task: 355521)
+Fix : User is not able to tab through the various fields in a fastpath enquiry(Defect-355444/Task-358243)
+Fix : ARC IB - Pressing "cancel" within the grace period of session timeout causes 500 error (Defect:341390/ Task:350805)
+Fix : Issue in downloading enquiry result as .html using iPAD (Defect 308958/Task 350729)
+Fix : Unable to deploy multiple war files inside a single .ear file (Defect-353974/Task-355383)
+Fix : No. of Records retrieved in an enquiry is shown only if default toolbar is used(Defect 353938/Task 356055)
+fix : jbase_agent - all sessions are crashing with the 12 retries, for the subroutine call fail. Retry option should be change(Defect:330261/Task:358390)
+Fix : Display of Data in Browser is not consistent (Defect : 351846 / Task : 353598)
+Fix : In Enquiry designer the subvalue field under the tab drill down is getting expanded incorrectly. (Defect 348132 / Task 356305)
+Fix : Core Browser Issue:When Tab out from a hot field, the full browser screen minimises to a RESTORE.(Defect:345306/Task:350974)
+Fix : The Arabic characters are not displayed correctly in the view mode in Internet Explorer. (Defect:349641/Task:351866)
+Fix : Alternative text is not provided for the loading image across all pages in ARC-IB (Defect 350450 / Task 351070)
+Fix : To remove the Helptext link in the Application/Version name for ARC-IB (Defect-349381 / Task-349635)
+Fix : PACS00175458-Back Button in ARCIB Screen.(Defect :339451/Task :348678)
+Fix : ARC IB - Able to view browser parameter settings (Defect 334218/Task 346677)
+Fix : ARC IB - Pen Test - Cross Site Request Forgery (XSRF)(Defect 335421 / Task 344168)
+Fix : Data Capture Authorise Bulk Batches is not working(Defect 339179/ Task 342159)
+Fix : Updation of enrichment and the no input fields on deleting the first sub value in browser. (Defect 337804 / Task 341408)
+Fix : Enabling external obfuscation in T24 Browser. (Defect 337030 / Task 343657) 
+Fix : The tittle of the page is displaying as "ARC Internet Banking" while logging to T24 for a moment(Defect : 342057/Task : 344222)
+Fix : Hyperlink is not working in ARC-IB (Defect 337756/Task 342069)
+Fix : Dropdown records listed are not based on the given criteria.(Defect:339329/Task:341882)
+Fix : JavaScript Error is thrown on commit of an FT record created through a version in ARC-IB.(Defect:245219/Task:353769)
+
+Server & Client Changes :
+Fix : Multi-value the field, and click ‘-‘ on the first multi value, one extra ‘+’ sign is added( ++-).(Defect348963/Task:349118)
+Fix : The enrichment set in the field is not shown as expected (Task 350505/Defect 344508)
+Fix : Java Script Error is displayed when multiple records are selected for amendment through a fastpath enquiry in ARC-IB (Defect 272041/ Task 291506, 291507)
+Fix : When a password type field is set as Rekey, System does not mask the characters when rekeying the field(Defect:338975/Task:345953)
+----------------------------------------------------------------------------------------------
+Build January 2012 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Arrangement Conditions are not opening when "no frames" attribute selected & the value "ALL" is given in items filed(Defect-333691/Task-337000)
+Fix : Selection screen is not getting launched when an enquiry is attached with the cos (Defect: 320491 /Task:321545)
+Fix : Merge userguides and training material into central repository- browser enhancement (Si-326129 / Task - 262385)
+Fix : The enquiry with drilldown opens the data in a new screen in ARC-IB (Defect 298092 / Task 326042)
+Fix : When we renegotiate activity for the first time, there was wrong emi amount.(Defect:324153/Task:332837)
+Fix : Error in displaying enrichment while enrichmentonly attribute is set for a field (Defcet-304802 / Task - 306717)   
+Fix : PACS00169184 - ARC IB - 3 failed Memo Word attempts does not cause lock-out (Defect - 327295 /Task - 329024)
+Fix : To block displaying "click here to confirm" message in confirm version (Defect - 325966 / Task - 327038)
+Fix : Blank spaces are coming in the view mode of Internet explorer (Defect : 325463/ Task : 328373)
+Fix : PACS00171134 - ARC IB - Inclusion of certain keywords in STO setup causes strange behavior(Defect-325660/Task-326439)
+Fix : PACS00151911 - Cache and Cookie clear issues resolved to display login page in proper (Defect-323566/Task-326084)
+Fix : Issue when trying to drilldown an enquiry, the Main enquiry is getting loaded again as “Your Request is being Processed”.(Defect:321803/Task:322603) 
+Fix :  PACS00156554 - AI -   ARC IB - Pressing the enter key to submit OTP results in 500 error (Defect: 306406/Task :322704)
+Fix : ARC IB - Application corrupts when lockout happens on simultaneous session on same browser(Defect: 298855/Task: 318369)
+Fix : ARC IB - screen corruption on timeout(Defect: 313570/Task: 319399)
+Fix : Enrichment was not populated in dropdown field in ARC-IB using Firefox 4 and 5(Defect: 307679/Task :317667)
+Fix : To remove the Backward Slash displayed in the file path while uploading an image(Defect-305683/ Task-308129)
+Fix : Password logged in plain text in debug level logging(Defect:164323/Task:211713)
+Fix : Browser command line API doesn't work(Defect : 304028/Task : 306735)
+Fix : New style classes for ARC-IB and style classes for see mode in both  browser and ARC-IB are introduced(Defect-306454/Task-308748) 
+Fix : ARC IB - Incorrect error message when T24 is unavailable (Defect 308917 / Task 312210)
+Fix : To display the AcceptOverride button for browser (Defect-310181/Task-311107)
+Fix : Pop up not displayed for print statement link in ARC-IB(IE).(Defect 302056 / Task 306366)
+Fix : Description of Menu item contains apostrophe character.(Defect:299788/Task:304731)
+Fix : Backtracked through the BREADCRUMB link loses the selection criteria of the Enquiry.(Task:305976/Defect:301904)
+Fix : PACS00156554 - AI -   ARC IB - Pressing the enter key to submit OTP results in 500 error  (Defect-306406/Task-314000)
+Fix : Auto Refresh option has not worked in Enquiry Result(Defect 183990/Task 266278)
+Fix : Fastpath does not include all selected transaction (Defect : 285822 / Task : 287119 )
+Fix : Frequency control issue on changing from defined frequency to any other frequency(Defect 289987/Task 291750)
+Fix : PACS00151488 - AI - 4tress Integration on WebSphere.(Defect-314350/Task-317294)
+
+Server & Client Changes :
+Fix : Browser should provide an option to suppress the Radio button option "None" for Null Display (Defect 330498 / Task 331431).
+Fix : Browser performance is slow when it is deployed in windows server - 2008 (Defect - 311215/ Task - 322767)
+Fix : ARC IB - Inconsistent AUDIT LOG update(Defect - 307368/ Task- 309510)
+Fix : Override Class Approval handling in Bulk transaction(EN:184594/Task:275049)
+Fix : AI - Cross-Site Scripting Vulnerability (Defect-225873/Task:226129)
+Fix : The enrichment was wrong, when we delete(START + 1Years) and create arrangement(ARRANGEMENT + 1Y) for the same date.(Defect:301046/Tasks:309037&309040)
+Fix : When the DEAL.SLIP is generated for an FT transaction in RQ mode, the error message stating “CANNOT AMEND AUTHORISED DEAL - The Deal slip has not been printed.(Defect:297396/Task:318604)
+----------------------------------------------------------------------------------------------
+Build December 2011 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : BLOCKING SITUATION FOR THE FILE VERSION.LINK.DEFAULT- (Defect:303085 / Task : 306446)
+Fix : Discrepancies found in the display of menu in ARC-IB Corporate Banking, while launched using  Mozilla Firefox. (Defect : 288501/Task : 297922)
+Fix : Alignment in enquiries with column width specified for hidden fields. (Defect 279328 / Task 282462)
+Fix : Underline under Tab missing in browser. (Defect 289938 / Task 291586)
+Fix : IE9 support for Browser and ARC IB- Development.(Defect(enhancement):227422)
+Fix : To list all records in drop down while the value for the selection field is empty (Defect-292824/Task-294649)
+Fix : Parent Issue - PACS00083758 (Defect:275874 / Task:305362)
+Fix : ARC IB - Application corrupts when lockout happens on simultaneous session on same browser (Defect:298855/Task:302868)
+Fix : While pressing the refresh button in the enquiry multiple times system performance decreases and system hangs(Defect:283394 Task:296152)
+Fix : Front end fix To display Hyperlink when drilldown.as.hyperlink attribute is set, Also have fix in routines(Defect-279285/Task -283292)
+Fix : Version behaviour in Composite Screen (Defect:281949/Task:286785).
+Fix : Production Incident #165788: Errors removing empty nodes in dynamic model portfolios (Defect : 287792 / Task : 291094)
+Fix : The saved HTML or CSV file does not contain the values in the editable field of the enquiry output.(Defect:31239/Task:235424)
+Fix : QA Browser_Firefox ( Defect : 292937 / Task : 294666)
+Fix : PACS00129532-ARC-IB - Problem with screen appearance in Mozilla Browser (Defect : 277621 / Task : 296277) 
+Fix : Simulation service throws error when we validate the simulate capture record many times.(Task:303038/Defect:290926)
+Fix : To do comitting  and accepting the overrides using different buttons (Defect-190468/Task-295692 )
+Fix : Back button functionality in Dev (Defect-152552/Task-243451)
+Fix : New style implementation for ARC-IB calendar and dropdown(Defect-302580/Task-302616)
+Fix : T24 Browser on jboss 6.0 support (Defect : 205561 / Task : 305314)
+Fix : HelpText for MID.REVAL.RATE and REVAL.RATE IN currency generates Error(Defect-311206 / Task-317629)
+
+Server & Client Changes :
+
+------------------------------------------------------------------------------------------------------
+Build November 2011 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Unable to retain the format of no-input fields in Browser Versions. (Defect:285422 / Task:287270)
+Fix : Auto New Content’s Value are vanished, if the the drill down enquiry does not return any value (Defect : 252759 / Task : 286883)
+Fix : Browser issue while selecting dates (Defect : 263163 / Task : 287500)
+Fix : Frequency control disappears when select the value in the frequency pattern (Defect 274018/ Task 277229)
+Fix : PACS00129017 - ARC IB - Able to detect username, password and MW seeds of an authenticated user (Defect 283949/ Task 285392)
+Fix : Site minder rejecting double forward slash ( //) sent from T24 browser(Defect 283375/Task 286057)
+Fix : Unable to download CSV from T24 when SSO are implemented in UATa environment (Defect 284430/Task 287826)
+Fix	: Object property differ from browser and the qtp sripts (Defect 232449/ Task 283734)	
+Fix : In ARC-IB Resuts for drildowns are populated in new window while an enquiry is attached inside TAB (Defect - 286084/ Task - 288335) 
+Fix : ARC IB - System fails to throw appropriate error when wrong OTP is entered for more than 3 times consecutively while try(Defect-290781/Task-292089)
+Fix : PACS00141708 - ARC IB - "AMEND" button in Move Money - New UK Payee transaction is taking me to OTP Input screen rather than the initia (Defect-291755/Task-292094)
+
+Server & Client Changes :
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Build October 2011 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Memorable Word Penetration Testing Issue - Back patch to R09, R10, R11 and DEV (Defect - 273035/ Task - 273397)
+Fix : To suppress the duplicate error message in AA (Defect - 267962 / Task - 274184)
+Fix : PACS00103484 - AI - Enable pre-authenticated setup while using 4TRESS as external authentication solution, T24 & Websphere that uses (Defect - 273035/ Task - 273397)
+Fix : Multiple Instances Of Browser/ARC-IB On jBoss 5.1+(Defect 234437/Task 237628)
+Fix : MV add/delete/add with a version having assoc version problem (Defect 275328/Task 276478) 
+Fix : When we delete the rel option and create a new for the same , the enrichment was displayed wrongly(Defect 277163/Task 277833)
+Fix : PACS00121049 - ARC IB - OTP Screen is missing when I try to amend 'Email' under Contact Details in My Preferences (Defect 282195 / Task 282369)
+Fix : CUS 14.02.03 - Country Field it is coming up error EB . Country not Valid (Defect 276583/ Task 280511)
+
+Server & Client Changes :
+Fix	: Fastpath enquiry in ARC-IB (Defect : 251803)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Build September 2011 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : SAR-2011-02-03-0001- Enhancement to IM-R12 (Defect:160793 / Task: 227681)
+Fix : Unable to login using DEV work set browser build (Defect - 255932 / Task - 275862)
+Fix : ARC-IB TCServer connectivity does not function as expected when migrating from Jboss 4.2.3 to Jboss 5.1.0 (Defect: 271093/Task: 271383)
+Fix : BrowserWeb TCServer connectivity does not function as expected when migrating from Jboss 4.2.3 to Jboss 5.1.0 (Defect: 262442/Task: 266499)
+Fix : T24 Browser SSO integration issue (Defect: 266049/Task: 266227)
+Fix : PACS00103366 - AI - passwordMemWord.jsp should display characters and numbers. (Defect: 261820/Task: 264076)
+Fix : ARC-IB build should NOT perform IP validation check for each request. (Defect : 258722/ Task : 260756)
+Fix : Hyperlink is not displayed when a enquiry search from the popup-dropdown window (Defect : 256680 / Task : 258625)
+Fix : Modification to use 4TRESS 7.0.2 RMI API instead of SOAP (Story :255181 / Task :255927  )
+Fix : Right Click disabled in ARC-IB.(Defect : 230036 / Task : 234477)
+Fix : Narrative of LC.AMENDMENTS in Browser.(Defect : 238011/Task : 248664)
+Fix : AI-ARCIB Header not displayed in Firefox.(Defect : 243425/Task : 247849)
+Fix : Unable to Change PIN through ARC-IB.(Defect -226863/Task -241260)
+Fix : ARC-IB alignment-in case of enquiries with hidden columns(Defect : 236982 / Task : 244670)
+Fix : A local adversary can steal password by exploiting the browser refresh feature(Defect : 194651 / Task : 246366)
+Fix : Default style is missing in textarea in Browser.(Defect : 241749/Task : 244807)
+Fix : Trimming of text in text box(IE).(Defect : 178578 / Task : 240320)
+Fix : Clicking on the calendar icon in frequency control,the frequency control disappears.(Defect : 216215 / Task : 218129)
+Fix : Fast Path enquiry is not working properly due to Javascript error (Defect : 252203/Task : 253803)
+Fix : The Tabs are not arranged properly in the ARC-IB(Defect : 226353 / Task : 236185)	
+Fix : Input missing error when we create more future dated property condition while editing the arrangement activity record. (Defect 254582/Task 257932)
+Fix : Appropriate Error message is not displayed when an external user performs an action in ARC-IB , after the jbase_agent is stopped.(Defect 201852 / Task 207354)
+Fix : Performance problem with xml conversion routines.(Defect 253703 / Task 257798)
+Fix : Override gives Temenos unauthorised system access message in browser (Defect 256796/ Task 259845)
+Fix : Multi value textarea field is not populated through hotfield validation routine(Defect:257575/Task259394) 
+Fix:Parent Issue - PACS00083758 - (Defect:260144/Task:261406)
+Fix : Alignment for enquiries in ARC-IB(safari).(Defect : 259213 / Task : 261845).
+Fix : Browser issue while selecting dates (Defect : 263163 / Task : 266329)
+Fix : Toggle timer not working with user defined Browser toolbar (Defect 264361 / Task  265903)
+Fix : Unable to upload file in Mozilla Browser(Defect 268250 / Task 270793)
+Fix : Enrichment Value is not shown in the screen for the field with attribute  "Enrichment Only"(Defect 270455/ Task 271997)
+
+Server & Client Changes :
+Fix : SECURITY VOILATION error when creating 2 future dated interest product condition & maintain chronological order in AA(Defects:224339&223000/Task:241867)
+Fix : High availability of ARC-IB when it is integrated with Authentication solution (4TRESS)(Defect:242272 / Task:254732)
+Fix : BROWSER.TOOLBAR issue for the ENQUIRY which has a custom toolbar(Defect:258253/Task:263260)
+Fix : Appropriate error Message does not get displayed on inputting incorrect value in rekey fields.(Defect 261385 / Tasks 265793,265798,265805)
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Build August 2011 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : To disable drag and drop of images(image management).(Defect-223557/Task no-226321)
+Fix : T24 Browser Cross Site Scripting Vulnerability (Defect-218932 / Task-228168)
+Fix : To bring focus on radio button after hot field validation (Defect-227070)
+Fix : Warning messages displayed in error console in firefox after login (Defect 229180/Task 231257)
+Fix : Enquiry starts with % is not properly launched in Firefox (Defect 212406 / Task:216770)
+Fix : To set enrichment corrextly for field with enrichmentonly attribute (Defect:231381  / Task:232258)
+Fix : Issue with printing deal slips in Firefox(Defect:230834/Task:237786)
+Fix : Not able to get FAST PATH Enquiry toolbar in ARCIB after install the updates ( Defect:233552 / Task :236821)
+Fix : Help Text for EB.AUTHSERVER.CONFIG has been added (Defect:232516 / Task:239972)
+Fix : Missing login jsp and web.xml for password/seeded memorable word websphere functionality (Defect:213292/Task:242227)
+Server & Client Changes :
+Fix : On clicking Accept overrides, System brings in the same overrides and does not complete the txn(Defect 224348/Task 227753)
+Fix	: Hyperlink not displayed for drill down column which enquiry is defined as drill down as hyperlink. (Defect: 224729 / Task:228127)
+-----------------------------------------------------------------------------------------------------------------------------
+Build July 2011 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Unable to setup high availability in JBoss EAP 5.1 for 4TRESS integration.(Defect-208816/Task-225036)
+Fix : Unable to login to ARCIB since blank page is loaded instead of login page when ARC-IB is deployed in Websphere that is 4 (Defect-220546/Tasd-224838)
+Fix : Cont PACS00072058- R10 Browser issues - The tool bar icons (Defect 228107 / Task 230283)
+-----------------------------------------------------------------------------------------------------------------------------
+Build June 2011 Release 1
+
+Server Only Changes :
+Fix     :   Information Leakage and Improper Error Handling in the Authentication Functionality of ARC IB(Defect 100584 / Task - 200179)
+Fix 	: 	FormTokenFilter mapping of servlets is modified to servlet/BrowserServlet (Defect 190957/Task - 202686)
+
+Client Only Changes :
+Fix : When a field is set as ENRICHMENT.ONLY attribute and enquiry is attached to as a drop down, dropdown's display position is wrong ( Task : 216765 / Defect : 212875)
+Fix : Unable to login to the Toolbox ( Task : 213967 / Defect : 210780)
+Fix : Issue related to the file unsupportedBrowserCheck.js (Defect - 208286 / Task - 212349)
+Fix : To read the information of individual contracts in a composite screen to display multivalue icons(Defect - 196089 / Task - 199573 )
+Fix : When cos screen frame contains other language characters it is not working in firefox (Defect 176938)
+Fix : Dropdown field which have enquiry with build routine is not working properly (Defect 199347/ Task 201343)
+Fix : Incorrect drillaction passed when drilling down to an application (Defect 194364 / Task 202425)
+Fix	: Hot field validation not works in ARC-IB when to lost focus (Defect:202554)
+Fix : TransSign parameter should be available in the session(Defect:158256/Task:175125)
+Fix	: Hot field validation not happening for LC application(Defect:202554/Task:211539)
+Fix : Its possible to tamper the transSign attribute and bypass the transaction signing security control (Defect:157938/Task:157950)
+Fix : when the mouse is over the image the full path of the image is shown in tooltip for all the images which has the FIELD.DISPLAY.TYPE is to IMAGE in the enquiry record.(Defect:209185/Task:210762)
+Fix : COS with incorp. AAA screen not working(Defect 208451/Task: 211589)
+Mod : Client LBG - ARC IB support for transaction confirmation using out of band SMS (Story - 153896/Coding Task - 212597)
+Fix : Reflected Cross- Site Scripting (XSS) in Context Enquires, META tag added in web.xml (Defect:100539 /Task:209257)
+Fix : Cross- Site Scripting (XSS) in ARC-IB (Defect:176517 / Task:209212)
+Fix : To redirect to login page after the session timed out ( Task : 215775 / Defect : 207753)
+Fix: EB.TABBED.SCREENS launched second time opens in an existing tab screen window instead of in a new window(Task:219285/defect:212166)
+Fix	: Script error while trying to launch deal slip with style sheet as modelEnquiry.xsl (Defect:221394 / Task:221896)
+Fix	: When a version record is launched from the composite screen through the enquiry record, 
+	  the deal slip gets triggered with the default style sheet instead of the attached style sheet.(Defect:217298 / Task : 218612)
+Fix : Tampered request exception thrown request details.(Defect:100644)
+Fix : Tabs are highlighted incorrectly in AA Screens(Defect:217021/Task:219678)
+
+Server & Client Changes :
+Fix : Issue with the Enrichment alignment ( Defect : 213366 / Task : 216731 )
+Fix : Delivery preview icon clicked in authorize mode disables the authorize icon (Defect - 192688 / Task - 199078)
+Fix	: Criteria field's value is not passed if the criteria data field is NODISPLAY(Defect - 202306 / Task - 206540,206544)
+-----------------------------------------------------------------------------------------------------------------------------
+Build May 2011 Release 1
+
+Server Only Changes :
+Fix : Design Flaws in Authentication Mechanisms of ARC IB – Information Leakage and Improper Error Handling (Defect - 100621 / Task - 196642)
+
+Client Only Changes :
+Fix : The error “A transform error has occured, please see the log files for details.”  is thrown. When we do “Expand Tab” in AA ARRANGEMENT ACTIVITY. (Defect - 189056 / Task - 191080)
+Fix	: Downloaded enquiry content gets overwritten the current page in ARC-IB. (Defect:185685)
+Fix : In IE to trigger the Hot field validation when the pop window is closed without selecting any value (Defect - 186832/ Task - 189629)
+Fix : AA-Can't able to create future dated property condition (Defect 153956/Task 191624)  
+Fix : Hyperlink on error text is not working for RADIO button (Defect 195469 / Task 196398)
+
+Server & Client Changes :
+
+Build April 2011 Release 1
+Fix : Information Leakage and Improper Error Handling in T24 Browser (Defect - 176700 / Task - 187550) 
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Cookies are not initialized to HTTPONLY Flag (Defect - 100639 / Task - 185929)
+Fix : In IE to set the initial cursor position	(Defect - 177179/Task - 177980)
+Fix : Portal Help text is not working fine (Defect : 89911)
+Fix :  Enquiry is not showing in ARCIB (Defect:159588 /Task :161283)
+Fix :  Enquiry drilldown in a composite screen is not working fine (Defect:125289/Task: 155883)
+Fix: Context Enquiry throws script error if user defined description contains the symbol apostrophe (Defect : 90752)
+Fix :  Hot validiation for Combobox doesn't working in no frame COS(Defect:161505/Task:165774)
+Fix :  Date and Frequency should not be treated as contract(Defect - 159903, Task - 167173) 
+Fix :  Calendar object within frequency does not disappear.(Defect - 121414 , Task - 157641)
+Fix	:  Bar graph enquiry is not displayed in browser(Defect:169498)
+Fix : Problem with the text area field in 200907(Defect:34377)
+Fix	:  Transformation error occurs when to add enquiry favorites(Defect:162290)
+Fix : Problem when using tabbed screens with ARC-IB (Defect 153568)
+Fix : Problem with I-Desc field display in application(Defect 164918)
+Fix	: Not able to find out which tab’s content is being displayed currenlty in browser.(Defect:169668)
+Fix : Future dated property condition id is not returned when selecting the date without RelOptions (Defect 164338)
+Fix : Extra display box is getting visible in Attachment window (Defect 171544)
+Fix : Remember password vulnerability - In change password screen only (Defect 100628).
+FIX	: Unable to pick the value from relative calendar.(Defect:86935).
+FIX : Unable to Display the image in drill down Enquiry (Defect 123874/Task: 170436)
+FIX : SECURITY VIOLATION error for future dated activity(Defect:179034)
+FIX : Lot of spaces wasted in Tabbed Screens and Composite Screens(Defect:185782)
+FIX : Scrolls being seen in display - T24 Browser - Release 201005.03(Defect:188282)
+
+Server & Client Changes :
+Fix :  To enable toolbar during authorizing a record using ARC-IB (Defect - 161345)
+Fix :  Problem in showing corresponding description specified in EB.LOOKUP record(Defect:162116/Task:164103,164880)
+Fix :  Browser Field alignment issue(Defect:111236/Task:169730,169564)  
+Fix :  AA-Appearance of error msg when entering a wrong DATE in interest rate schedule (MONTH CAN BE (0) 1-12) (Defect:149633/Task :174040)
+---------------------------------------------------------------------------------------------------
+Build March 2011 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : The issue is that the message that is displayed to the user is misleading and the client would like it be changed(Defect:122349/HD1053298)
+Fix : Issue in implementing TOCF security context propagation in IBM Websphere 6.1(Defect:132280/HD1101991)
+Fix	: Javascript error thrown when autorefreshing the enquiry in noframes composite screen(defect 129492/HD1101789)	
+Fix	: Hot validation doesn't work in no frames COS.(Defect:136005/CSS:HD1103828)
+Fix : Click on Error but cursor is not in the expected field (Defect 134029)
+
+Server & Client Changes :
+Fix : Support for custom styles for individual elements in ARC IB Browser(Defect:39261)
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Build February 2011 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix: SECURITY.VIOLATION error when trying to post any request after checkfile enrichment in AA.(Defect:119728/HD1039501)
+Fix: UTF-8 encoding problems in IE.(Defect:119249/HD1051545)
+Fix: Text misalignment in multi-line text box field.(Defect:78303/Task:126715)
+Fix: ARC IB support for Safari Browser(Defect(Enhancement):78303)
+Fix: Values are not getting updated correctly in Fast Path for Multi value set fields(Defect 104757/ Task 122564)
+
+Server & Client Changes :
+---------------------------------------------------------------------------------------------------
+Build January 2011 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix:  Http 404 error throws in JavaScript while login to ARC-IB.(Defect:105629/CSS:HD1045310)
+Fix: ARC - SSO and Secure Document download not working in tandem (Defect: 95197/HD1038969)
+Fix: GB - SSO and SDD not working in Temenos Dev Environment(Defect: 92260/HD1038952)
+Fix: AI - ARC IB does not log user log off event(Defect : 105943/HD1044223)
+Fix: AI - ARC-IB does not redirect to log on page 20 seconds(Defect : 101688/HD1044366)
+Fix: Scrolling happens for whole window instead of frame when to open AA through enquiry drill down.(Defect:104726/CSS:HD1042723)
+Fix: Date dropdown does not work(Defect : 104935/HD1043991)
+Fix: Customized style sheets properties doesn't get applied in IE (Defect:109923/HD1043486)
+Fix: Security Violation sv-01 error message in browser(Defect : 109938/HD1048520)
+Fix: Security violation occurs in COS screen when to launch application level context enquiry(Defect:113194/HD1035082)
+Fix	:	System does not print all the transactions (Defect:113181/HD1049545)
+Fix: Issue with CR.CONTACT.LOG and EB.LOOKUP(Defect : 113106/HD1044862)
+Fix: Too many characters error throws for text boxes in ARC-IB(Defect:111488/HD1045564)
+Fix: Comment field are not displaying in bold in browser(Defect:122612/HD1050173) 
+Fix: Wrong enquiry opens up on selecting the icon for Selection screen.(Defect:114360/Task 115211) 
+Fix: Pass book not gets printed in new window when launched from COS(Defect:116573/CSS:HD1043686)
+Fix: Noinput dropdown enhancement (Defect 39268)
+Fix: Error While Deploying ARC-IB in Weblogic in production Mode (Defect :115202 / HD1036375) 
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Build December 2010 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix: Deal slips are not printed if it is triggered using online method (Defect:96074/HD1041652)
+Fix: ARC-IB Java script error while launching composite screen through a toolbar(Defect:99920/HD1042329)
+Fix: The action button to selection box window throws the error message “Enquiry record missing”(99124 /HD1041538).
+Fix: COMBO type tools are not working(Defect:97191/HD1040531)
+Fix: Decode UTF-8  characters in URL when request comes from firefox(Defect 72256/HD1024328)
+Fix: Txn complete message thrown when opening the contract (defect:105182 /HD1043588).
+Fix: Enquiry window launched from more actions menu is not resized (Defect:104124/HD1039491)
+Fix: Security Violation (SV-01) when clicking find on context enquiry results page (Defect:104959/HD1035082)
+
+Server & Client Changes :
+Fix: Dynamic headers are not displayed on each page in enquiry download.(Defect:98447/CSS:HD1035464)
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Build November 2010 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Serbian cyrillic characters are not displayed in context enquiry (defect 71804/HD1028118)
+Fix	: Clear the common variable FragmentName for dropdowns in firefox  to get the exact windowname (defect 86587/HD1024258)
+Fix : Warnings in the CSS used in the browser (defect 89612/HD1011406)
+Fix	: Unable to Input Transactions through ARC-IB (defect 90436)
+
+Fix	: Unable to Bulk upload using EB.FILE.UPLOAD (defect 96892)
+Fix : ARC IB CSS commenting (Defect 38276)
+Fix : Java script error when launching multiple deal slip (defect 97028)
+Fix: SBP - right Justification problem with Baseline SBP Screen(Defect:97666/HD1034883)
+
+Server & Client Changes :
+Fix	: Version fields are misaligned (Defect:89008 /HD1037812)
+---------------------------------------------------------------------------------------------------
+Build October 2010 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix : Customized style sheet properties doesn't get applied if multiple deal slips attached (Defect:78357/HD1033832)
+Fix : Value in the radio button is not getting updated (Defect 79370 / HD1033409)
+Fix : “There is a problem with system, Please contact System Administrator” error thrown on committing AA(Defect:80261 / HD1035081)
+Fix	: Graph error message displays absolute path of the web folder directory in user screen.(Defect:78720/CSS:HD1031561)
+Fix : Transaction ID in browser is not getting fully displayed.(Defect :78090 / HD1034325)
+Fix : CLIENT.IP field of the protocol is not updated when using JMS Connection mechanism (defect 77886/HD1034111)
+Fix	: Dynamic sub directory with special characters are not able to download documents.(Defect:79095/CSS:HD1034908)
+Fix : Text box fields are going as changed fields even though user didn't change the value (Defect:81187/HD1034284)
+Fix	: Unable to select the value in frequency, recurrence control.(Defect:81913/HD1036147)
+Fix	: Enquiry selection to a favourite, Page gets loaded for a long time and is not returning back to the enquiry selection screen.(Defect:83312 \ HD1035211)
+Fix	: Connectivity Error message needs to be user friendly for Internet users (defect 84143/HD1037035)
+Fix	: Text box fields are not getting cleared as per the functionality of MD.DEAL when hot field triggers in UNIX (AIX) installed tomcat. (Problem exists only in IE.)
+Server & Client Changes :
+
+
+---------------------------------------------------------------------------------------------------
+Build September 2010 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix :  Cross-Site Request Forgery (Defect: 54936)
+Fix :  Problem with background image in tabbed menu style in ARC (Defect:67563 /HD1028160)
+Fix :  Not able to launch an audio file via Image Management(Defect:59574 /HD1022867)
+Fix :  While we try to view multiple records in Fastpath enquiry through ARC, it gives response for only one record(Defect:68843 / hd1028848)
+Fix :  Extra space between last field of version and delete button(Defect :67508 / HD1025486)
+Fix :  Field value vanished if case conversion is set (Defect : 68111 / HD1026591)
+Fix	:  Drill down iframe is being displayed in left top corner of the window when field attribute is set to 'ENRICHMENT.ONLY'.
+	   (Fire fox 3.6 only replicates this problem)(Defect:67348/CSS:HD1027423)
+Fix :  New browser window getting launched (Defect:68137 / HD1007982)	   
+Fix :  Javascript error is thrown while performing case conversion for multi value fields(Defect:71755/HD1030717) 
+Fix : Security violation occurs when returning back to the application in AA.ARRANGEMENT.ACTIVITY (Defect:71586/ HD1027927)
+Fix :  Multiple deal slips not getting triggered for version record.(Defect:73866/HD1031238)
+Fix	:  Unable to commit the transactions when override containing special characters(Defect 72376/HD1013631)
+Fix	:	T24 does not allow the phrase ONKEY to be part of any data(Defect 68622 / HD1034450)
+Fix	: TAB screen is launched form the Command line, the scroll bar for viewing the tabs  are not displayed(Defect 76646 /HD1027781 )
+
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+
+Build August 2010 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+
+Fix :  Field is mandatory in the version, it is not getting updated from the validation.(Defect:50286 /HD1017182)
+Fix	:  T24 User Guide doesn't load in IE  due to new variable 'isArc' (defect 54253/HD1021316)
+Fix	:  When the same record is opened twice using a version without making any changes, transaction complete message is shown (defect 55361/HD1021421
+Fix	:  Browser window position and size not saved – For No frame composite screens (HD1019846/defect 51056)
+Fix	:  When an enquiry is run from context enquiry security violation occurs(Defect:53571/CSS:HD1020648)
+Fix :  Menus inside composite screen with targets defined(Defect 54900 / css:HD1021613)
+Fix	:  Dropdown field Value is not getting defaulted from assoc version to associated version screen, when same field is used.(Defect :53556 / HD1019520)
+Fix	:  Value in noinput field not getting cleared on multi valuing (HD1020185 / 52583)	
+Fix :  Enrichment Only is selected on Version for a field, even though no enrichment appears on that field(Internal Defect:50820 )
+Fix :  When processing.html is being executed in browser error code 500 is written in web server’s log.(Defect:56964/ HD1015610)
+Fix :  Dropdown enquiry returns incorrect values after field is sub-valued (Defect-53351/HD1016454)
+Fix	:  CSS bug fixes (Defect 55815 /HD1006537)
+Fix	:  Blank page appears on picking a value from a dropdown hot field (Defect 61241 /HD1024258)
+Fix	:  ID enrichment of the record is displayed while the version is displayed in ARC-IB.(Defect :61945 /  HD1021747)
+Fix :  Browser tool is displayed improperly(Defect : 63901 / HD1023829)
+Fix :  Processing.html page not displayed (Defect : 54900 / HD1021613)	
+
+Server & Client Changes :
+Fix	:  Document download - Enhancement(Defect:51325)
+Fix	:  Unable to store images outside web server root directory	(HD1020388 / 57293) 
+Fix	:  Browser window positions not saved properly (Defect 52497 / HD1009800)
+
+---------------------------------------------------------------------------------------------------
+
+
+
+Build July 2010 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+
+Fix	:	The ID field of Product Designer not displaying in full (Defect 47203 / HD1017537)
+Fix	:	Breadcrumb response opens in new window instead of current fragment in COS.(Defect:46537/CSS:HD1017367)
+Fix	:  Firefox does not release RECORD.LOCK (HD1016390/defect 47405) 
+Fix	:  ARC-IB - unable to view the dropdown item  after selecting the item(Defect 51420).
+Fix	:  Enquiry in COS enlarges too wide  (Defect:53512/CSS:HD1017848)
+Fix  :	Empty multivalue fields appear on deletion of a multivalue( Defect :46489 /  HD1016805)
+Fix  :  RELEASE info now available in new path
+Fix :  New record opened with ID field blank and  inputtable (Defect - 46368 - HD1013978)
+Fix :  Drilldown to an application via context enquiry and clicking on delivery preview icon throws security violation. (Defect : 50839 / HD1018025)  
+Fix :  xml Entities in saved document(Defect - 50488 / HD1018652)
+Fix	:  Arrangement Activity View - tabs not navigation in Internet Explorer (HD1018451 /defect 50606) 
+Fix :  SECURITY VIOLATION (Code: SV-01) message in Drill down enquiry in Arrangement level.( HD1015753 /51350)
+Fix	:  Header text is not displayed in ARC-IB when menu style is set to POPDOWN or DEFAULT.(Defect:54672/CSS:HD1019805)
+
+
+Server & Client Changes :
+
+
+---------------------------------------------------------------------------------------------------
+Build June 2010 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Security violation occurs while to print deal slips when ‘doNochangeFieldsCheck’ parameter is set to ‘yes’ in browserParameters.xml (  HD1015395 /defect 44205)
+Fix	:	When No Frames cos is inside the tabbed screen, firefox throws javascript error ( HD1013398 / defect 39892)
+Fix :   Case conversion is not happening instead a JavaScript error is thrown (Defect : 39385 /Task : 43343)
+Fix : 	More actions combo box button doesn’t display tool tip when mouse over on it in browser.(Defect: 43048)
+Fix	:	SECURITY-VIOLATION occurs when field has WEB.VALIDATION.(Defect: 42863 /CSS: HD1015374)
+Fix	:	Log in page with security violation error message displayed in COS frame and able to re-login from it.(Defect:42697/CSS:HD1015187)
+Fix	:	Script error thrown when saving the helptext file (HD1013227 / defect 47304)
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+
+Build May 2010 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix :   ARC-IB SSO Ticket timeout issue for 12-24 hours (HD1006883)
+Fix :   Issue using Bouncy castle provider in Websphere for encryption and decryption. (HD1005406)
+Fix :   Password swap required in config file. (HD1005411)
+Fix	:	ARCIB-History & Pending page-Container dropdown showing ARCIB sign on screen (HD0944920)	
+Fix	:	Invalid character in value of field error is thrown when input contains "expression" (HD0946896) 
+Fix	:	Cross-site scripting attack in a Http parameter name blocked (TTS0911078).
+Fix	:	Local reference multivalue fields are misaligned (TTS0909346)
+Fix	:	When the version have context enquiries and launched in see mode field alignment is improper (TTS0908650)
+Fix	:	Updated Copyright notice on the About page (TTS0911169)
+Fix	:	Session data gets cleared in AA Contract when recurrence control gets selected (TTS0910229)
+Fix	:	Enquiries right aligned are showing left alignment on enquiry output (TTS0910771)
+Add	:	Added New image to Model bank
+Fix	:	Application enquiries are not getting committed (TTS0910501)
+Fix	:	Skin specified in UI.APPERANCE is not considered in ARC-IB (TTS0910741)
+Fix	:	when the “Add a Widget” option is clicked the widget list are not opened correctly in the active tab.(HD0945617)
+Fix	:	Fix JavaScript error on running an enquiry after setting a Refresh time (TTS0911033)
+Fix	:	Stop JavaScript looping on input of long words in text areas (TTS0911292)
+Fix	:	Accept overrides should be displayed also for single overrides in ARC-IB (TTS0909986)
+Fix	:	Saved window positions not retrived for user(TTS0911328)
+Fix	:	The field FORWARD.RATE is showing as no inputtable field for a Forex Contract (TTS0910951)
+Fix	:	“Security Violation” occurs when we close a pop-window in Browser & try to open a window from the parent screen just after that.(TTS0908453)
+Fix	:	Field display type is displayed in static header of the enquiry (TTS0910784)
+Fix	:	Query keyword does not fetch the enquiry records in fast path enquiry (HD0946692) 
+Fix	:	Browser does not throw Security Violation when windowName has been changed. (RTC 13641)
+Fix	:	Revert change done for TTS0908235 - hot field radio button security violation.
+Fix	:	When launching the upload page in IM.DOCUMENT.UPLOAD application, error is thrown (11646)
+Fix :   Security Violation error when trying to print passbook entries(RTC 14988)
+Fix :   Scroller bar not displayed when selection fields are more.(Defect 13574)
+Fix :   Shortcut key for user defined browser tools does not work(Defect 11657)
+Fix	:	Fix to file upload cross site scripting checking (Defect 15187)
+Fix :   Not able to view the list details for mod ps chq no
+Fix	:	ARC-IB Help Text Missing error (Defect 18969)
+Fix :	Unable to upload the document using IM.DOCUMENT.UPLOAD (defect 19610)
+Fix :   SECURITY VIOLATION - ILLEGAL CHANGE error thrown during password repeat (Defect 12070)
+Fix :   Currency field length is shown reduced in versions (Defect 17123)
+Fix	:	Java script functions are not invoked between <script> while attached html file gets loaded.(Defect 16532)
+Fix	:	Record gets locked during Manual Excise Option of Derivatives ( Defect 16812)
+Fix:    Problem in importing the ofx file into the MONEY MARKET(12936)
+Fix :   For multi value fields with options defined through EB.LOOKUP, description defined in lookup table is not displayed.
+Fix	:	Unable to view the deal slip to full size (defect 22073)
+Fix :	Error throws while deploy browser war file in sun java application server(GlassFish).(Defect: 26190)
+Fix	:	After approximately 60 sec of not using IB a session expiry popup Appears (Defect 27947)
+Fix	:	Record lock happens when changing tabs in ARC-IB (defect 26633)
+Fix	:	Unable to deploy R10 Browser in jboss 5.xx family (defect 27639)
+Fix :   Reverting the code change done for Defect 25979 (Defect: 42899, Task :42903)
+
+Server & Client Changes :
+New	:	Allow a Composite Screen frames to be marked with an attribute of "REPLACE.ALL" (TTS0910245).
+Fix	:	When to navigate one tab to another a blank window appears with java script error.(HD0947318)
+Fix	:	More than one attached deal slips are not displayed when deal slip trigger set to RQ in version.(HD0949067)
+Fix	:	Problem in firefox with enquiry output - Long listing a version (TTS0911383)      
+Fix	:	Contents are overlapped the DIV border in contract screen in fire fox (HD0949612) 
+Fix	:	ARC-IB Conform version changes for challenge response (rtc 13378)
+Fix :   Values of multi value local reference fields  are cleared on validation if expansion is set to “NO”at version level.(Defect:17231)
+Fix :   Deal slip icon needs to be enabled for TELLER application via SEE mode also (Defect:25323)
+Fix :   User needs to notified while overwriting an existing record using paste option (Defect:23775) 
+
+
+---------------------------------------------------------------------------------------------------
+
+Build 200912.01 - December 2009 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+New	:	ARC3 Customer/Prospect Self-registration (SAR-2008-09-15-0011)
+Mod	:	Added extra logging for security violations.
+Fix	:	Changing the default Server Connection method as JMS (TTS0909641) 
+Fix	:	Spaces in between the lines of a deal slip are getting trimmed off (HD0938045)
+Fix	:	Incorrect jndi name in defaulted of ARC-IB configuration (TTS0908566)
+Fix	:	Enquiry data is not alignmed in Firefox (HD0939278)
+Fix	:	Extra space when displaying menus in IE(HD0940348) 
+Fix	:	In associated version, when entering value and tabout of textbox, value vanishes (HD0940820)
+Fix	:	Enquiry results with changes tab throws javascript error (HD0937688)
+New	:	New ARC-IB "arc-intermed" skin released by the Model Bank.
+New	:	Add files to the modelbank/help/ARC/headertext directories.
+Fix	:	Fix to File upload MaxSize property, was not being reset if a different uploadType was chosen for next file upload (TTS0910612)
+New	:	Add pie chart image to enquiry drill downs for model bank.
+Fix	:	Add encoding specification to some browser xml files.
+Fix	:	Remove calls to System.exit() that were causing browser to hang during startup in Linux on Websphere. (TTS0910652)
+
+Server & Client Changes :
+New	:	File upload in Browser/ARC-IB using the EB.FILE.UPLOAD application (SAR-2008-09-15-0012)
+Fix	:	Additional browser changes for AA marfin SAR (TTS0910164) 
+Fix	:	URLs are not properly displayed in tabbed screen (HD0940926)
+Fix	:	Integration of IN2DP with AA marfin SAR
+New	:       Single sign On of T24 Browser & ARC-IB with AD(SAR-2009-07-14-0001)
+New     :       Transaction Signing using RSA 7.1 Authentication Server (SAR-2009-09-08-0001)
+Fix	:	New requirements for IN2DP control (TTS0910794)
+
+---------------------------------------------------------------------------------------------------
+
+Build 200911.01 - November 2009 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	The enquiry data turns into hyperlink, when execute it from COS with attribute is set as “NO.FRAMES”  (HD0931347) 
+Fix	:	POPUP.DROPDOWN attribute is not working when the enquiry dropdown has selection criteria (HD0930658)
+Fix	:	Unsecured password change (HD0933996)
+Fix	:	Local reference List box hot field does not trigger the hot field validation (HD0935514)
+Fix	:	Tools are not getting multivalued when attached as hyperlink to the field (HD0935514)
+Fix	:	Enrichments for date fields needs to be supported  for which  the feature currently not available (TTS0907393)
+Fix	:	When an enquiry with build routine is attached to the version,selection criteria is not passed in the argument of the build routine (HD0934045)
+Fix	:	Unable to update helptext with '..' characters (HD0937555)
+Fix	:	Drilldowns getting displayed in new window, instead of blank frame in composite screen (TTS0909921)
+Fix	:	“Changes not saved” message is appearing, though the user not changed any field content (HD0934491)
+Fix	:	Security violation problem when AA.SIMULATION.CAPTURE is commited.(TTS0909978)
+
+Server & Client Changes :
+Fix	:	Browser request to enclose the machine name in addition to IP address(TTS0909381)
+New	:	ARC-IB User Authentication and Control Enhancements (SAR-2009-01-14-0007)
+New	:	Single Sign On with SiteMinder (SAR-2009-03-13-0002)
+Add	:	AA Browser Changes for supporting expandable tab for properties (SAR-2009-02-20-0003)	
+New	:	Backpatch of Same enquiry in multiple windows enhancement (SAR-2009-04-22-0024)
+---------------------------------------------------------------------------------------------------
+Build 200910.01 - October 2009 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Unsupported browser check is added to T24 Browser (HD0930023)
+Fix	:	Session data to contain function in the key when displaying the same record in multiple windows (HD0928032).
+Fix	:	Frequency window disappeared when the user tries to select the value from it (HD0931451)
+Fix	:	Auto New Content fields in not getting populated, when trying to copy the record (HD0930925)
+
+Server & Client Changes :
+Mod :	Display I/O information in Browser when committing a record.
+---------------------------------------------------------------------------------------------------
+Build 200909.01 - September 2009 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Problems with piechart display (HD0925426)
+Fix	: 	In a version hot field is not triggered for date when selected from calendar popup(HD0924245)
+Fix	: 	When downloading enquiry results length mask value coming in header data (HD0926733)
+Fix	:	Static header for the enquiry is not displayed(HD0925542)
+Fix	:	When trying to view the reports "XML page cannot be displayed" error is thrown (HD0928339)
+Fix	:	In COS screens,drilldowns are not launched in the Blank frame(HD0926437)
+Fix	:	Hot field not triggered for dropdowns inputted manually (TTS0908452)
+Fix	:       User can disable clear selection option in enquiry selection screen (HD0926531)
+Fix	:	Added "AllowToolbox" parameter to disable Toolbox logins via Browser (HD0924829)
+Fix	:	Performance problem due to browser enquiry selection screen (HD0927750)
+Fix	:	Menu is not displayed correctly when HELPTEXT.MENU record contain another HELPTEXT.MENU record as sub menu (TTS0907821)
+Fix	:	Validation routine not executed for popup calendar fields (HD0927965)
+Fix	:	Changed AJAX Fragment error message to be more user friendly.
+Fix	:	Changed field is not set when the combo field set is multi-valued (HD0926238)
+Fix	:	Hot field set as No change field causes security violation problem (TTS0908235)
+Fix	:	System throws security violation when "Tampered value detected" (TTS0907211)
+Fix	:	Escape sequence charecters stored in web server session without decoded (HD0931072)
+Fix	:	Popup Drop down field’s build routine enquiry result is not getting displayed in new window (HD0930658) 
+Fix	:	Drop down screen is not getting disappear in firefox (HD0928058)
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+Build 200908.01 - August 2009 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Contract screen is not getting loaded in IFrame (HD0913877)      
+Fix	:	Content directed to a new window when a frames composite screen includes a noframes composite screen (HD0919740).
+Fix	:	Added error page 500 which is displayed when there is an uncaught Java Exception (HD0921407).
+Fix	:	Fix SECURITY VIOLATION after selecting from a dropdown in a version that is based on an enquiry with a build routine (TTS0908005, HD0924732)
+Fix	:	Added security for writing of HelpText files (HD0919942).
+Fix	:	ARC-IB confirmation page button displays text messages (HD0922224)
+Fix	:	Frequency window does not disappears after moving to different tab in ARC-IB (TTS0907792)
+Fix	:	Enquiry when launched through a tool gives security violation (TTS0907934)
+Fix	:	Dropdowns creates spaces in screens (HD0921786)
+Fix	:	When selecting the id from exception listing blank screen appears (HD0925179)
+ 
+Server & Client Changes :
+Fix	:	User defined Enquiry toolbar in UI.BEHAVIOUR will be displayed when stripframetoolbar is set to "true"(HD0920879)
+
+---------------------------------------------------------------------------------------------------
+Build 200907.01 - July 2009 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Hidden enquiry fields display the data only to width of the header (HD0919322)
+Fix	:	Dropdown containing error message does not hide on any further action (HD0916952)
+Fix	:	Javascript error is thrown when launching TEC.MONITOR (HD0917851)
+Mod	:	Don't display pie segment labels on pie charts in pngImage mode.
+Fix	:	Suspense Account not being defaulted automatically when committing a Security Transfer(TTS0906486)
+Fix	:	Reverted the fix done for Enquiry header misalignment problem (HD0914548)
+Mod	:	Remove references to enquiry.css
+Fix	:	"Print to Server" in enquiry is not printing the correct data.(HD0913359)
+Fix	:	Confirm button not getting enabled in confirm version when there is no transaction overrides (TTS0907885)
+Fix	:	Class Name will not appear in the Enquiry when the data is blank (HD0922534).
+
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+Build 200906.01 - June 2009 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Don't duplicate value to same-name fields in different property classes on single AA contract. (HD0909276)
+Fix	:	Hidden content in the composite screen will not be displayed when ‘NO.FRAMES” is set.(HD0909703)
+Fix	:	Custom.js should not be obfuscated (TTS0906978)
+Fix	:	Log an error message if the html is blank after the transformResult method.
+Fix	:	Fix to calendar not being displayed properly in Frequency Control. (TTS0907071)
+Fix	:	Browser & ARC-IB now compatible with Oracle Application Server 10g (10.1.3.4.0 - build 080709.0800.28953) (HD0802005 & HD0904666)
+Fix	:   	Version name is being displayed in ARC-IB when mouse over on the version header (HD0915149)
+Fix	:	Enquiry header misalignment problem(HD0913128)
+Fix 	:   	Enquiries are not getting launched when ENTER key is pressed from the selection screen. (TTS0906327)
+Fix 	:	In the multi line text field if the word exceeds maximum length it is broken into two. (TTS0907042) 	
+New	:	The work directory for graphs when using graphDisplayType=pngImage is now configurable in browserParameters.xml (SAR-2009-04-14-0001)
+Fix	:	Enquiry header contains invalid text for field values (HD0918558)
+Fix 	:	Selection criteria is incorrect for the subvalue dropdown enquiry fields (HD0915669)
+Fix 	:	Breadcrumbs are not appearing in the enquiry drill down when the enquiry is attached to an EB.COMPOSITE.SCREEN (TTS0804169) 	
+Fix	:	In see mode, field button is not working correctly when attached to a version (HD0917032)
+
+Server & Client Changes :
+New	:	Enhance ENQUIRY so it's able to specify horizontal rules and other display styles with ATTRIBUTES (SAR-2009-04-06-0002)
+Fix	:	Popup Dropdownt to work with versions that have enquiry dropdown set on a field.(HD0918606)
+
+---------------------------------------------------------------------------------------------------
+Build 200905.01 - May 2009 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Display error message (rather than an exception) on login screen if user attempting to login through tomcat but using JCA connection mechanism.
+Fix	:	Confirm button not getting enabled in confirm version when there is no transaction overrides(TTS0906140)
+Fix	:	Committing application enquiry list causes javascript error (HD0910763)
+Fix	:	Performance enhancement to fastpath.js: Cache references to '.elements' array. (HD0909542)
+Fix	:	In ARC-IB, When click on the field names helptext should not be displayed (HD0911495)
+
+Server & Client Changes :
+Fix	:	No input textbox to display decrypted data(HD0902210)
+
+---------------------------------------------------------------------------------------------------
+Build 200812.004 - April 2009 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Fix security violation caused by overrides with html entities (TTS0804947)
+Fix	:	Added additional cross-site scripting keywords - anchors.
+Fix	:	Fix security violation in TEC.MONITOR workspace (TTS0804905)
+Fix	:	Fix security violation with tabbed screens inside composite screens in noframes mode. (TTS0804788)
+Fix	:	Expansion/Deletion of multivalue fields occurs now in ARC-IB (HD0904472)
+Fix	:	Display contents of AA property classes again. (TTS0906084)
+Fix	:	BreadCrumbs to be displyed when stripFrameToolbars is set to true(HD0904088).
+Fix	:	Blank screen is displayed when special characters are entered as id of an application.(TTS0905969)
+Fix	:	In COS screens, breadcrumbs to be displayed only for drilldown within the same frame. (TTS0804169)
+Fix	:	Radio type fields are validated during every request incorrectly (TTS0905919,TTS0905762)
+Fix	:	Text message alignment gets distorted on scrolling the field (TTS0905690,TTS0905834)
+Fix	:	Drilldown to reports in composite screen launches previous screen incorrectly (HD0907960)
+Fix	:	Fix security violation when closing windows.
+New	:	Add JMS Connection mechanism (SAR-2009-03-04-0013)
+Fix	:	Integrate new jremote-ra.rar to handle non utf-8 databases with JCA and JMS connections (TTS0906267, TTS0906070, TTS0906306)
+Fix	:	Further update to jremote-ra.rar file to map top 8 characters (F8-FF) rather than just AM, VM and SM. (TTS0906267, TTS0906070, TTS0906306)
+
+
+Server & Client Changes :
+Fix	:	Decrypted message to be shown in no input textbox.(HD0902210)
+
+---------------------------------------------------------------------------------------------------
+Build 200812.003.01 - March 2009 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix 	:	Changed the Security filters (BrowserFilter and FormFieldInputFilter) redirect to an error page (HD0901220)
+Fix	:	Added disabled icons for view and edit. (TTS0905339)
+Fix	:	Addded additional cross-site scripting keywords (HD0901220).
+Fix	:	Handle SECURITY VIOLATION when user commits after deleting / inserting a multivalue that contains noedit fields. (TTS0905397)
+Fix	:	Radio buttons on AA screens losing their value (HD0901248 & TTS0905411).
+Fix	:	Radio buttons on NO.FRAMES composite screens losing their value (HD0901373).
+Fix	:	New jar files of TC1.5.2_10 is replaced.(HD0901971)
+Fix	:	Multiple auto-launch enquiries displayed on AA validation (TTS0905445).
+Fix	:	Composite screen windows resize correctly. (TTS0905494).
+Fix     :       AA front end fix (TTS0905489)
+Fix	:	Hyperlinks will not be shown for application level context enquiries now.(TTS0905238)
+Fix	:	Added parameter for display/hiding of the status bar information (TTS0803385).
+Fix	:	Avoid changed field processing twice for hot validate fields (TTS0905304)
+Fix	:	Enter key commits problem (TTS0804447)
+Mod	:	Added debug information of a user's session data.
+Mod	:	Removed the URL to the Temenos web site from the login page.
+Fix	:	Unable to multivalue in AA frames (HD0901248)
+Fix	:	Display the login page instead of the 'SECURITY VIOLATION' white screen page. (TTS0804930)
+Fix	:	Don't submit a checkFileEnrichment request if the field is a or hotField hotValidate field. (TTS0905454)
+Fix	:	Script error occurs when a processing window is resized and repositioned (HD0837372)
+Fix	:	Ensure menu text does not wrap.
+Fix	:	Fix multi-value expansion in a NOFRAMES composite screen.
+Fix	:	Reverted HD0835311 - Fix to version field alignment (TTS0905376)
+Fix	:	Added content type blank html pages.
+Fix	:	Turned off auto-complete on login screens for security reasons.
+Fix	:	'MENU' type content of COS screen should not be loaded on the same frame(HD0901899)
+
+Server & Client Changes :
+Fix	:	Fields of a pasted deal should be validated (HD0900607)
+---------------------------------------------------------------------------------------------------
+Build 200812.002.00.01 - Internal February 2009
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Changes for cleanprint in browser (SAR-2008-04-17-0003)
+Fix	:	Multivalue fields of checkbox type will be a combox box. (HD0836552)
+Fix	:	Ensure newline characters in regular expressions are taken in to account. (TTS0804977)
+Fix	:	Local reference fields are aligned properly. (HD0835311)
+Fix	:	Toolbar attached in version will launch the appropriate content without error (HD0835638)
+Fix	:	'INPUT MISSING' error is thrown on enquiry drilldown (HD0835472 & TTS0804564)
+Fix	:	Fixed problem with contract enquiry screens not having a static toolbar (TTS0805073)
+Mod	:	Only display mandatory icon in versions (TTS0804462)
+Fix	:	version.js now contains the product version number (TTS0804530)
+Fix	:	Popdown Menus appear consistent between IE and Firefox (TTS0804463)
+Fix	:	Security Violation returned when accepting overrides during input of an SY trade. (TTS0804944)
+Fix	:	Drilldown enquiries in composite screen are to launched in appropriate target frames (HD0836636)
+Fix	:	Jump to link should work regardless of the Enquiry description(HD0837386)
+New	:	New option in browserParameters.xml to enable display of graphs as png image files rather than as svg objects (SAR-2008-11-17-0008)
+Fix	:	Bug fixes for duplicate fields in associated versions enhancement (TTS0804971)
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+Build 200812.001.01 - January 2009 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Mod	:	Collapse and Expand icons changed for new skin (TTS0804370)
+Fix	:	Pagination toolbar to have extra space between numbers (TTS0804372)
+Mod	:	Add 'noinput' contract fields to the list of fields not allowed to change that's stored in the serlvet session (TTS0804369)
+Mod	:	JNDI connection method add for Application Server deployment (SAR-2008-10-15-0007)
+Fix	:	Session data not to be deleted for webvalidation request(HD0829561)
+Fix	:	Expansion history not be updated when expansion fails(TTS0803454)
+Fix	:	Data in changes tab to be alligned with header(HD0829894)
+Fix	:	Remove the DebugServlet from a Browser release (TTS0803396)
+Fix	:	Escaping out of '&' characters in Web Server fields (TTS0804171)
+Fix	:	Ensure NOENQ Composite Screen targets are obeyed correctly (TTS0803709)
+Fix	:	Fix JavaScript error on enquiry screens with the new skin (TTS0804628)
+Fix	:	Able to select local reference radio button (HD0832459)
+Fix	:	Fix for defined recurrence values being empty (TTS0804633)
+Fix	:	With Websphere, unable to perform actions using icon clicks in enquiry/contract (HD0831966)
+Fix	:	Fix nullPointerException when clicking on multiple enquiry tabs in tabbed screen (TTS0804685)
+Fix	:	Problem with multivalue deletions in associated versions with duplicate fields (HD0831211)
+Fix	:	Fix to blank gifs (TTS0804880)
+Fix	:	Further fix to <iframe> elements src attribute (HD0834245, see also HD0831966 and HD0823070)
+Fix	:	Quickguide updated (TTS0804859)
+Fix	:	Context enquiry SECURITY VIOLATION fixed (TTS0804912)
+Fix	:	Classes in custom.css use relative font sizes (TTS0804921)
+Fix	:	Allow blank lines in the 'TEXT' type fields to be updated (HD0833369)
+
+Server & Client Changes :
+Fix	:	JavaScript errors with Text BROWSER.TOOLS records (TTS0804565)
+Mod	:	Allow dropdowns to popup with page facility and limit dropdown display to 200. (SAR-2008-11-17-0009)
+Mod	:	Show page toolbar in enquiry response even when NO.TOOLBAR attribute is set (TTS0804745)
+
+---------------------------------------------------------------------------------------------------
+Build 200812.01 - December 2008 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Mod	:	ARC-IB support for Websphere Implementation (SAR-2008-09-02-0002)
+Fix	:	Give <iframe> elements an 'src' attribute to prevent 'unsecure items' error in IE6 on Win2k (HD0823070)
+Mod	:	New Browser Skin & Icons for R09
+New	:	Additional Security Checks for Fields in Requests/Responses (SAR-2008-08-19-0005)
+Fix	:	Popup menu overlaps error message in ARC (HD0829675)
+Fix	:	Version name not set by ValidationManager (HD0819137)
+Fix	:	Performance problems on enquiries and dropdowns (HD0830975)
+Fix	:	Fast Path enquiries show/collapse the correct hidden columns (TTS0803791)
+Mod	:	ModelBank resources intergated into project.
+Mod	:	Minimum Java Version is now 5 (1.5).
+Fix	:	Enquiry response corrected for NO.TOOLBAR attribute set.
+Fix	:	Fragment suffix fix for drilldowns in tabs in composite screens (TTS0804332)
+Fix	:	Fontsize adjusted & noinput box size corrected (TTS0804494)
+Fix	:	Processing Page background colour corrected (TTS0804523)
+Fix	:	Hidden fields are deleted during deal slip print and throws error (TTS0803814)
+Fix	:	Drilldown to versions in composite screen launches in a separate window (TTS0803569)
+
+Server & Client Changes :
+Mod	:	ARC and Browser Enhancements (SAR-2008-08-20-0001)
+Mod	:	Multi-Select PDF Merge for Secure Document Download (SAR-2008-09-26-0002)
+Fix	:	'Print to Server' works fine for reports (HD0822729)
+Fix	:	Field with masked values has incorrect arguments for field level context enquiries (HD0828844)
+Fix	:	Configure the display of "More Options" and "Auto Refresh" for enquiries (TTS0804335)
+
+---------------------------------------------------------------------------------------------------
+
+Build 200811.01 - November 2008 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Clear checkboxes when client side expansion (HD0822328)
+Fix	:	Run HOT.VALIDATE functions on changing Frequency fields (TTS0803148).
+Mod	:	Back Button handling in Contracts, Enquires & Menus (SAR-2008-07-09-0010 & HD0814676)
+Fix	:	Fix HOT.VALIDATE for Firefox (TTS0802867) 
+Fix	:	Reduce margins and padding between enquiry fragments in noframes mode (TTS0803135)
+Fix	:	ARC toolbar appears when "stripFrameToolbars" is set to YES.(HD0821720)
+Fix	:	Deletion does not occur for a field that is both multivalue and subvalue.(HD0824954)
+Fix	:	Accept transactions with id size as one character if the template allows it.(HD0823994)
+Fix	:	Able to select options from ENQUIRY.ACTION popup.(HD0824544)
+Fix	:	Fix displaying of blank windows when record selected from list (TTS0803720).
+Fix	:	Cloned objects not to be marked as changed fields.(HD0823251)
+Fix	:	Hyperlink to be displayed in enquiry listing to pick the record.(HD0824549)
+Fix	:	Logout works fine when defined in menu in ARC (HD0827228)
+
+Server & Client Changes :
+New	:	Handle authentication and navigation buttons for ARC (SAR-2008-03-20-0003)
+Fix	:	Defined Frequency dropdown brings the description along with the Id.(HD0824354)
+Fix	:	Bug fix for ARC Transaction signing (SAR-2008-03-20-0003)
+---------------------------------------------------------------------------------------------------
+
+Build 200810.01 - October 2008 Release 1
+
+Server Only Changes :
+Fix	:	Tooltip displays for all fieldnames (TTS0802994)
+
+Client Only Changes :
+Fix	:	Escape single quote marks sent in the context enquiry 'description' field. (TTS0802524)
+Fix	:	Remove whitespace from transaction ID input box. (TTS0803071)
+Mod	:	Do not show scrollbar for Tabs in noFrames mode.
+Fix	:	Checkfile enrichment causes OFS.DUPLICATE.ERROR. (TTS0803144)
+Fix	:	Text Box text wrapping problem in EB.SECURE.MESSAGE (TTS0803181).
+Fix	:	Auto-install SVG viewer for Internet Explorer (HD0822547).
+Fix	:	Fix problems with "Txn COmplete" being displayed when opening a record (TTS0802555).
+Fix	:	Menus to be displayed without overlapping field values. (HD0809109).
+Fix	:	Fix problems with escaper.xsl being included multiple times (TTS0803395).
+Fix	:	Hyperlink is not shown now for enquiry fields in context enquiry (HD0823083).
+
+Server & Client Changes :
+Fix	:	Fix to Enquiry Selection screen to display Frequency and Recurrence controls (TTS0802934)
+Fix	:	Paging Tool to appear bottom centre of enquiry unless specified in Enquiry definition (TTS0802836)
+Fix	:	Dropdown with enquiry containing build routine to be launched as a separate window for some T24 releases (HD0819936)
+Fix     :       Drilldown functionlaity, being able to launch a composite screen (TTS0802879)
+New     :       SAR-2008-02-01-0008 Client Functions for T24 Updates
+
+---------------------------------------------------------------------------------------------------
+
+Build 200809.01 - September 2008 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	"QUERY" to use last known enquiry result (TTS0802752)
+Fix	:	Command Line API enquiries now allow Enquiry Selection criteria and arguments.
+Fix	:	Hidden fields with FT problem (TTS0802151)
+New	:	HelpText changes to allow filtering, sorting and captions of fields (SAR-2008-02-14-0004).
+New	:	Full Support For NoFrames in Browser (SAR-2008-01-29-0003).
+Fix	:	Unable to find the field in current tab and fieldfocus throws javascript error (HD0819175).
+Fix	:	Text Box text wrapping problem in EB.SECURE.MESSAGE (TTS0803181).
+
+Server & Client Changes :
+Fix	:	Dropdown with enquiry containing build routine to be launched as a separate window for some T24 releases (HD0819936)
+
+---------------------------------------------------------------------------------------------------
+
+Build 200808.01 - August 2008 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix     :       Model Bank issue with hidden fields - TTS0802151
+Fix	:	Allow "L L" on the application screen (TTS0802042)
+Fix	:	Fix to "Save as XML" options (TTS0802262)
+Fix	:	Fix to display scroll bars in screen when tabs exceed page size(HD0813836)
+Fix	:	Updated Add and Delete Favourite icons (TTS0802251)
+Fix	:	Changes not saved prompt is now prompted for all contract screens (HD0813720)
+Fix	:	Added correct display of time in OFS on status bar (TTS0802286).
+Fix	:	On selecting the option in a radio type hot field, validation is not triggered (HD0813472).
+Fix	:	Problem with enquiries having selection criteria with build routine (HD0810869).
+
+Server & Client Changes :
+Mod	:	Improved Browser Tokens (SAR-2008-04-11-0002)
+Fix	:	Changes done to resolve ARC-IB toolbar problem(TTS0802551)
+Fix	:	Multivalue local reference fields should show subvalue icon instead of multivalue icon(HD0816460)
+Mod	:	Enhancement to recurrence and frequency controls to allow 'None' option and a date (SAR-2008-07-03-0017).
+
+---------------------------------------------------------------------------------------------------
+
+Build 200807.01 - July 2008 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix     :       Missing defaulted fields in version
+Fix     :       Images fix for enquiry missing images
+Fix	:	Hyperlinks incorrectly displayed in changes tab (HD0808401)
+Fix	:	Problem with defaulting value using Auto.new.content fixed (HD0812761 & HD0811319) 
+Fix	:	ARC-IB Get classloader for every public method (TTS0802118)
+Fix	:	Unable to identify external users in 4TRESS (TTS0802110)
+Fix	:	Dropdown with enquiry containing build routine is displayed as a popup within the same window(HD0805145).
+Fix	:	Fix to "Save as XML" options (TTS0802262)
+Fix	:	Fix to display scroll bars in screen when tabs exceed page size(HD0813836)
+Fix	:	Changes not saved message is now prompted for all contract screens (HD0813720)
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+
+Build 200806.01 - June 2008 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix     :       Missing defaulted fields in version
+Fix     :       Images fix for enquiry missing images
+Mod	:	Browser Performance and Security (SAR-2008-01-22-0003)
+New	:	Add CachingFilter so plaf and css can be cached by the web browser (SAR-2008-01-25-0003)
+Fix	:	Browser to support Arabic characters in LTR & RTL screen mode.(HD0807169)
+Fix	:	Enquiry name is selected correctly to the id field (HD0806477)
+Fix	:	Problem in downloading large reports (HD0810524)
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+
+Build 200805.01 - May 2008 Release 1
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Enquiry drilldowns can once again specify javascript to be run.
+Fix	:	Multiple click on dropdowns caused errors (TTS0800841)
+Fix	:	Changed so that "+" as a field value is properly encoded for Fragment (TTS0801173)
+Fix	:	Check for field changes when changing Tabs on a Tabbed Screen (TTS0801055)
+Fix	:	Allow use of "www." links on the login page TTS0801386)
+Fix 	:	Justification problem in dropdown list (HD0807596)
+Fix 	:	Drilldowns to a composite screen to be displayed in a new window (TTS0801429)
+Fix	:	Capture exception when OFS.SOURCE record is missing (TTS0801518)
+Fix	:	Fixes for determining enquiry target in a composite screen (TTS0753955)
+
+Server & Client Changes :
+Fix	:	Unable to save enquiry results in XML format (HD0806030)
+Mod	:	Browser to support Rekey Fields defined in version(SAR-2007-09-08-0001)
+Fix	:	Fix 'Add Widget' link in the TEC workspace (TTS0801667)
+
+---------------------------------------------------------------------------------------------------
+
+Build R08.000 - R08 Build - April 2008
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Calendars in Recurrence fields work properly. (TTS0800964)
+Fix	:	Hot validate does not occur for dropdown fields in firefox (HD0805145)
+Fix	:	Fix problem with Calendar popups on enquiry selection screens (TTS0801148).
+Fix	:	Entire id is visible in id field now (HD0805515)
+Fix	:	Changes for ARC-IB context specific HelpText.
+Fix	:	Allow display of XML requests in the DebugServlet (TTS0801210).
+
+Server & Client Changes :
+Fix	:	Allow deletion of MV fields which cannot be user expanded (TTS0801065)
+Fix	:	Added support for tabbed screens containing composite screens and menus (TTS0801068).
+
+---------------------------------------------------------------------------------------------------
+
+Build 080303 - 3rd March 2008
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	For dropdown fields that are also CHECKFILE fields, don't set the enrichment to the 
+			second column. The enrichment will already be set in the change event (TTS0705911).
+Fix	:	Don't display fastpath icon and checkbox on rows that don't have a drill down reference 
+			such as blank or 'total' rows (TTS0800354).
+Fix	:	Handle record IDs containing single quote marks in enquiry list links (TTS0855138).
+Fix	:	Fix JS error in IE SMS.APPLICATION dropdown field of ENQUIRY when enrichment contains 
+			a double quote mark (TTS0754194).
+Fix	:	Cursor not visible on Firefox within the Recurrence pattern and Frequency pattern (TTS0754158).
+Fix	:	Password repetition screen not to have old password pre-filled(TTS0652354).
+Fix     :       Fastpath enquiries collapse incorrect columns (TTS0753252).
+Fix	:	Fix for L L functionality on command line (TTS0800438).
+Fix	:	Displaying of Help menu in Tabbed Menu mode (TTS0706962).
+Fix	:	Fix to cloned fields. Dropdowns now disappear when selected (TTS0800448).
+Fix	:	Added dynamic links to the login page as defined in "loginPageLinks.xml" (TTS0800526).
+Fix	:	Prevent error on field focus if field is non-inputtable (TTS0800482)
+Fix	:	Drop down to show full description (HD0803015)
+Fix	:	Fix to relative path for Enquiry images (TTS0800525).
+Fix	:	Add JSP file to ARC-IB build (TTS0800605).
+Fix	:	Fixed error displayed in Tomcat log file.
+Fix	:	Ensure errors from Web Validate routines are displayed on contract screens (TTS0800619).
+Fix	:	Added new Product parameter to indicate whether we are running BROWSER or ARC-IB (TTS0800662).
+Fix	:	Display static page for ARC-IB field HelpText (TTS0800606).
+Fix 	:   	Problem with textarea in Firefox allowing a line to be greater then the size of the textarea. 
+		This fix formats the text so that no word is greater then size of the text area.(TTS0800604)
+Fix 	:   	Updated the sub value expansion image (TTS0800681).
+Fix	:	Fix problems with errors display box not being displayed (TTS0800798)
+Fix	:	Fix enquiry hidden column problem when not a Fastpath enquiry.
+Fix	:	Fix to missing context flow icons on associated versions (TTS0800718)
+
+Server & Client Changes :
+Fix	:	Do not display enquiry name on selection screen when logging in as External User (TTS0754835).
+Fix	:	Image Upload handles non-image files by displaying a generic upload success message (TTS0800326).
+Fix	:	During Image Upload if an incorrect UPLOAD.ID is specifed the user will get a message (TTS0800710).
+
+---------------------------------------------------------------------------------------------------
+Build 080205 - 5th February 2008
+
+Server Only Changes :
+Fix	:	ENQUIRY COL.WIDTH with default (%) enquiries now affects the correct column (TTS0754921).
+Fix	:	Allow blank enquiry column headings by using "" as the field label (TTS0755120).
+
+Client Only Changes :
+Fix	:	Don't populate the 'Edit' button in contract screens with dropdown enrichment.
+Fix	:	Hot Fields are disabled when 'NO.HOT.FIELDS' is specified on BROWSER.PREFERENCES (TTS0753987).
+Fix	:	Fix to allow Firefox to resolve local file system resources for Image Management (TTS0605173).
+Fix	:	Set div width for fixed width enquiries to 'auto' to prevent truncation in IE (TTS0800054).
+Fix	:	Only display the drill down spyglass in ENQUIRY if there is data to drill down on - not blank lines (TTS0707203).
+Fix	:	Create EncodingFilter to set request encoding to UTF-8 (HD0715989).
+Fix	:	ARC build - failure to login due to corruption in obfuscated code (TTS0754665).
+Fix	:	Allow multiple Help windows by using the application name (TTS0755128).
+Fix	:	Removed Calendar accept and cancel buttons (TTS0755116).
+Fix	:	Ensure Composite SCreens resize according the parameter "Allow Resize" (TTS0753444).
+Fix	:	Ensure window positions for application screens are saved (TTS0755131).
+Fix	:	Enquiry toolbar should not be displayed when there is no response from an enquiry. 
+			and "stripFrameToolbars" in BrowserParameters is set to YES (TTS0755119).
+Fix	:	Make ARC-IB work with TC in INSTANCE mode (TTS0755028).
+Fix	:	Wrong parameter named used when checking whether to remove the user name 
+			for ARC-IB (TTS0754417).
+Fix	:	Fix Quick Guide errors when changing skin name (TTS0755057).
+Fix	:	SSL changes for T24 Browser is enabled (HD0721277).
+Fix	:	Ensure ARC-IB users can login if password has expired (TTS0755068).
+Fix	:	Modify General.css to allow 65 and 35 characters in textarea fields.
+Fix	:	Fixed spelling mistake on login acreen for ARC-IB (TTS0800053).
+Fix	:	Version enquiry dropdowns now picking correctly (TTS0800171).
+Fix	:	Handle command line arguments where key can also be a function (TTS0651824).
+Fix	:	In See mode the columns are not aligned in tabbed screens (TTS0754819).
+Mod	:	Add POPDOWN menu style from DB proof of concept (SAR-2007-07-05-0003).
+Mod	:	Integration of TC Client (TCC) 1.5.2.
+Fix :   Recurrance and Frequency controls had hardcoded background colors in XSL. Now changed to use CCS. (TTS0754836)
+Mod :   Login page changes to swap around the input fields with the Temenos logo + alignment issues. (TTS0800477)
+
+Server & Client Changes :
+Mod	:	Refactor the recurrence and frequency controls to use the generic runPopupDropDown() (TTS0754566).
+Mod 	:	Allow specification of column widths for ENQUIRY (SAR-2007-07-05-0005).
+Mod 	:	New selection screen and favourites for ENQUIRY (SAR-2007-07-05-0009).
+Mod	:	Secure Document Download (SAR-2007-07-05-0006).
+Mod	:	Browser to Restrict Manual ID Input (SAR-2007-04-18-0011).
+
+---------------------------------------------------------------------------------------------------
+
+Build 080102 - 2nd January 2008
+
+Requires T24 200801 Project Build
+
+Server Only Changes :
+
+Client Only Changes :
+
+Fix	:	Allow commas in CSV exported enquiry data (TTS0755127).
+Fix	:	Resolved java script error for testpopup (HD0722522).
+Mod	:	Added support for Restricting Manual ID Input (SAR-2007-04-18-0011).
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+
+Build 071219 - 19th Decemeber 2007
+
+Requires T24 200712 Project Build
+
+Server Only Changes :
+
+Client Only Changes :
+
+Mod	:	Integration of TC Client (TCC) 1.5.2.
+
+Server & Client Changes :
+
+Mod	:	Secure Document Download (SAR-2007-07-05-0006)
+
+---------------------------------------------------------------------------------------------------
+
+Build 071213 - 13th Decemeber 2007
+
+Requires T24 200712 Project Build
+
+Server Only Changes :
+Fix	:	ENQUIRY COL.WIDTH with default (%) enquiries now affects the correct column (TTS0754921)
+Fix	:	Local reference fields will be marked as mandatory fields (HD0719589)
+Fix	:	I-Descriptors can be included on versions (HD0721790)
+Fix	:	Company ID is validated while processing the requests (HD0721277)
+
+Client Only Changes :
+
+Mod	:	Add POPDOWN menu style from DB proof of concept (SAR-2007-07-05-0003)
+Fix	:	Changes are done to generate a new JSESSIONID during the user logon (HD0721231)
+Fix	:	Default browser error page has been introduced (HD0721232)
+Fix	:	BrowserFilter is enabled for all servlets and jsps by default (HD0721233)
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+
+Build 071201 - 1st December 2007
+
+Requires T24 200710 Project Build
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Fix to editable fast path enquiries for Firefox (TTS0754614)
+Fix	:	Fix to display full list of Context Enquiries (TTS0754947)
+Fix	:	Display information icon on Browser Toolbar enquiry (TTS0755016)
+Fix	:	Do not allow white space in enquiry favourite names (TTS0754998)
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+
+Build 071001 - 1st October 2007
+
+Requires T24 200710 Project Build
+
+Server Only Changes :
+
+Client Only Changes :
+Mod	:	Development of Bsic Authentication security (SAR-2007-08-02-0004).
+Mod	:	TransactionId checking added for internal obfuscation mode (SAR-2007-05-29-0002).
+Fix	:	Convert user name to uppercase for RSA checks (TTS0754285).
+Fix	:	Correctly mark radio buttons as changed when a field value is altered.
+Fix	:	Fixed to solve print dealslips with given format without trimming the spaces (HD0715118).
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+
+Build 070906 - 9th September 2007
+
+Requires T24 200709 Project Build
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Image path consturcted & resolved correctly when an absolute path is specifed 
+		on IM.IMAGE.TYPE.
+Fix	:	Attachment Upload window size corrected.
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+Build 070901 - 1st September 2007
+
+Requires T24 200709 Project Build
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Ensure Checkfile enrichments are displayed against the correct field when
+			there are more than 10 multi-values (TTS0754360).
+Mod	:	Incorporated new Temenos Connector Client (TCC) - version 1.5.
+
+Server & Client Changes :
+
+---------------------------------------------------------------------------------------------------
+
+Build 070817- 17th August 2007
+
+Requires T24 200709 Project Build
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Ensure default function if I is used when accepting Overrides is no value is set (TTS0754302).
+Fix	:	Composite screens send up two XML "noframes" tags when there should only be one. (TTS0754261)
+Fix	:	Enquiry dropdowns did not appear in correct position (TTS0754241)
+Fix :   EB.ENQUIRY.GRAPH Charts were missing the toolbar in 200712 since the Enquiry Selection changes had gone in (TTS0754952)
+
+Server & Client Changes :
+Fix	:	Ensure drilling down to an application runs in bulk mode.
+Fix	:	A scrollbar is now provided for tab screens where needed (HD0713601)
+
+---------------------------------------------------------------------------------------------------
+
+Build 070807- 7th August 2007
+
+Requires T24 200709 Project Build
+
+Server Only Changes :
+
+Client Only Changes :
+Fix	:	Ensure correct Function is used when accepting Overrides (HD0713190).
+
+Server & Client Changes :
+Fix	:	Ensure drilldowns to AA applications run in bulk mode.
+
+---------------------------------------------------------------------------------------------------
+
+Build 070806- 6th August 2007
+
+Requires T24 200709 Project Build
+
+Server Only Changes :
+
+Client Only Changes :
+Mod 	:	NoFrames mode enhancements for ARC (SAR-2007-05-03-0001)
+Fix 	:	Help fixes (TTS0753982 / TTS0753875 / TTS0753738)
+Fix 	:	Banner layout (TTS0753425)
+Fix 	:	Combo box fix for NoFrames / IE (TTS0753990)
+Mod	:	Addition of Command Line API (SAR-2007-01-17-0001)
+Mod 	:	Addition of Single-Sign-On servlet filter (SAR-2007-02-07-0001)
+Fix 	:	Improved logic to handle field alignment when fields are in a grid pattern (SAR-2007-06-06-0001)	
+
+Server & Client Changes :
+Mod 	:	AA Front-end (SAR-2006-09-07-0001).
+Mod	:	Browser screen alignment on Versions (SAR-2007-06-06-0001).
+Mod	:	Client-side Multi-value expansion (SAR-2007-03-21-0003).
+Mod	:	Client-side Sub-value expansion (SAR-2007-06-01-0006).
+Mod	:	New Frequency control for AA screens (SAR-2007-03-08-0001).
+Mod	:	New Occurrence control for AA screens (SAR-2007-02-15-0001).
+
+---------------------------------------------------------------------------------------------------
+
+

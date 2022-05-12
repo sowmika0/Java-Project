@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file configures Versions Enquiries servlet filter -->
+<!-- WARNING: In the default configuration, an empty filter item passes through requests to all Versions/Enquiries! -->
+
+<!-- Instructions:
+
+        - This does not replace the normal T24 authorization mechanism for allowing and disallowing access to 
+          specific commands
+        - For each unique filter, create a 'filterItem' element.
+        - Within each filter item, sub-elements are added to match against request parameters
+          e.g. requestType could be CREATE.SESSION, UTILITY.ROUTINE
+        - For each parameter sub-element, one or more 'match' elements are used to specify filtering patterns.
+          All match elements must be satisfied to allow the request through.
+          The matching operators are either equal or startsWith.
+          - equal operator: the value of the match tag must be exactly the same as
+                            the value of the associated HTTP request parameter
+          - startsWith operator: the value of HTTP request parameter has to start with the value of the match tag
+        - Care must be taken to avoid over-filtering, where two patterns combine to ensure that 
+          all requests of a certain type are blocked
+-->
+
+<arcIbServletFilter>
+
+    <!-- Permit all versions and enquiries!!
+       - replace with commented out sections below, and more, to implement this security filter -->
+
+	<filterItem>
+	</filterItem>
+
+
+    <!-- ************************************************************************ -->
+    <!-- First 3 are fairly fundamental, allowing login, menus and composite screens -->
+    
+	<!-- Allow login - let through any request with type 'CREATE.SESSION' -->
+    <!--
+	<filterItem>
+		<requestType>
+			<match operator="equal">CREATE.SESSION</match>
+		</requestType>
+    </filterItem>
+    -->
+
+	<!-- Allow all menu requests -->
+    <!--
+	<filterItem>
+		<requestType>
+			<match operator="equal">UTILITY.ROUTINE</match>
+		</requestType>
+		<routineName>
+			<match operator="equal">OS.GET.MENU.XML</match>
+		</routineName>
+    </filterItem>
+    -->
+
+	<!-- Allow composite screen requests -->
+    <!--
+	<filterItem>
+		<requestType>
+			<match operator="equal">UTILITY.ROUTINE</match>
+		</requestType>
+		<routineName>
+			<match operator="equal">OS.GET.COMPOSITE.SCREEN.XML</match>
+		</routineName>
+    </filterItem>
+    -->
+
+
+    <!-- ************************************************************************ -->
+    
+	<!-- Allow funds transfer application requests, but only specific ARC versions -->
+    <!--
+    <filterItem>
+		<requestType>
+			<match operator="equal">OFS.APPLICATION</match>
+		</requestType>
+		<application>
+			<match operator="startsWith">FUNDS.TRANSFER</match>
+		</application>
+		<version>
+			<match operator="startsWith">,ARC.IB</match>
+		</version>
+    </filterItem>
+    -->
+	
+	<!-- Permit account enquiries -->
+    <!--
+	<filterItem>
+		<requestType>
+			<match operator="equal">OFS.ENQUIRY</match>
+		</requestType>
+		<enqname>
+			<match operator="startsWith">ACCT</match>
+		</enqname>
+    </filterItem>
+    -->
+
+    <!-- Example filterItem showing a range of parameters that can be filtered, using both matching operators -->
+    <!--
+	<filterItem>
+		<requestType>
+			<match operator="equal">EXAMPLE.REQUEST.TYPE</match>
+			<match operator="startsWith">EXAMPLE.REQUEST.</match>
+		</requestType>
+		<routineName></routineName>
+		<routineArgs></routineArgs>
+		<application></application>
+		<version></version>
+		<enqname></enqname>
+	</filterItem>
+	-->
+    
+  <!-- TRANSACTION SIGNING FILTER ITEMS -->
+  <!-- Examples transSignFilter are configured below for various options -->
+
+    <!--
+    <transSignFilter>
+        <requestType>
+            <match operator="equal">OFS.APPLICATION</match>
+        </requestType>
+        <application>
+            <match operator="startsWith">BENEFICIARY</match>
+        </application>
+        <version>
+            <match operator="startsWith">,AI.NEW.LOCAL.CONFIRM</match>
+        </version>
+        <transSignType>TOKEN</transSignType>
+    </transSignFilter>
+    <transSignFilter>
+        <requestType>
+            <match operator="equal">OFS.APPLICATION</match>
+        </requestType>
+        <application>
+            <match operator="startsWith">BENEFICIARY</match>
+        </application>
+        <version>
+            <match operator="startsWith">,AI.NEW.LOCAL.OB.CONFIRM</match>
+        </version>
+        <transSignType>CHRES</transSignType>
+    </transSignFilter>
+    <transSignFilter>
+        <requestType>
+            <match operator="equal">OFS.APPLICATION</match>
+        </requestType>
+        <application>
+            <match operator="startsWith">BENEFICIARY</match>
+        </application>
+        <version>
+            <match operator="startsWith">,AI.NEW.INTERNATIONAL.CONFIRM</match>
+        </version>
+        <transSignType>SMS</transSignType>
+    </transSignFilter>
+    -->
+
+    <!-- UPDATE Customer Profile -->
+
+    <!--
+    <transSignFilter>
+        <requestType>
+            <match operator="equal">OFS.APPLICATION</match>
+        </requestType>
+        <application>
+            <match operator="startsWith">PW.AF.ACCT.NAME.CHANGE</match>
+        </application>
+        <version>
+            <match operator="startsWith">,INPUT.CONFIRM</match>
+        </version>
+    </transSignFilter>
+    -->
+        
+    <!-- Transfer Money to Own Account with default transSignType - PASSWORD-->
+
+    <!--
+    <transSignFilter>
+        <requestType>
+            <match operator="equal">OFS.APPLICATION</match>
+        </requestType>
+        <application>
+            <match operator="startsWith">FUNDS.TRANSFER</match>
+        </application>
+        <version>
+            <match operator="startsWith">,AI.AC.CONFIRM</match>
+        </version>
+    </transSignFilter>
+    -->
+
+    <!-- Transfer Money to Interbank Beneficiary Account with Out of Band SMS/EMail -->
+
+    <!--
+    <transSignFilter>
+        <requestType>
+            <match operator="equal">OFS.APPLICATION</match>
+        </requestType>
+        <application>
+            <match operator="startsWith">FUNDS.TRANSFER</match>
+        </application>
+        <version>
+            <match operator="startsWith">,AI.BENEFICIARY.OTHERBANK.CONFIRM</match>
+        </version>
+        <transSignType>SMS</transSignType>
+    </transSignFilter>
+   -->
+  
+    <!-- Transfer Money to CrossBank Beneficiary Account (Amount < 1000) -->
+
+    <!--
+    <transSignFilter>
+        <requestType>
+            <match operator="equal">OFS.APPLICATION</match>
+        </requestType>
+        <application>
+            <match operator="startsWith">FUNDS.TRANSFER</match>
+        </application>
+        <version>
+            <match operator="startsWith">,AI.BENEFICIARY.INTERNATIONAL.CONFIRM</match>
+        </version>
+        <transSignType>TOKEN</transSignType>
+        <transCriteria>
+            <condition sequence="1" value="1000" operator="LT">fieldName:DEBIT.AMOUNT</condition>
+        </transCriteria>
+    </transSignFilter>
+    -->
+
+    <!-- Transfer Money to CrossBank Beneficiary Account (Amount >= 1000 AND Amount <= 1500) -->
+
+    <!--
+    <transSignFilter>
+        <requestType>
+            <match operator="equal">OFS.APPLICATION</match>
+        </requestType>
+        <application>
+            <match operator="startsWith">FUNDS.TRANSFER</match>
+        </application>
+        <version>
+            <match operator="startsWith">,AI.BENEFICIARY.INTERNATIONAL.CONFIRM</match>
+        </version>
+        <transSignType>CHRES</transSignType>
+        <transCriteria>
+              <condition sequence="1" value="1000" operator="GE">fieldName:DEBIT.AMOUNT</condition>
+              <condition sequence="2" value="1500" operator="LE">fieldName:DEBIT.AMOUNT</condition>
+        </transCriteria>
+    </transSignFilter>
+    -->
+
+    <!-- Transfer Money to CrossBank Beneficiary Account (Amount >= 1500) -->
+    <!--
+    <transSignFilter>
+        <requestType>
+            <match operator="equal">OFS.APPLICATION</match>
+        </requestType>
+        <application>
+            <match operator="startsWith">FUNDS.TRANSFER</match>
+        </application>
+        <version>
+            <match operator="startsWith">,AI.BENEFICIARY.INTERNATIONAL.CONFIRM</match>
+        </version>
+        <transSignType>CHRES</transSignType>
+        <transCriteria>
+              
+              <condition sequence="1" value="1500" operator="GE">fieldName:DEBIT.AMOUNT</condition>
+              
+              <challenge sequence="1" value="L7">fieldName:BENEFICIARY.ID</challenge>
+        </transCriteria>
+    </transSignFilter>
+    -->
+    
+</arcIbServletFilter>

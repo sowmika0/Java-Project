@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<project name="BrowserWeb" default="all">
+    <!--
+      Build the Browser project using the (internal) Browser configuration.
+
+      Standard installation dir properties can be overridden in a global using the ANT_OPTS:
+      For example, if your glassfish install is in D:/sun/jdk1.5.0_06, set ANT_OPTS=-Djdk.home=D:/sun/jdk1.5.0_06
+    -->
+
+    <!-- shared build config - std props -->
+    <property name="project.name" value="BrowserWeb" />
+
+
+    <!-- import shared and project properties / paths -->
+    <import file="build-browser-common.xml"/>
+    
+    <!-- top-level targets (note that the build etc are in the common build file) -->
+    <target name="all" description="Do a clean build and package (no deploy) of Browser configured for internal use" depends="clean, build, external-obfuscation, package" />
+
+    <target name="all-nolog4j" description="Do a clean build and package (no deploy) of Browser configured for internal use" depends="set-nolog4j, clean, build, external-obfuscation, package" />
+</project>

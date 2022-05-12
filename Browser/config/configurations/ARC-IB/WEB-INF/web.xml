@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app id="WebApp">
+	<display-name>BrowserWeb</display-name>
+	<distributable />
+	<!-- Browser parameters file -->
+	<context-param>
+		<param-name>browserParameters</param-name>
+		<param-value>browserParameters.xml</param-value>
+	</context-param>
+	<!-- Help parameters file -->
+	<context-param>
+		<param-name>helpParameters</param-name>
+		<param-value>helpParameters.xml</param-value>
+	</context-param>
+	<!--  Tab Index Parameter File -->
+	<context-param>
+		<param-name>tabIndexParameters</param-name>
+		<param-value>tabIndexParameters.xml</param-value>
+	</context-param>
+	<!-- nochangeFields list file -->
+	<context-param>
+		<param-name>nochangeFields</param-name>
+		<param-value>nochangeFields.xml</param-value>
+	</context-param>
+	<!-- Captcha image type - 'Text' or 'FishEye' -->
+	<context-param>
+		<param-name>captchaImageType</param-name>
+		<param-value>FishEye</param-value>
+	</context-param>
+	<context-param>
+		<param-name>valid_input_regex</param-name>
+		<!-- Anything that matches this regex will be rejected - the idea is to catch cross site scripting attacks (e.g. see ha.ckers.org/xss.html) -->
+		<!-- NOTE: DO NOT USE 'CDATA' as this is NOT compatible with Oracle Application Server -->
+		<param-value>
+			((?i)&lt; */? *((?i)script|META|img|form|object|applet|embed|frameset|iframe|a&gt;|a[\s]+)|javascript\:|document\.cookie|href[\s]*=|String\.fromCharCode|expression|eval[\W]|onAbort|onActivate|onAfter|onBefore|onBlur|onBounce|onCellChange|onChange|onClick|onContextMenu|onControlSelect|onCopy|onCut|onDataAvailable|onDatasetChange|onDatasetComplete|onDblClick|onDeactivate|onDrag|onDrop|onError|onFilterChange|onFinish|onFocus|onHelp|onKey[\s]*=|onLayoutComplete|onLoad|onLoseCapture|onMouse|onMove|onPaste|onPropertyChange|onReadyStateChange|onReset|onResize|onRowEnter|onRowExit|onRowsDelete|onRowsInserted|onScroll|onSelect|onSelectionChange|onSelectStart|onStart|onSubmit|onTimeError|onUnload|onMessage|\"[\s]*\)|\'[\s]*\)|\/\*.*\*\/|\'[\s]*\+|\'[\s]*\,|\'[\s]*\-|\'[\s]*\=|\"[\s]*\,|\"[\s]*\-|\"[\s]*\=) 
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>valid_input_regex_strict</param-name>
+		<!-- Anything that matches this regex will be rejected - the idea is to catch cross site scripting attacks (e.g. see ha.ckers.org/xss.html) -->
+		<!-- NOTE: DO NOT USE 'CDATA' as this is NOT compatible with Oracle Application Server -->
+		<param-value>
+			((?i)&lt; */? *((?i)script|META|img|form|object|applet|embed|frameset|iframe|a&gt;|a[\s]+)|javascript\:|document\.cookie|href[\s]*=|String\.fromCharCode|expression|eval[\W]|onAbort|onActivate|onAfter|onBefore|onBlur|onBounce|onCellChange|onChange|onClick|onContextMenu|onControlSelect|onCopy|onCut|onDataAvailable|onDatasetChange|onDatasetComplete|onDblClick|onDeactivate|onDrag|onDrop|onError|onFilterChange|onFinish|onFocus|onHelp|onKey[\s]*=|onLayoutComplete|onLoad|onLoseCapture|onMouse|onMove|onPaste|onPropertyChange|onReadyStateChange|onReset|onResize|onRowEnter|onRowExit|onRowsDelete|onRowsInserted|onScroll|onSelect|onSelectionChange|onSelectStart|onStart|onSubmit|onTimeError|onUnload|onMessage|\"[\s]*\)|\'[\s]*\)|\/\*.*\*\/|\'[\s]*\+|\'[\s]*\,|\'[\s]*\-|\'[\s]*\=|\"[\s]*\,|\"[\s]*\-|\"[\s]*\=|\.\.\/|\.\.\\) 
+		</param-value>
+	</context-param>
+	<filter>
+		<filter-name>CaptchaFilter</filter-name>
+		<description>
+			This jCaptcha filter validates a Captcha image text is valid
+		</description>
+		<filter-class>
+			com.temenos.t24browser.captcha.CaptchaFilter
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<description>
+			This 'helper' filter ensures the character encoding of the request is UTF-8.
+			This filter *must* be used, and it *should* be called before any other
+			filter or servlet that reads parameters from the request, otherwise
+			data may become corrupt by incorrect encoding.
+		</description>
+		<filter-class>
+			com.temenos.t24browser.servlets.EncodingFilter
+		</filter-class>
+	</filter>
+	<!--
+   	<filter>
+ 		<filter-name>CharacterEncodingFilter</filter-name>
+ 		<description>
+ 			This filter Charcter Encoding
+ 		</description>
+ 		<filter-class>
+ 			com.temenos.t24browser.servlets.CharEncodingFilter
+ 		</filter-class>
+ 	</filter>
+    -->
+	<filter>
+		<filter-name>ObfuscationServletFilter</filter-name>
+		<description>
+			This filter handles obfuscated requests and translates them
+			to un-obfuscated.
+		</description>
+		<filter-class>
+			com.temenos.t24browser.servlets.ObfuscationServletFilter
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>CachingFilter</filter-name>
+		<description>
+			This filter will apply the 'Cache-Control:max-age' http header to resources 
+			it covers to indicate to web browsers that the content should be cached.
+			Should only be applied to non-sensitive 'static' content like images or stylesheets.
+			MaxAgeInSeconds default value is 86400 (1 day).
+			Only integer values from 1 to 2147483647 (approx 68 years) are understood.
+		</description>
+		<filter-class>
+			com.temenos.t24browser.servlets.CachingFilter
+		</filter-class>
+		<init-param>
+			<param-name>MaxAgeInSeconds</param-name>
+			<param-value>86400</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>ArcIbFilter</filter-name>
+		<description>
+			This filter controls access to the browser servlet.
+		</description>
+		<filter-class>
+			com.temenos.t24browser.servlets.VersionsEnquiriesFilter
+		</filter-class>
+		<init-param>
+			<param-name>configFile</param-name>
+			<param-value>
+				/WEB-INF/conf/versionsEnquiriesFilterConfig.xml
+			</param-value>
+		</init-param>
+		<init-param>
+            <param-name>operationtagname</param-name>
+            <param-value>cfNavOperation</param-value>
+        </init-param>
+        <init-param>
+            <param-name>unverifiedoperations</param-name>
+            <param-value>CANCEL|BACK</param-value>
+        </init-param>
+	</filter>
+	<filter>
+		<filter-name>BrowserServletFormFieldInputFilter</filter-name>
+		<description>
+			This filter ensures invalid characters are not accepted in
+			any field in a form post to Browser Servlet
+		</description>
+		<filter-class>
+			com.temenos.t24browser.servlets.FormFieldInputFilter
+		</filter-class>
+		<init-param>
+			<param-name>xssPatternName</param-name>
+			<param-value>valid_input_regex</param-value>
+		</init-param>
+		<init-param>
+			<param-name>redirectPage</param-name>
+			<param-value>/modelbank/unprotected/FilterError.jsp</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>HelpServletFormFieldInputFilter</filter-name>
+		<description>
+			This filter ensures '..' is never accepted by the Help servlet
+		</description>
+		<filter-class>
+			com.temenos.t24browser.servlets.FormFieldInputFilter
+		</filter-class>
+		<init-param>
+			<param-name>xssPatternName</param-name>
+			<param-value>valid_input_regex_strict</param-value>
+		</init-param>
+		<init-param>
+			<param-name>redirectPage</param-name>
+			<param-value>/modelbank/unprotected/FilterError.jsp</param-value>
+		</init-param>
+	</filter>
+	<!--<filter>
+	<filter-name>RSATransactionSigningFilter</filter-name>
+		<filter-class>
+			com.temenos.arc.security.filter.RSATransactionSigningFilter
+		</filter-class>
+	</filter>-->
+	<filter>
+		<filter-name>HTTPHeaderFilter</filter-name>
+		<description>
+			This filter adds http header parameters
+		</description>
+		<filter-class>
+			com.temenos.arc.security.filter.HTTPHeaderFilter
+	    </filter-class>
+	</filter>
+	<filter>
+		<filter-name>FormTokenFilter</filter-name>
+		<description>
+			This filter adds form token id to all the response which contains the forms and checks if the request form that from contains the token id
+		</description>
+		<filter-class>
+			com.temenos.arc.security.filter.FormTokenFilter
+	    </filter-class>
+	</filter>
+	
+	<!-- Add separate filter-mapping if more than one URL pattern needs to be specified.-->
+	<!-- Some web servers do not understand and throws error in deployement.-->
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/servlet/BrowserServlet</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/jsps/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HTTPHeaderFilter</filter-name>
+		<url-pattern>/jsps/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HTTPHeaderFilter</filter-name>
+		<url-pattern>/servlet/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HTTPHeaderFilter</filter-name>
+		<url-pattern>/modelbank/unprotected/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CaptchaFilter</filter-name>
+		<url-pattern>/servlet/OfsServlet</url-pattern>
+	</filter-mapping>
+	<!--
+     <filter-mapping>
+ 		<filter-name>CharacterEncodingFilter</filter-name>
+ 		<url-pattern>/servlet/*</url-pattern>
+ 	</filter-mapping>
+ 	-->
+	<filter-mapping>
+		<filter-name>ObfuscationServletFilter</filter-name>
+		<servlet-name>BrowserServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CachingFilter</filter-name>
+		<url-pattern>/plaf/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CachingFilter</filter-name>
+		<url-pattern>/scripts/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ArcIbFilter</filter-name>
+		<servlet-name>BrowserServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>BrowserServletFormFieldInputFilter</filter-name>
+		<url-pattern>/servlet/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>BrowserServletFormFieldInputFilter</filter-name>
+		<url-pattern>/jsps/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>BrowserServletFormFieldInputFilter</filter-name>
+		<url-pattern>/modelbank/unprotected/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HelpServletFormFieldInputFilter</filter-name>
+		<servlet-name>HelpServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>FormTokenFilter</filter-name>
+		<url-pattern>/servlet/BrowserServlet</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>FormTokenFilter</filter-name>
+		<url-pattern>/jsps/*</url-pattern>
+	</filter-mapping>
+	<!--<filter-mapping>
+		<filter-name>RSATransactionSigningFilter</filter-name>
+		<servlet-name>BrowserServlet</servlet-name>
+	</filter-mapping>-->
+	
+	<!-- The BrowserContextListener will perform any actions required at application startup, 
+	     like loading browserParameters.xml into the ServletContext -->
+	<listener>
+		<listener-class>
+			com.temenos.t24browser.utils.BrowserContextListener
+		</listener-class>
+	</listener>
+	<!-- The BrowserSessionListener will log when web sessions have been destroyed -->
+	<listener>
+		<listener-class>
+			com.temenos.t24browser.servlets.BrowserSessionListener
+		</listener-class>
+	</listener>
+	<!-- Uncomment the GraphSessionListener and GraphServlet if graphs are to be displayed as pngImages instead of svgObjects.
+	     The GraphSessionListener will clear 'used' files from the ../work/GraphImages folder at the end of a users session.
+	     Only required if displaying graphs as .pngImages rather than SVG graphics. (see browserParameters.xml property)
+	<listener>
+		<listener-class>
+			com.temenos.t24browser.graph.GraphSessionListener
+		</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>GraphServlet</servlet-name>
+		<display-name>GraphServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.GraphServlet
+		</servlet-class>
+	</servlet>
+	 -->
+	<servlet>
+		<servlet-name>BrowserServlet</servlet-name>
+		<display-name>BrowserServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.BrowserServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>HelpServlet</servlet-name>
+		<display-name>HelpServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.HelpServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>FtressChangePasswordServlet</servlet-name>
+		<servlet-class>com.temenos.t24browser.servlets.FtressChangePasswordServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>  
+	<!-- Uncomment this entry if Secure Document Download is required
+	<servlet>
+		<servlet-name>DocumentService</servlet-name>
+		<display-name>DocumentService</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.DocumentService
+		</servlet-class>
+	</servlet>
+	-->
+	<servlet>
+		<servlet-name>CaptchaImageServlet</servlet-name>
+		<display-name>CaptchaImageServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.captcha.CaptchaImageServlet
+		</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>OfsServlet</servlet-name>
+		<display-name>OfsServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.ofs.OfsServlet
+		</servlet-class>
+	</servlet>
+	<!-- Servlet to process request to files in cloud location -->	
+	<servlet>
+		<servlet-name>GetImage</servlet-name>
+		<display-name>GetImage</display-name>
+		<servlet-class>com.temenos.t24browser.servlets.GetImage</servlet-class>
+	</servlet>	
+	<servlet>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<display-name>FileUploadServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.FileUploadServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DirectURLRestrictionServlet</servlet-name>
+		<display-name>DirectURLRestrictionServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.DirectURLRestrictionServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>RenderImageServlet</servlet-name>
+		<display-name>RenderImageServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.RenderImageServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<display-name>UploadServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.UploadServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern>/servlet/FileUploadServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Uncomment the GraphServlet if graphs are to be displayed as pngImages instead of svgObjects.
+	<servlet-mapping>
+		<servlet-name>GraphServlet</servlet-name>
+		<url-pattern>/servlet/GraphServlet</url-pattern>
+	</servlet-mapping>
+	 -->
+
+	<servlet-mapping>
+		<servlet-name>BrowserServlet</servlet-name>
+		<url-pattern>/servlet/BrowserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HelpServlet</servlet-name>
+		<url-pattern>/servlet/HelpServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CaptchaImageServlet</servlet-name>
+		<url-pattern>/servlet/CaptchaImageServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OfsServlet</servlet-name>
+		<url-pattern>/servlet/OfsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FtressChangePasswordServlet</servlet-name>
+		<url-pattern>/servlet/protected/FtressChangePasswordServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DirectURLRestrictionServlet</servlet-name>
+		<url-pattern>/browserParameters.xml</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RenderImageServlet</servlet-name>
+		<url-pattern>/servlet/RenderImageServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/servlet/UploadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+    	<servlet-name>GetImage</servlet-name>
+    	<url-pattern>/GetImage/*</url-pattern>
+  	</servlet-mapping>	
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	
+	<error-page>
+        <exception-type>com.temenos.arc.security.authenticationserver.common.ArcAuthenticationServerException</exception-type>
+		<location>/modelbank/unprotected/auth_error.jsp</location>
+	</error-page>
+	<!--<error-page>
+		<exception-type>com.temenos.t24browser.exceptions.GenericAuthenticationException</exception-type>
+		<location>/jsps/customMessage.jsp</location>
+	</error-page>-->	
+	<error-page>
+		<error-code>400</error-code>
+		<location>/modelbank/unprotected/400.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/modelbank/unprotected/404.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/modelbank/unprotected/403.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/modelbank/unprotected/500.jsp</location>
+ 	</error-page>
+	<error-page>
+		<error-code>503</error-code>
+		<location>/modelbank/unprotected/503.jsp</location>
+ 	</error-page>
+	<resource-ref id="ResourceRef_t24ConnectionFactory">
+		<description>T24</description>
+		<res-ref-name>jca/t24ConnectionFactory</res-ref-name>
+		<res-type>com.temenos.tocf.t24ra.T24ConnectionFactory</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	<resource-ref id="ResourceRef_jmsConnectionFactory">
+		<description>Used to get connections to JMS for OFS queues</description>
+		<res-ref-name>jms/jmsConnectionFactory</res-ref-name>
+		<res-type>javax.jms.ConnectionFactory</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	<resource-ref id="ResourceRef_t24OFSQueue">
+		<description>OFS queue</description>
+		<res-ref-name>queue/t24OFSQueue</res-ref-name>
+		<res-type>javax.jms.Queue</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	<resource-ref id="ResourceRef_t24OFSReplyQueue">
+		<description>OFS reply queue</description>
+		<res-ref-name>queue/t24OFSReplyQueue</res-ref-name>
+		<res-type>javax.jms.Queue</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<!-- Security Stuff -->
+	<security-constraint>
+		<!-- With no role-name in the auth-constraint, this blocks access to xsl files even when authenticated -->
+    		<web-resource-collection>
+        		<web-resource-name>BrowserWeb</web-resource-name>
+        		<url-pattern>*.xsl</url-pattern>
+    		</web-resource-collection>
+    		<auth-constraint>
+			<!-- deliberately empty (see above) -->
+		</auth-constraint> 	
+	</security-constraint>
+</web-app>

@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Common OFS Message components -->
+
+
+
+
+<!--  SIMPLE DATATYPE DEFINITIONS -->
+<xsd:simpleType name ="messageReference"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> A message reference, typically used by the message transport layer. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:restriction base ="xsd:string"> 
+  	<xsd:minLength value ="16"/> 
+  	</xsd:restriction> 
+</xsd:simpleType> 
+
+<xsd:simpleType name ="globusUserName"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> A GLOBUS user name. May represent a unique user, a business channel or an external application. </xsd:documentation> 
+  	</xsd:annotation> 
+<xsd:restriction base ="xsd:string"/>
+ </xsd:simpleType> 
+
+<xsd:simpleType name ="globusUserPassword"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> A GLOBUS user password. May represent a unique user, a business channel or an external application. </xsd:documentation> 
+  	</xsd:annotation> 
+<xsd:restriction base ="xsd:string"/>
+</xsd:simpleType> 
+
+<xsd:simpleType name ="globusCompanyId"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The GLOBUS name that uniquely identifies a company processed by GLOBUS. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+
+
+<xsd:simpleType name ="fieldName"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The system name of a field in any OFSML message. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string">
+  		<xsd:minLength value = "1"/> 
+  	</xsd:restriction> 
+</xsd:simpleType>
+
+<xsd:simpleType name ="nickName"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> A simple representation of a callers security credentials. Used by a security sub-system only. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+
+
+
+
+<!-- ofsAppRequest -->
+
+
+<xsd:simpleType name ="ofsFunctionCode"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en" > The standard function code of any transaction procesing request to GLOBUS. Function codes are: 'I' - insert the transaction; 'S' - see (show) the transaction (requires a transactionId); 'A' - authorise the transaction; 'R' - reverse (unwind) the transaction; 'D' - delete the transaction. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:restriction base ="xsd:string"> 
+  		<xsd:enumeration value ="I"/> 
+  		<xsd:enumeration value ="S"/> 
+  		<xsd:enumeration value ="A"/> 
+  		<xsd:enumeration value ="R"/> 
+  		<xsd:enumeration value ="D"/> 
+  		<xsd:enumeration value =""/>	
+  	</xsd:restriction> 
+</xsd:simpleType>
+ 
+<xsd:simpleType name ="ofsOperationCode"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The GLOBUS directive for handling any transaction processing request. PROCESS will attempt to validate and execute the request, VALIDATE will only validate the correctness of the request, which includes returning all default values (only for fields where default values are present). </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:restriction base ="xsd:string"> 
+  	<xsd:enumeration value ="PROCESS"/> 
+  	<xsd:enumeration value ="VALIDATE"/> 
+  	<xsd:enumeration value ="ENQUIRY.SELECT"/> 
+	</xsd:restriction> 
+</xsd:simpleType> 
+
+
+<xsd:simpleType name ="transactionId"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en" > The unique id of a transaction in GLOBUS. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string">
+  		<xsd:minLength value = "1"/> 
+  	</xsd:restriction>
+</xsd:simpleType> 
+
+
+<xsd:simpleType name ="globusApplicationName"> 
+	<xsd:annotation> 
+		<xsd:documentation xml:lang ="en" > The GLOBUS name of an application. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string">
+  		<xsd:minLength value = "1"/> 
+  	</xsd:restriction> 
+</xsd:simpleType> 
+
+<xsd:simpleType name ="globusVersionName"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en" > The GLOBUS name of a version. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType>
+
+
+
+
+<!-- ofsAppResponse -->
+
+
+<xsd:simpleType name ="processingStatus"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The status of the transaction (the data record), returned from GLOBUS. This status will indicate the state of the business transaction post any processing completed while executing the request. It represents a summary code, which is further detailed in the record.status field of the transaction. If no detail is available in record.status, the overall transaction status is set to 'OK'. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:restriction base ="xsd:string"> 
+  		<xsd:enumeration value ="OK"/> 
+  		<xsd:enumeration value ="REVERSED"/> 
+  		<xsd:enumeration value ="NOT-AUTHORISED"/> 
+  		<xsd:enumeration value ="ON-HOLD"/> 
+  		<xsd:enumeration value ="MATURED"/> 
+  		<xsd:enumeration value ="PARTIAL-INPUT"/> 
+  	</xsd:restriction> 
+</xsd:simpleType> 
+
+
+<xsd:simpleType name ="transactionStatus"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The return status from executing a transaction. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:restriction base ="xsd:string"> 
+  	<xsd:enumeration value ="OK"/> 
+  	<xsd:enumeration value ="OVERRIDE"/> 
+  	<xsd:enumeration value ="OFFLINE"/> 
+  	<xsd:enumeration value ="FAILED"/> 
+  	</xsd:restriction> 
+</xsd:simpleType> 
+
+
+<xsd:simpleType name="successFail">
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> Whether or not the transaction has been a success. </xsd:documentation> 
+  	</xsd:annotation>
+ 	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="1"/>
+		<xsd:enumeration value="-1"/>
+		<xsd:enumeration value="-2"/>
+		<xsd:enumeration value="-3"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<!-- ofsEnqRequest -->
+
+
+<xsd:simpleType name ="globusEnquiryName"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The GLOBUS name of an enquiry. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+
+
+<xsd:simpleType name ="value"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> A single field's value. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string">
+  		<xsd:minLength value = "1"/> 
+  	</xsd:restriction> 
+</xsd:simpleType> 
+
+<xsd:simpleType name ="selectionOperand"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The standard operands used in a selection criteria when requesting information from GLOBUS. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:restriction base ="xsd:string"> 
+  		<xsd:enumeration value ="EQ"/> 
+  		<xsd:enumeration value ="NE"/> 
+  		<xsd:enumeration value ="GE"/> 
+  		<xsd:enumeration value ="GT"/> 
+  		<xsd:enumeration value ="LE"/> 
+  		<xsd:enumeration value ="LT"/> 
+  		<xsd:enumeration value ="UL"/> 
+  		<xsd:enumeration value ="LK"/> 
+  		<xsd:enumeration value ="NR"/> 
+  		<xsd:enumeration value ="RG"/> 
+  	</xsd:restriction> 
+</xsd:simpleType> 
+
+
+<!-- ofsEnqResponse -->
+
+
+<xsd:simpleType name ="enquiryHeaderId"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The system id of the header in an enquiry response. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+
+<xsd:simpleType name ="text"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> A free text type in any OFSML message. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+
+<xsd:simpleType name ="columnId"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The system id of a column in an enquiry response. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+
+<xsd:simpleType name ="columnLabel"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The text name of a column in an enquiry response. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType>
+
+<xsd:simpleType name ="globusType"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The GLOBUS datatype for a field. If not specified, the default type is string. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:restriction base ="xsd:string"> 
+  	<xsd:enumeration value ="AMOUNT"/> 
+  	<xsd:enumeration value ="DATE"/> 
+  	</xsd:restriction> 
+</xsd:simpleType> 
+
+<xsd:simpleType name ="enquiryColumn"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The value of a column in an OFSML enquiry response. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+
+<xsd:simpleType name ="enquiryStatus"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The return status from executing an enquiry. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:restriction base ="xsd:string"> 
+  	<xsd:enumeration value ="OK"/> 
+  	<xsd:enumeration value ="NO-ROWS"/> 
+  	</xsd:restriction> 
+</xsd:simpleType> 
+
+
+<xsd:simpleType name ="msgtransID"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+<!-- ofsRoutineRequest -->
+
+
+<xsd:simpleType name ="routineParameter"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> A parameter used in the invokation of a routine. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+
+
+<xsd:simpleType name ="globusRoutineName"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The GLOBUS name of a routine. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+
+
+
+<!-- ofsRoutineResponse -->
+
+
+<xsd:simpleType name ="unstructuredRoutineOutput"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The output of a routine may be unstructured, requiring that the caller is aware of the return format. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+
+
+<xsd:simpleType name ="routineStatus"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The return status from executing a routine. </xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string"/> 
+</xsd:simpleType> 
+
+
+<xsd:simpleType name ="requestType"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en">The type of request</xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string">
+    	<xsd:enumeration value ="OFS.APPLICATION"/> 
+  		<xsd:enumeration value ="OFS.ENQUIRY"/> 
+  	</xsd:restriction>
+</xsd:simpleType> 
+
+<xsd:simpleType name ="responseType"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en">The type of request</xsd:documentation> 
+  	</xsd:annotation> 
+  	<xsd:restriction base ="xsd:string">
+    	<xsd:enumeration value ="OFS.APPLICATION.RETURN"/> 
+  		<xsd:enumeration value ="OFS.ENQUIRY.RETURN"/> 
+  	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name = "ofsPositiveInteger">
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en">A positive number or blank</xsd:documentation> 
+  	</xsd:annotation>
+        <xsd:union>
+          <xsd:simpleType>
+            <xsd:restriction base='xsd:positiveInteger'/>
+          </xsd:simpleType>
+          <xsd:simpleType>
+            <xsd:restriction base='xsd:string'>
+              <xsd:enumeration value=''/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:union>
+</xsd:simpleType>
+
+</xsd:schema>

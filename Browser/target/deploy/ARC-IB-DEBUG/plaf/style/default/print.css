@@ -1,0 +1,114 @@
+/* Applied when clean print is set to YES */
+@media print {
+	
+	/* applied for body tag */
+	body {
+		font-family:"Times New Roman", Times, serif;
+		overflow: visible;
+	}
+	
+	#enquiryDataScroller,#enquiryHeadingScroller {
+		overflow: visible !important;
+	}
+	
+	/* Redefinition of TD in general.css */
+	td,th {
+		font-family:"Times New Roman", Times, serif;
+	}
+	
+	/* Redefinition of value from enquiry.css */
+	.columnheader {
+		font-family:"Times New Roman", Times, serif;
+	}
+	
+    /* Applied to bread crumbs */
+    #enquiryResponseCrumbs td{
+        display: none;
+    }
+    
+    /* Applied for associated version tab */
+    #maintab .dropdown_button, .tab .dropdown_button {
+        display: none;
+    }
+    
+    /* applied for images like multi value icon / sub value icon / context / mandatory icon */                               
+	.ascell { 
+		display:none;
+	}
+
+	/* The solely fragment that should be printed */
+	.printableFragment {
+		display: block;
+	}
+	
+    /* fragement that will not be printed */
+	.notPrintableFragment {
+		display: none;
+	}
+	
+	/* Hides "drill" button */  
+	.enqdrilldowncell {
+		display: none;
+	}
+	
+	/* Hids "next" button in the version */
+	.belowDealButtonBox {
+		display: none;
+	}
+    /* Applied for images */
+	img { 
+		display: none;
+	}
+	
+	/* Applied for paging tools */
+	.paging-toolbar {
+		display: none
+	}
+	
+    /* used in enquiry selection */	
+	.noPrint {
+		display: none;
+	}
+		
+	.enquiry_response {
+		border: 0px;
+	}
+	
+	/* To add page break per each file */  
+	.page_break {
+		page-break-after: always;
+	}
+	
+	.display_box {
+		display: block;			
+	}
+	
+    @-moz-document url-prefix() {
+       #enquiryDataScroller {
+	    display: inline !important;
+		height:100% !important;	
+		width: 100% !important;
+		}
+	}
+}
+
+@media screen {
+/* used for header */
+	#printHeader {
+		display: none;
+		height: 1%;  /*otherwise the the height of the header in IE is proportional */
+	}
+/* used for footer */
+	#printFooter {
+		display: none;
+		height: 1%; /* otherwise the the height of the footer in IE is proportional */
+	}
+/* used in contract screen */
+	.scroll_contract_screen {
+		overflow:auto;
+	}
+	/* used in enquiry */
+	.enquirydatascroller {
+		overflow: auto;
+	}
+}

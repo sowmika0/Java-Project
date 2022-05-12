@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loginPageLinks>
+	<messageData>
+		<parameter>
+			<parameterName>application</parameterName>
+			<parameterValue>contract/app</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>companyId</parameterName>
+			<parameterValue>userDetails/companyId</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>transactionId</parameterName>
+			<parameterValue>contract/key</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>user</parameterName>
+			<parameterValue>userDetails/user</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>version</parameterName>
+			<parameterValue>contract/version</parameterValue>
+		</parameter>
+	</messageData>
+</loginPageLinks>

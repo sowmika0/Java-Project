@@ -1,0 +1,17 @@
+<?xml-stylesheet type="text/xsl" href="../transforms/help/helpmenu.xsl"?>
+<t24help><basedest>t24help</basedest>
+	<categorymenu>
+		<ts c="T24 Release Documentation">
+				<t>
+					<c>Highlights</c>
+					<ty>URL</ty>
+					<tar>../doc/Release Documentation/Highlights.pdf</tar>
+				</t>
+				<t>
+					<c>Release Notes</c>
+					<ty>URL</ty>
+					<tar>../doc/Release Documentation/Release Notes.pdf</tar>
+				</t>
+		</ts>
+	</categorymenu>
+</t24help>

@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<ofsSessionRequest xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"  schemaLocation = "\WEB-INF\xml\schema\ofsSessionRequest.xsd">
+	<requestType></requestType>
+	<token></token>
+	<detailtag></detailtag>
+	<pwprocessid></pwprocessid>
+	<requestArguments>
+		<routineName/>
+		<routineArgs/>
+		<companyId/>
+		<userRole/>
+		<windowName/>
+		<fragment/>
+		<EnqParentWindow/>
+		<reqTabid/>
+		<title/>
+		<compScreen/>
+		<unlock/>
+		<closing/>
+		<clientStyleSheet/>
+		<staticId/>
+		<RecordRead/>
+	</requestArguments>
+</ofsSessionRequest>

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.ibm.com/xtools/1.5.0/Notation" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.0/Umlnotation" xmi:id="_HQ4PEKIiEdu9cIovi8Euew" type="Class" name="classdiagram.dnx">
+  <children xmi:id="_HqqoEKIiEdu9cIovi8Euew">
+    <children xmi:id="_HqzyAKIiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ServiceLocator[jcu^name=ServiceLocator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_HqzyAaIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_HqzyAqIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ServiceLocator[jcu^name=ServiceLocator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HqzyA6IiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ServiceLocator[jcu^name=ServiceLocator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HqzyBKIiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HqzyBaIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ServiceLocator[jcu^name=ServiceLocator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HqzyBqIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HqzyB6IiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ServiceLocator[jcu^name=ServiceLocator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HqzyCKIiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HqzyCaIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ServiceLocator[jcu^name=ServiceLocator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_Hr264KIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_Hr264aIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ServiceLocator[jcu^name=ServiceLocator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_HqqoEaIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ServiceLocator[jcu^name=ServiceLocator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HqqoEqIiEdu9cIovi8Euew" x="9419" y="8176"/>
+  </children>
+  <children xmi:id="_Hyj_0KIiEdu9cIovi8Euew">
+    <children xmi:id="_Hyj_06IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EjbHomeFactory[jcu^name=EjbHomeFactory.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_Hyj_1KIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_Hyj_1aIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EjbHomeFactory[jcu^name=EjbHomeFactory.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_Hyj_1qIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EjbHomeFactory[jcu^name=EjbHomeFactory.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_Hyj_16IiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Hyj_2KIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EjbHomeFactory[jcu^name=EjbHomeFactory.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_Hyj_2aIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Hyj_2qIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EjbHomeFactory[jcu^name=EjbHomeFactory.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_Hyj_26IiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Hyj_3KIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EjbHomeFactory[jcu^name=EjbHomeFactory.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_Hyj_3aIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_Hyj_3qIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EjbHomeFactory[jcu^name=EjbHomeFactory.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_Hyj_0aIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=EjbHomeFactory[jcu^name=EjbHomeFactory.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hyj_0qIiEdu9cIovi8Euew" x="22260" y="5406"/>
+  </children>
+  <children xmi:id="_HzJ1sKIiEdu9cIovi8Euew">
+    <children xmi:id="_HzJ1s6IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerException[jcu^name=ArcAuthenticationServerException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_HzJ1tKIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_HzJ1taIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerException[jcu^name=ArcAuthenticationServerException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HzJ1tqIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerException[jcu^name=ArcAuthenticationServerException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HzJ1t6IiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HzJ1uKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerException[jcu^name=ArcAuthenticationServerException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HzJ1uaIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HzJ1uqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerException[jcu^name=ArcAuthenticationServerException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HzJ1u6IiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HzJ1vKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerException[jcu^name=ArcAuthenticationServerException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HzJ1vaIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_HzJ1vqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerException[jcu^name=ArcAuthenticationServerException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_HzJ1saIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerException[jcu^name=ArcAuthenticationServerException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HzJ1sqIiEdu9cIovi8Euew" x="19599" y="8196"/>
+  </children>
+  <children xmi:id="_HzcwoKIiEdu9cIovi8Euew">
+    <children xmi:id="_Hzcwo6IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcSession[jcu^name=ArcSession.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_HzcwpKIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_HzcwpaIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcSession[jcu^name=ArcSession.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HzcwpqIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcSession[jcu^name=ArcSession.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_Hzcwp6IiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HzcwqKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcSession[jcu^name=ArcSession.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HzcwqaIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HzcwqqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcSession[jcu^name=ArcSession.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_Hzcwq6IiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_HzcwrKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcSession[jcu^name=ArcSession.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_HzcwraIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_HzcwrqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcSession[jcu^name=ArcSession.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_HzcwoaIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcSession[jcu^name=ArcSession.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HzcwoqIiEdu9cIovi8Euew" x="26752" y="8179"/>
+  </children>
+  <children xmi:id="_H0M-kKIiEdu9cIovi8Euew">
+    <children xmi:id="_H0M-k6IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserSecret[jcu^name=UserSecret.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_H0M-lKIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_H0M-laIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserSecret[jcu^name=UserSecret.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H0M-lqIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserSecret[jcu^name=UserSecret.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H0M-l6IiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H0M-mKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserSecret[jcu^name=UserSecret.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H0M-maIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H0M-mqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserSecret[jcu^name=UserSecret.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H0M-m6IiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H0M-nKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserSecret[jcu^name=UserSecret.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H0M-naIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_H0M-nqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserSecret[jcu^name=UserSecret.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_H0M-kaIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserSecret[jcu^name=UserSecret.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H0M-kqIiEdu9cIovi8Euew" x="30255" y="8189"/>
+  </children>
+  <children xmi:id="_H1ibUqIiEdu9cIovi8Euew">
+    <children xmi:id="_H1sMUKIiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerConnectionException[jcu^name=ArcAuthenticationServerConnectionException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_H1sMUaIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_H1sMUqIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerConnectionException[jcu^name=ArcAuthenticationServerConnectionException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H1sMU6IiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerConnectionException[jcu^name=ArcAuthenticationServerConnectionException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H1sMVKIiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H1sMVaIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerConnectionException[jcu^name=ArcAuthenticationServerConnectionException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H1sMVqIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H1sMV6IiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerConnectionException[jcu^name=ArcAuthenticationServerConnectionException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H1sMWKIiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H1sMWaIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerConnectionException[jcu^name=ArcAuthenticationServerConnectionException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H1sMWqIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_H1sMW6IiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerConnectionException[jcu^name=ArcAuthenticationServerConnectionException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_H1ibU6IiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=ArcAuthenticationServerConnectionException[jcu^name=ArcAuthenticationServerConnectionException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1ibVKIiEdu9cIovi8Euew" x="33890" y="8199"/>
+  </children>
+  <children xmi:id="_H1_HQKIiEdu9cIovi8Euew">
+    <children xmi:id="_H1_HQ6IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UsernamePasswordAuthenticator[jcu^name=UsernamePasswordAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_H1_HRKIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_H1_HRaIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UsernamePasswordAuthenticator[jcu^name=UsernamePasswordAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H1_HRqIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UsernamePasswordAuthenticator[jcu^name=UsernamePasswordAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H1_HR6IiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H1_HSKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UsernamePasswordAuthenticator[jcu^name=UsernamePasswordAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H1_HSaIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H1_HSqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UsernamePasswordAuthenticator[jcu^name=UsernamePasswordAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H1_HS6IiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H1_HTKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UsernamePasswordAuthenticator[jcu^name=UsernamePasswordAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H1_HTaIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_H1_HTqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UsernamePasswordAuthenticator[jcu^name=UsernamePasswordAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_H1_HQaIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UsernamePasswordAuthenticator[jcu^name=UsernamePasswordAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H1_HQqIiEdu9cIovi8Euew" x="42895" y="8183"/>
+  </children>
+  <children xmi:id="_H2lkMKIiEdu9cIovi8Euew">
+    <children xmi:id="_H2lkM6IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfigurationException[jcu^name=AuthenticationServerConfigurationException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_H2lkNKIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_H2lkNaIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfigurationException[jcu^name=AuthenticationServerConfigurationException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H2lkNqIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfigurationException[jcu^name=AuthenticationServerConfigurationException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H2lkN6IiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H2lkOKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfigurationException[jcu^name=AuthenticationServerConfigurationException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H2lkOaIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H2lkOqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfigurationException[jcu^name=AuthenticationServerConfigurationException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H2lkO6IiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H2lkPKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfigurationException[jcu^name=AuthenticationServerConfigurationException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H2lkPaIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_H2lkPqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfigurationException[jcu^name=AuthenticationServerConfigurationException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_H2lkMaIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfigurationException[jcu^name=AuthenticationServerConfigurationException.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H2lkMqIiEdu9cIovi8Euew" x="49890" y="8193"/>
+  </children>
+  <children xmi:id="_H24fIKIiEdu9cIovi8Euew">
+    <children xmi:id="_H24fI6IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Helpers[jcu^name=Helpers.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_H24fJKIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_H24fJaIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Helpers[jcu^name=Helpers.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H24fJqIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Helpers[jcu^name=Helpers.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H24fJ6IiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H24fKKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Helpers[jcu^name=Helpers.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H24fKaIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H24fKqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Helpers[jcu^name=Helpers.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H24fK6IiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H24fLKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Helpers[jcu^name=Helpers.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H24fLaIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_H24fLqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Helpers[jcu^name=Helpers.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_H24fIaIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Helpers[jcu^name=Helpers.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H24fIqIiEdu9cIovi8Euew" x="58764" y="8176"/>
+  </children>
+  <children xmi:id="_H3LaEqIiEdu9cIovi8Euew">
+    <children xmi:id="_H3LaFaIiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Authenticatable[jcu^name=Authenticatable.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_H3LaFqIiEdu9cIovi8Euew" width="530" height="530"/>
+    </children>
+    <children xmi:id="_H3LaF6IiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Authenticatable[jcu^name=Authenticatable.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H3LaGKIiEdu9cIovi8Euew" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Authenticatable[jcu^name=Authenticatable.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H3VLEKIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Authenticatable[jcu^name=Authenticatable.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H3VLEaIiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H3VLEqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Authenticatable[jcu^name=Authenticatable.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H3VLE6IiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H3VLFKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Authenticatable[jcu^name=Authenticatable.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H3VLFaIiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H3VLFqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Authenticatable[jcu^name=Authenticatable.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_H3LaE6IiEdu9cIovi8Euew" showStereotype="Label" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=Authenticatable[jcu^name=Authenticatable.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H3LaFKIiEdu9cIovi8Euew" x="62319" y="8186"/>
+  </children>
+  <children xmi:id="_H6dXkKIiEdu9cIovi8Euew">
+    <children xmi:id="_H6dXk6IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractAuthenticator[jcu^name=AbstractAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_H6dXlKIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_H6dXlaIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractAuthenticator[jcu^name=AbstractAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H6dXlqIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractAuthenticator[jcu^name=AbstractAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H6dXl6IiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H6dXmKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractAuthenticator[jcu^name=AbstractAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H6dXmaIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H6dXmqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractAuthenticator[jcu^name=AbstractAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H6dXm6IiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H6dXnKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractAuthenticator[jcu^name=AbstractAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H6dXnaIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_H6dXnqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractAuthenticator[jcu^name=AbstractAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_H6dXkaIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AbstractAuthenticator[jcu^name=AbstractAuthenticator.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H6dXkqIiEdu9cIovi8Euew" x="66510" y="8196"/>
+  </children>
+  <children xmi:id="_H7WvcKIiEdu9cIovi8Euew">
+    <children xmi:id="_H7Wvc6IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfiguration[jcu^name=AuthenticationServerConfiguration.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_H7WvdKIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_H7WvdaIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfiguration[jcu^name=AuthenticationServerConfiguration.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H7WvdqIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfiguration[jcu^name=AuthenticationServerConfiguration.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H7Wvd6IiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H7WveKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfiguration[jcu^name=AuthenticationServerConfiguration.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H7WveaIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H7WveqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfiguration[jcu^name=AuthenticationServerConfiguration.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H7Wve6IiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_H7WvfKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfiguration[jcu^name=AuthenticationServerConfiguration.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_H7WvfaIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_H7WvfqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfiguration[jcu^name=AuthenticationServerConfiguration.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_H7WvcaIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=AuthenticationServerConfiguration[jcu^name=AuthenticationServerConfiguration.java[jpack^name=com.temenos.arc.security.authenticationservermanagement.common[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H7WvcqIiEdu9cIovi8Euew" x="71759" y="8180"/>
+  </children>
+  <children xmi:id="_LUnKQKIiEdu9cIovi8Euew">
+    <children xmi:id="_LUnKQ6IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ArcUserManagement[jcu^name=ArcUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_LUnKRKIiEdu9cIovi8Euew" width="530" height="530"/>
+    </children>
+    <children xmi:id="_LUnKRaIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ArcUserManagement[jcu^name=ArcUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LUnKRqIiEdu9cIovi8Euew" type="Kind">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ArcUserManagement[jcu^name=ArcUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LUnKR6IiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ArcUserManagement[jcu^name=ArcUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LUnKSKIiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LUnKSaIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ArcUserManagement[jcu^name=ArcUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LUnKSqIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LUnKS6IiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ArcUserManagement[jcu^name=ArcUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LUnKTKIiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LUnKTaIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ArcUserManagement[jcu^name=ArcUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_LUnKQaIiEdu9cIovi8Euew" showStereotype="Label" useClassifierShape="true"/>
+    <element xmi:type="uml:Interface" href="vizref:///#jsrctype^vcore.target=uml2.Interface^name=ArcUserManagement[jcu^name=ArcUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LUnKQqIiEdu9cIovi8Euew" x="32118" y="636"/>
+  </children>
+  <children xmi:id="_LVD2MKIiEdu9cIovi8Euew">
+    <children xmi:id="_LVD2M6IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserManagement[jcu^name=UserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_LVD2NKIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_LVD2NaIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserManagement[jcu^name=UserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LVD2NqIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserManagement[jcu^name=UserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LVD2N6IiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LVD2OKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserManagement[jcu^name=UserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LVD2OaIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LVD2OqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserManagement[jcu^name=UserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LVD2O6IiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LVD2PKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserManagement[jcu^name=UserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LVD2PaIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_LVD2PqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserManagement[jcu^name=UserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_LVD2MaIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=UserManagement[jcu^name=UserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LVD2MqIiEdu9cIovi8Euew" x="32436" y="4452"/>
+  </children>
+  <children xmi:id="_LVgiIKIiEdu9cIovi8Euew">
+    <children xmi:id="_LVgiI6IiEdu9cIovi8Euew" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=XmlUserManagement[jcu^name=XmlUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_LVgiJKIiEdu9cIovi8Euew" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_LVgiJaIiEdu9cIovi8Euew" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=XmlUserManagement[jcu^name=XmlUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LVgiJqIiEdu9cIovi8Euew" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=XmlUserManagement[jcu^name=XmlUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LVgiJ6IiEdu9cIovi8Euew" visible="false" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LVgiKKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=XmlUserManagement[jcu^name=XmlUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LVgiKaIiEdu9cIovi8Euew" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LVgiKqIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=XmlUserManagement[jcu^name=XmlUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LVgiK6IiEdu9cIovi8Euew" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_LVgiLKIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=XmlUserManagement[jcu^name=XmlUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <children xmi:id="_LVqTIKIiEdu9cIovi8Euew" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_LVqTIaIiEdu9cIovi8Euew"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=XmlUserManagement[jcu^name=XmlUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_LVgiIaIiEdu9cIovi8Euew" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=XmlUserManagement[jcu^name=XmlUserManagement.java[jpack^name=com.temenos.arc.security.authenticationservermanagement[jsrcroot^srcfolder=src[project^vcore.target=uml2.Model^id=ARC+4TRESS+Management]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LVgiIqIiEdu9cIovi8Euew" x="42930" y="1590"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_HQ4PEaIiEdu9cIovi8Euew"/>
+</notation:Diagram>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loginPageLinks>
+	<messageData>
+		<parameter>
+			<parameterName>About Temenos</parameterName>
+			<parameterValue>http://www.temenos.com</parameterValue>
+		</parameter>
+	</messageData>
+</loginPageLinks>

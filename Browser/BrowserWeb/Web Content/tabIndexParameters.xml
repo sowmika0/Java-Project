@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabIndexParameters>
+	<messageData>
+		<parameter>
+			<!-- Enable TAB index configuration for below properties-->
+			<parameterName>enableTabIndex</parameterName>
+			<parameterValue>NO</parameterValue>
+			<!-- Options: YES / NO -->			
+		</parameter>
+		<parameter>
+			<!-- Enable TAB index feature for Information Icons or images-->
+			<parameterName>tabIndexForInfoIcon</parameterName>
+			<parameterValue>YES</parameterValue>
+			<!-- Options: YES / NO -->			
+		</parameter>
+		<parameter>
+			<!-- Enable TAB index feature for Drop down Icons -->
+			<parameterName>tabIndexForDropFields</parameterName>
+			<parameterValue>YES</parameterValue>
+			<!-- Options: YES / NO -->			
+		</parameter>
+		<parameter>
+			<!-- Enable TAB index feature for multivalue Icons -->
+			<parameterName>tabIndexForExpansionIcons</parameterName>
+			<parameterValue>YES</parameterValue>
+			<!-- Options: YES / NO -->			
+		</parameter>		
+	</messageData>
+</tabIndexParameters>

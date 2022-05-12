@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<project name="T24-Updates" default="all">
+    <!--
+      Build the Browser project using the ARC-IB configuration.
+      This will leave out unused files, include Obfuscation, etc
+      This will also add all resources required by the 'T24 Updates' package.
+      
+      NOTE: The T24 Updates package is simply a copy of ARC-IB PLUS some extra resources
+      		and configuration. 
+
+	  All configuration & resources specific to the T24 Updates package should be placed under
+	  the following location:
+	  
+	  Browser\config\configurations\T24-Updates
+	  
+	  The generic ant target will copy (overwiting) these files into the exploded location.  
+    -->
+
+    <!-- shared build config - std props -->
+    <property name="project.name" value="T24-Updates" />
+
+    <!-- Ensure the model bank files are included -->
+    <property name="include.model.bank" value="true"/>
+	
+	<target name="all" description="Do a clean build and package of Browser configured for T24 Updates">
+        <ant antfile="build-ib.xml" target="t24updates"/>
+    </target> 
+
+</project>

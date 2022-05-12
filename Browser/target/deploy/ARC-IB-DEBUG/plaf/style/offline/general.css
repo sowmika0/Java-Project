@@ -1,0 +1,1516 @@
+/* General styles used by all XSLTs */
+/*
+Colours used are :
+	#eaedf4  -  light grey background for display boxes, other containers, and odd enq rows
+	#d9d9d9  -  darker grey background for disabled text tools, dropdown response row hover
+	#e8ebf2  -  light grey background for text tools
+	#ff8400  -  highlight colour for: general hyperlink text, enq header, error span
+	#ffa400  -  hover colour for: popup menu hyperlinks
+	#f5f5f5  -  popup menu background
+*/
+
+/* First our top level items that apply to all elements.
+/* Main window - apply background to html, so it copes with empty initial frames, and fixed so content scrolls over it */
+html {
+	height: 100%;
+	width: 99%;
+	background-image: url(../../images/offline/window_bg.gif);
+	background-attachment: fixed;
+}
+/* if body height=100% get scrollbars in processing page in firefox */
+/* General font setting - specific elements/classes override this to 10px(7pt) and 12px(9pt) */
+body {
+	margin: 2px;
+	height: 98%;
+	font: 11px Arial, sans-serif;
+    overflow: auto;
+}
+th {
+  text-align:left;
+}
+/* style for options and input fields */
+select, input {
+	font: 12px Arial, sans-serif;
+}
+/* Textbox type field */
+textarea {
+	background-color: White;
+}
+/* Applied for table tags present in TEC and workspaces */
+table {
+	font: 11px Arial, sans-serif;
+}
+/* applied for list */
+li {
+	font-size: 12px;
+}
+
+/* Other general tag settings */
+img, form {
+	border: 0;
+	margin: 0;
+}
+/* Applied for table tags present in TEC and workspaces */
+table {
+	padding: 0;
+	margin: 0;
+	empty-cells: show; /* forces borders to be displayed for empty cells,used for tabs */
+	border-collapse: collapse; /* equivalent of cellspacing in html */
+	border: 0;
+}
+/* styling for hyperlinks */
+a {
+	color: #ff8400;
+}
+/* style for para */
+p {
+	margin: 0;
+	padding: 0;
+}
+/* style for unordered list */
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+/* style for ordered and unordered list */
+li ul {
+    display: none;
+    margin-left: 16px;
+}
+/* style for ordered list */
+li {
+    font-weight: normal;
+    cursor: default;
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+/***************************************************************************/
+/* Style for toolbox div of a contract */
+.position_box {
+	margin-left: 10px;
+	overflow: hidden;
+}
+/* Error / override box / Enquiry selection box*/
+.display_box {
+	margin: 10px;
+	padding: 3px;
+	border: solid 2px silver;
+	background-color: #eaedf4; /* light grey background colour for display boxes */
+	display: table;  /* IE 6 and below don't understand table, so it reverts to inline */
+}
+/* No error / override in display_box */
+.display_box_none {
+	display: none;
+}
+/* boxes displayed without margin */
+.display_box_no_border
+{
+	overflow:auto;
+	width:100%
+}
+/* applied to book mark that appear in AA */
+.bookMarkDiv
+{
+	float: left;
+}
+
+/* IE-only - standard StarHTML hack to give the display box 'hasLayout' property */
+* html .display_box, * html .position_box {
+	width: 1px;
+}
+/* column tag of display box */
+.display_box td,.display_box th {
+	white-space: nowrap;
+}
+/* Data in ENQUIRY tables where the column widths have been specified should wrap */
+.wrap_words td,.wrap_words th {
+	white-space: normal;
+}
+/* For anchor/image icon buttons */
+.iconLink {
+	display: block;
+	margin-left: 3px;
+}
+/* pointer */
+.clickable {
+	cursor: pointer;
+}
+/* The main contract screen div */
+.scroll_contract_screen {
+	margin: 10px;
+	padding: 3px;
+	border: solid 2px silver;
+	background-color: #ffecf3; /* light pinky background colour for display boxes */
+	
+	overflow:auto;
+	width:100%;
+}
+/* for tabbed screens place a scrollbar if the length of total tabs is greater than the width of window */
+.tabScreenStyle {
+	width:98%;
+	height:55px;
+	overflow-x:auto;
+	overflow-y:hidden;
+}
+/***************************************************************************/
+/* for images */
+.ascell {  /* mv, sv, hot, validate icons .. */
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 2px;
+}
+/* Action tools beside fields in the contracts */
+.action_container {
+	white-space: nowrap;
+}
+/* generic caption styling used across the Browser */
+.caption {
+    color: black;
+    font-weight: bolder;
+    background-color: #eaedf4;
+}
+/*"header" background on forms*/
+.formback {
+	background-color: #eaedf4;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+}
+/* Edge of form right and bottom */
+.formdark {
+    background-color: #777777;
+    font-size: 0;
+    line-height: 0;
+}
+/* Edge of form left and top */
+.formlight {
+    background-color: #d9d9d9;
+    font-size: 0;
+    line-height: 0;
+}
+/* Response even row background colour */
+.colour0 {
+	background-color: white;
+}
+/* Response odd row background colour */
+.colour1 {
+	background-color: #eaedf4;
+}
+/* For highlighting the dropdown row */
+.colour2 {
+	background-color: #d9d9d9;
+}
+/* Tree view items - same as colour1 and colour0 but the display is set to none*/
+.hidden0 {
+	background-color: white;
+	display: none;
+}
+.hidden1 {
+	background-color: #eaedf4;
+	display: none;
+}
+.hidden {
+	display: none;
+}
+/* general class, like hidden e.g. for popup divs */
+.abs {
+	position: absolute;
+}
+/* style for images and toolbar */
+.toolbaritem img {
+    margin: 0 2px;
+}
+
+/* Tool caption text - for enabled button - produces a "box" around the button */
+.toolcaption_ena {
+    width: 50px;
+	white-space: nowrap;
+    background-color: #e8ebf2;
+    border: outset 2px #333333;
+}
+/* Tool caption text - for disabled button - produces a "box" around the button */
+.toolcaption_dis {
+	width: 50px;
+	white-space: nowrap;
+	padding: 3px;
+	background-color: #d9d9d9;
+    border: outset 2px #000000;
+}
+/* Not used */
+* html .toolcaption_ena {
+    border-color: #cccccc;  /* IE requires lighter colours for inset borders */
+}
+/* Not used */
+* html .toolcaption_dis {
+    border-color: #aaaaaa;  /* IE requires lighter colours for inset borders */
+}
+/* Not used */
+a.toolcaption {
+	display: block;
+	white-space: nowrap;
+	font-size: 12px;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	padding: 3px;
+}
+
+/* ****** for calendar.xsl ******* */
+/* Include id's for all your layers here, with commas between.*/
+.calendar {
+    display: block;
+    left: 12px;
+    top: 55px;
+    width: 150px;
+    z-index: 0;
+}
+/* Not used */
+.calmessage {
+    display: none;
+    left: 12px;
+    top: 55px;
+    width: 150px;
+    z-index: 4;
+}
+
+/***************************************************************************/
+/* Main Hyperlink topic style (i.e. a menu that has child menu items) */
+.clsHasKids {
+	font-size: 12px;
+	list-style-type: none;
+	white-space: nowrap;
+}
+/* applied for span tag present in topic */
+.clsHasKids span {
+	cursor: pointer;
+}
+/* applied for img tag */
+.clsHasKids span img {
+	margin-right: 4px;
+}
+/* The distance from the edge of the screen*/
+.menuMargin {
+	margin-left: 5px;
+}
+/* Menu header title background and colour styles */
+.menutitle {
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    background-image : url(../../images/offline/banner_end.gif); 
+}
+/* Hyperlink colour on menu title background */
+.menutitlelink {
+    font-size: 12px;
+	color: white;
+	text-decoration: none;
+}
+/* Hyperlink font size on mouse over */
+.menutitlelink:hover {
+    font-size: 11px;
+}
+/* Background colour for the "form" needs to match menu_div_top.gif" */
+.menubody {
+    background-color: #ffecf3;
+}
+/* Menu heading (not sub-menus) on the menu */
+.menuHeading {
+    color: black;
+    font-size: 11px;
+}
+/* Menu dark colour divider line */
+.menudark {
+    background-color: #5e5e5e;
+}
+/* Menu light colour divider line */
+.menulight {
+    background-color: #8e8e8e;
+}
+/* Menu banner backgrounnd colour */
+.menubanner {
+    background-color: black;
+}
+
+/***************************************************************************/
+/* Used to control the menu banner */
+.banner {
+	padding: 0 3px;
+}
+/* Font used in the text display */
+.bannertxt {
+	margin: 6px 3px;
+	font-weight: bold;
+	color: black;
+}
+/* Style for banner and command line */
+.banner .commandline {
+	padding: 3px;
+	margin: 0;
+	white-space: nowrap;
+}
+/* Style for banner command value */
+.banner #commandValue {
+    border: solid 1px #7f9db9;
+}
+/* Style for banner commandline */
+.banner .commandline a {
+	display: block;
+}
+/***************************************************************************/
+/* Enquiry info in enquiry listing */
+.enqinfo {
+	display: none;
+	white-space: nowrap;
+	font-weight: bold;
+}
+/* Enquiry bread crumbs */
+#enquiryResponseCrumbs td,#enquiryResponseCrumbs th {
+	white-space: nowrap;
+}
+/* Enquiry listing */
+.enquiry_response {
+	margin: 4px 0pt 0pt 10px;
+}
+/* Enquiry response */
+#enquiryResponseData {
+	width: auto;
+}
+/* centre paging tools - IE quirks needs text-align, margin auto is the standards way */
+.paging-toolbar {
+}
+/* tools for navigating pages in enquiry */
+.paging-toolbar table {
+	margin: 3px auto;
+}
+/* Not used anywhere */
+.numrange * {
+	font-size: 13px;
+	margin: 0 2px;
+	padding: 2px;
+}
+/* Enquiry response and selection column headers */
+.columnHeader {
+	font-weight: bolder;
+	color: black;
+	background-color: white;
+	white-space: nowrap;
+}
+/* Applied for hold records */
+.report {
+    font-size: 13px;
+    font-family: Courier New;
+}
+/* enquiry header */
+.enqheader {
+	font-weight:bold;
+	color: #ff8400;
+}
+/* style for NO.HEADER.STYLE */
+.noenqheaderStyle {
+	font-weight:bold;
+	color: #993300;
+	font-family: Courier New;
+    font-size: 13px;
+}
+/* enquiry footer */
+.enqfooter {
+	font-weight:bold;
+	color: #993300;
+}
+/* Header message in the enquiry like "Results-..."*/
+.enqheader-msg span {
+	white-space: nowrap;
+	margin: 3px;
+}
+/* enquiry data listing section */
+.enquirydatascroller {
+	padding: 3px 0;
+	//overflow attribute removed becoz of incorrect printing in IE
+}
+/* Not used */
+.enqDrillLink {
+	color: blue;
+}
+/* Not used */
+.enqDrillImage {
+	border:none;
+}
+/* Style for enquiry selection screen */
+.enqsel-vert select, .enqsel-horiz select {
+	/* width: 100%; */
+}
+/* style for favourites, selection box and enquiry data */
+.enqsel-main .favs, .enqsel-horiz td {
+	vertical-align: top;
+}
+/* style for favourites, selection box and enquiry data */
+.enqsel-main .favs .display_box {
+	width: auto;
+}
+/* enquiry selection screen */
+.enqsel-vert span, .enqsel-horiz span {
+	padding: 0 2px;
+	font-weight: bold;
+}
+/* enquiry selection screen */
+.enqsel-vert .oper span, .enqsel-horiz .oper span {
+	font-weight: normal;
+}
+/* enquiry selection screen */
+.enquirydataclipped {
+	height: 200px;
+}
+/* NOTE: Special rule - just read by JS to determine overflow threshold
+         Needs to be in pixels */
+.enqsel-clipped-horiz {
+	width: 600px;
+}
+/* Enquiry data column */
+.enquirydata td,.enquirydata th {
+	padding: 2px 5px;
+}
+/* Enquiry data table & column */
+.enquirydata table td,.enquirydata table th {
+	padding: 0;
+}
+/* Columns of enquiry selection table*/
+.enqsel-main td,.enqsel-main th {
+	vertical-align: top;
+	white-space: nowrap;
+}
+/* Header of enquiry selection box */
+.header-table {
+	width: 100%;
+}
+/* Enquiry selection header column */
+.header-table td,.header-table th {
+	vertical-align: middle;
+}
+/* Enquiry selection window tables */
+.table-section {
+ 	border-top: 1px solid silver;
+}
+/* Options in enquiry selection screen */
+.enqsel-opts {
+	width: 100%;
+}
+/* refresh seconds field in enquiry selection window */
+.enqsel-refresh input {
+	margin: 0 5px
+}
+/* Enquiry selection footer */
+.enqsel-ftr {
+	padding: 3px;
+	white-space: nowrap;
+}
+/* Go tool */
+.enqsel-go {
+	margin: 3px;
+    cursor: pointer;
+}
+/* Used for the combo boxes on enquiry selections */
+.enqsel {
+    font-size: 10px;
+    color: black;
+}
+/* Data fields in enquiry selection */
+.enqseldata {
+    color: black;
+    background-color: white;
+    border: solid 1px #7f9db9; 
+}
+/* Favourites box in enquiry selection screen*/
+.enqfav {
+	margin: 4px;
+}
+/* IE-only - standard StarHTML hack - quirks mode only */
+* html .enqfav {
+	margin: 2px;
+	border-collapse: separate;
+}
+/* used for headers in enquiry favourite */
+.enqfav thead {
+ 	border-bottom: 1px solid silver;
+}
+/* used for displaying enquiry favourite title */
+.enqfav span {
+    font-weight: bold;
+}
+/* applied for images in enquiry favourite */
+.enqfav img {
+	margin-left: 3px;
+	cursor: pointer;
+}
+/* used in <p> tag of application enquiry */
+.app-enq-hdr p {
+	margin: 2px 4px;
+}
+	
+/* General class for fields in about/dropdown JSPs only */
+/* The font-size and line-height are required for Firefox 1.5.0.3 to transform the xml correctly - 
+	without those the <td> defaults to the height of the font-size defined in general.css. */
+.fieldname {
+    color: #333333;
+    text-decoration: none;
+	background-color: #eaedf4;
+    font-size: 0;
+    line-height: 0;
+}
+
+/* Used for Error text on a deal menu */
+.captionError {
+	color: #AA0000;
+}
+/* Deal Error links on deal menu */
+.errors span {
+    color: #ff8400;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* present in the contract form not visible in the screen */
+.dmenu {
+	width: 100%;
+    overflow: auto;
+}
+/* present in the contract form not visible in the screen */
+.dmenutable {
+	text-align: left;
+	width: auto;
+}
+/* Not used */
+.ddeal {
+	background-color: Aqua;
+}
+/* applied for processing page */
+.dprocessing {
+	width: 100%;
+	height: 100%;
+    z-index: 1;
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+    background-image: url(../../images/offline/window_bg.gif);
+}
+/* Applied for text "Your request is being processed" */
+.dprocessing p {
+	vertical-align: middle;
+	text-align: center;
+}
+/* used in messages  */
+.dmsg {
+    z-index: 1;
+    position: relative;
+}
+/*  applied for message footers - including those with hyperlinks */
+.message {
+    color: black;
+    text-decoration: none;
+}
+/* Not used */
+table.tab {
+    z-index: 1;
+	margin: 5px;
+	border-collapse: separate;
+	border-spacing: 2px 5px;
+	display: none;
+}
+/* Image of a dropdown field */
+.dropdown_button,.selection_criteria {
+	vertical-align: middle;
+	margin-left: 2px;
+	cursor: pointer;
+}
+
+/* The tabs */
+#contract_screen_div {
+	width: 98%;  /* need this for expanding tab headers in IE */
+}
+/* applied for contract screen and fragements */
+.printableFragment #contract_screen_div, .fragmentContainer #contract_screen_div {
+	width: auto; /* no expanding in comp screen fragments */
+}
+* html .printableFragment #contract_screen_div, * html .fragmentContainer #contract_screen_div {
+	width: 1px; /* IE only - no expanding in comp screen fragments */
+}
+/* Applied to contract screen part that contains field names and values */
+#alltab {
+	width: 99%;
+}
+/* Applied for tabs present in associated version */
+#headtab {
+	margin-bottom: -9px;
+	border-collapse: separate;
+	border-spacing: 6px;
+}
+/* Applied for html element of head tab */
+* html #headtab {
+	margin-bottom: -5px;
+}
+
+/* --- not used in deal any more - just retain for EB.TABBED.SCREEN until refactored --- */
+.offstart{width:4px;border-bottom:solid 1px #97acd4;}
+.offstop {width:4px;border-bottom:solid 1px #97acd4;}
+.offtabcell {border:1px solid #97acd4; background-color:silver;padding:3px;white-space:nowrap;cursor:pointer; width:100px; text-align:center;}
+.onstart {width:4px;border-bottom:solid 1px #97acd4;}
+.onstop {width:4px;border-bottom:solid 1px #97acd4;}
+.ontabcell{border:1px solid #97acd4;color:black;border-bottom:0px;background-color:#eaedf4;padding:3px;white-space:nowrap;width:100px; text-align:center; font-weight:bold;}
+
+/* Field captions */
+/* Appearance of field caption on error*/
+.error {
+	color: red;
+	text-decoration: none;
+}
+/* Applied for field names and comments */
+.field {
+	color: black;
+	white-space: nowrap;
+	text-decoration: none;
+}
+/* Not used */
+td.field {
+	padding: 3px 0;
+}
+/* Application / Version title appearing in the left of id box */
+.dealtitle {
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+    white-space: nowrap;
+}
+/* Shows the key in read only mode */
+.iddisplay {
+	padding-left: 4px;
+	font-weight: bold;
+    font-size: 12px;
+    color: black;
+    background-color: #eeeeee;
+    border: solid 1px #7f9db9;    
+}
+/* appearance of radio button */
+.radioCheckStyle {
+    background-color: transparent;
+}
+/* appearance of text next to radio button */
+.enrichment {
+	color: #8f9cbe;
+}
+/* Input type field */
+.dealbox {
+	font-size: 11px;
+}
+/* Style for TEXT box type fields */
+.textbox {
+	font-size: 12px;
+ 	color: black;
+	background-color: white;
+	border: solid 1px #7f9db9;
+}
+/* Input type field */
+.dealbox, .keybox {
+	color: black;
+	background-color: white;
+	border: solid 1px #7f9db9;
+}
+/* Style for noinput / nochange field */
+.disabled_dealbox {
+	position: relative; /* to make sure it's not clipped */
+	padding: 1px 2px;
+	font-size: 10px;
+	background-color: #efefef;
+	border: solid 1px #7f9db9;
+}
+/* Applied for comment lines in contract */
+.comment{
+	padding : 0;
+    font-weight: bold;
+    color: black;
+}
+/* Override text */
+.overrideOn {
+	color: red;
+}
+/* Not used */
+.overrideOff {
+	color: green;
+}
+/* Unanswered warning */
+.warningUnset {
+    color: black;
+    background-color: yellow;    
+}
+/* Answered warning - ex: chosen the option to RECEIVE / NOT RECEIVED */
+.warningSet {
+    color: black;
+    background-color: #e8ebf2;
+}
+
+/* help */
+/* Applied to overview textarea which appears when editing helptext */
+.overviewbox {
+    color: black;
+    border: solid 1px #7f9db9;   
+    width: 600px;
+    height: 150px;
+}
+/* Applied to textarea which appears when editing helptext for a field */
+.fieldbox {   
+    color: black;
+    border: solid 1px #7f9db9;   
+    width: 600px;
+    height: 80px;
+}
+/* Applied to image field */
+.imagebox {   
+    color: black;
+    border: solid 1px #7f9db9;   
+    width: 200px;
+}
+
+/* Styles for popups - including Dropdowns and Calendars */
+.calendar_display {
+	padding: 3px;
+	background-color: #eaedf4; /* light grey background colour for display boxes */
+	display: table;  /* IE 6 and below don't understand table, so it reverts to inline */
+	background-color: transparent;
+}
+/* Style for day caption appearing in the calendar box */
+.dayheader {
+    font-size: 12px;
+    font-weight: bolder;
+    background-color: #eeeeee;
+}
+/* Style for the current day in the calendar */
+.today {
+    font-size: 12px;
+    color: black;
+    background-color: yellow;
+    border: 1px solid red;
+}
+/* Style to indicate a working day in the calendar */
+.workday {
+	background-color: white;
+}
+/* Style to indicate a holiday in the calendar */
+.nonworkday {
+    font-size: 12px;
+    color: #333333;
+    background-color: #eeeeee;
+}
+
+/***************************************************************************/
+/* from arc-ib tabbedMenu.css, then modified */
+/* Styles for rounded tabs e.g. tabbed menu and deal */
+/***************************************************************************/
+/* Style for the entire row of tab header span  */
+.tab-nav-base {
+    border-bottom: 1px solid #999;
+}
+/*Style for the active tab header link of the tabbed screen */
+.tab-nav td a {
+    display: block;
+	position: relative;
+    width: 100%;
+    text-decoration: none;
+    padding: 0 5px 0 0;
+    border-bottom: 1px solid #999;
+    background: no-repeat url(../../images/offline/tabs/tab-round-right.gif) right -100px;
+}
+/* Style for the span of tab header region like tab1 | tab2 | tab3 present in the top*/
+.tab-nav td span {
+    display: block;
+    padding: 5px 11px 5px 16px;
+    white-space: nowrap;
+    color: #322F29;
+    background: url(../../images/offline/tabs/tab-round-full.gif) left -100px;
+}
+/*Style for the active tab of a tabbed screen */
+.tab-nav .active-tab {
+    border-bottom: 1px solid #eaedf4;
+    background: no-repeat url(../../images/offline/tabs/tab-round-right.gif) right top;
+}
+/*Style for the active tab of a tabbed screen */
+.tab-nav .active-tab * {
+    font-weight: bolder;
+    background: url(../../images/offline/tabs/tab-round-full.gif) left top;
+}
+
+/***************************************************************************/
+/* Quick Guide styles */
+/***************************************************************************/
+/*Quick Guides section is Not Used */
+.qgbox {
+	line-height: 1.5;
+	border-collapse: collapse;
+	background-color: white;
+}
+.qgbox thead td {
+	padding: 5px 10px;
+}
+.qgbox img, .qgbox td table {
+	margin: 2px 0 2px 20px;
+}
+.qgbox td.qgheading {
+	font-weight: bolder;
+	padding: 10px 0 5px 3px;
+}
+/* Toolbar text buttons - display: block and no width essential otherwise longer captions overflow the table cell! */
+.textbtn {
+	cursor: pointer;
+	padding: 0 0 4px 0;
+	background: no-repeat url(../../images/offline/tools/btn_bg_bot.gif) left bottom;
+}
+.textbtn * {
+	display: block;
+	padding: 4px 0 0 8px;
+	white-space: nowrap;
+	color: black;
+	font-size: 12px;
+	text-decoration: none;
+	text-align: center;
+	background: url(../../images/offline/tools/btn_bg.gif) left top;
+}
+/* Used in ofx download buttons */
+.textbtn-end {
+	cursor: pointer;
+	padding: 0 0 4px 0;
+	background: no-repeat url(../../images/offline/tools/btn_bg_bot.gif) right bottom;
+}
+.textbtn-end * {
+	display: block;
+	padding: 4px 0 0 5px;
+	cursor: pointer;	
+	background: url(../../images/offline/tools/btn_bg.gif) right top;
+}
+/* Not used */
+.textbtn-dis {
+	padding: 0 0 4px 0;
+	background: no-repeat url(../../images/offline/tools/btn_bg_bot_dis.gif) left bottom;
+}
+/* Not used */
+.textbtn-dis * {
+	display: block;
+	padding: 4px 0 0 8px;
+	font-size: 12px;
+	white-space: nowrap;
+	background: url(../../images/offline/tools/btn_bg_dis.gif) left top;
+}
+/* Not used */
+.textbtn-end-dis {
+	padding: 0 0 4px 0;
+	background: no-repeat url(../../images/offline/tools/btn_bg_bot_dis.gif) right bottom;
+}
+/* Not used */
+.textbtn-end-dis * {
+	display: block;
+	padding: 4px 0 0 5px;
+	background: url(../../images/offline/tools/btn_bg_dis.gif) right top;
+}
+
+
+/***************************************************************************/
+/* Styles for the Tabbed menu */
+/***************************************************************************/
+/* Used in unordered list of tabbed menu */
+.extra-nav ul {
+	list-style: none;
+}
+/* Used in ordered list of tabbed menu */
+.extra-nav li {
+	margin: 0 1px 0 0;
+	padding: 0 5px 0 0;
+	background: url(../../images/offline/tabs/tab-round-right.gif) no-repeat right -100px;
+	float: left;
+	border-bottom: 1px solid #bbb;
+}
+/* used in active tabs of ordered list */
+.extra-nav li.active-tab {
+	border-bottom: 1px solid transparent;
+	background: url(../../images/offline/tabs/tab-round-right.gif) no-repeat right 0;
+}
+/* used in anchor and span tag of tabbed menu */
+.extra-nav li a, .extra-nav li a:visited, .extra-nav li span {
+	display: block;
+	float: left;
+	padding: 5px 11px 5px 16px;
+/*	text-align: center;*/
+	white-space: nowrap;
+	background: url(../../images/offline/tabs/tab-round-full.gif) no-repeat left -100px;
+	text-decoration: none;
+	min-height: 17px; /* fixes FX/Mac issue */
+	color: #322F29;
+}
+
+#nav-menu li.active-tab a, .extra-nav li.active-tab span {
+	background: url(../../images/offline/tabs/tab-round-full.gif) no-repeat left 0;
+}
+/***************************************************************************/
+/* Styles for the POPDOWN menu */
+/***************************************************************************/
+/* used in the div of POP-DOWN menu */
+.sec-nav {
+    background-color: #eaedf4;
+    overflow: auto;
+}
+/* used in unordered list of POP-DOWN menu */
+.sec-nav ul {
+    margin: 0;  /* IE needs L/R to be 0, otherwise big indent! .. top/bottom - no effect */
+    padding: 0;  /* FX needs L/R padding to be 0, otherwise big indent! */
+    list-style: none;
+}
+/* used in ordered and unordered list of POP-DOWN menu */
+.sec-nav li ul {
+    display: inline;
+}
+/* used in unordered list of POP-DOWN menu */
+.menu-nav {
+    white-space: nowrap;
+    height: 24px;
+}
+/* used in ordered list of POP-DOWN menu */
+.menu-nav li {
+    float: left;
+}
+/* applied to anchor tags that is present inside the POP-DOWN menu */
+.menu-nav a {
+    display: block;  /* in IE, gives auto left padding in lists! */
+    padding: 5px 15px 5px 15px;
+    white-space: nowrap;
+    color: black;
+    font-size: 11px;
+    text-decoration: none;
+}
+/* applied to anchor tags when mouse over happens */
+.menu-nav a:hover {
+	background-color:#d9d9d9;
+}
+/* applied to pop-down menu unordered list */
+.pop-menu {
+    position: absolute;
+    visibility: hidden;
+    background-color: #d9d9d9;
+}
+/* applied to pop-down menu ordered list */
+.pop-menu li {
+    float: none;
+    display: block;
+}
+/* applied to pop-down menu anchor tag */
+.pop-menu a {
+	margin: 1px 0px 0px 0px;
+	padding: 3px 15px 3px 15px;
+	font-weight: normal;
+	color: black;
+	background-color:#eaedf4;
+}
+/* applied to pop-down menu anchor tag */
+* html .pop-menu a {
+	padding-left: 8px;
+}
+
+/* Applied to  visible row tag of menu */
+tr.visible-row {
+	display: table-row;
+}
+/* Applied to invisible row tag of menu */
+tr.hidden-row {
+	display: none;
+}
+/* Applied in td avaiable in menu table */
+#menu-table td  {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+/* Applied for table tag of menu */
+#menu-table {
+	padding-top: 10px; 
+}
+/* applied to anchor tag that is present inside table tag of menu */
+#menu-table a {
+	white-space: nowrap;
+	text-decoration: underline;
+}
+
+ul.nav-menu li.nonactive-tab {}
+/* used in anchor tag of tabbed menu which is active */
+td.active-command a{
+	color: #213a7d;
+}
+/* used in anchor tag of tabbed menu which is inactive */
+td.nonactive-command a{
+	color: #808080;
+}
+
+/* Applied when mouse over happens in the anchor tag of table menu */
+#menu-table a:hover {
+	color: #DB6E4C;
+}
+/* Applied for all <br> tags */
+br {
+	clear: left 
+}
+/* Applied for ordered list of menu */
+#nav-menu li
+{
+    font-size: 10px;
+}
+/* Applied for tabbed menu */
+#commandsViewport {
+	clear:both;
+	padding-top: 10px;
+}
+/* Applied for div inside the tabbed menu */
+* html div#commandsViewport {
+	/* Hack	for proper gap between menu and links in IE */
+	padding-top: 0px;
+}
+
+ /* Added for enquiry list display*/
+ .enquiryList
+ {
+	width:100%;
+	height:100%;
+ }
+  /* used in the div of enquiry response when VIEWLIST attribute is set */
+ .enquiry_list_container
+ {
+	background-color:White;
+ }
+ /* Used in header of enquiry response when VIEWLIST attribute is set in enquiry */
+ .enquiry_list_detail_container
+ {
+	border: solid 2px silver;
+ }
+ /* Used in div of enquiry response to display each row of enquiry data when VIEWLIST attribute is set in enquiry. */
+ .enquiry_list_item_container
+ {
+	border: solid 1px silver;
+	float: left;
+	background-color:White;
+	margin: 2px;
+	width:100px;
+	height:100px;
+ }
+ /* Used by LEGEND,BAR and negative BAR display type of Enquiry */
+ .barColor1{ background-color: #CC99FF; border: solid 1px white;}
+ .barColor2{ background-color: #CC99CC; border: solid 1px white;}
+ .barColor3{ background-color: #CC9999; border: solid 1px white;}
+ .barColor4{ background-color: #CC9966; border: solid 1px white;}
+ .barColor5{ background-color: #CC9933; border: solid 1px white;}
+ .barColor6{ background-color: #CC9900; border: solid 1px white;}
+ .barColor7{ background-color: #669900; border: solid 1px white;}
+ .barColor8{ background-color: #669933; border: solid 1px white;}
+ .barColor9{ background-color: #669966; border: solid 1px white;}
+ .barColor10{ background-color: #669999; border: solid 1px white;}
+ .barColor11{ background-color: #6699CC; border: solid 1px white;}
+ .barColor12{ background-color: #6699FF; border: solid 1px white;}
+ .barColor13{ background-color: #9966FF; border: solid 1px white;}
+ .barColor14{ background-color: #9966CC; border: solid 1px white;}
+ .barColor15{ background-color: #996699; border: solid 1px white;}
+ .barColor16{ background-color: #996666; border: solid 1px white;}
+ .barColor17{ background-color: #996633; border: solid 1px white;}
+ .barColor18{ background-color: #996600; border: solid 1px white;}
+ .barColor19{ background-color: #FFCC99; border: solid 1px white;}
+ .barColor20{ background-color: #009999; border: solid 1px white;}
+
+/* Classes that need to be applied for enquiry dropdown that appears in new window. */
+
+/* To be applied for div's  and iframe in popup window of enquiry dropdown */
+
+.popup-tools div, .popup-tools iframe {
+	position: absolute;
+	display: none;
+	visibility: hidden;
+	z-index: 10;
+}
+/* additional properties that need to be applied for popup window of enquiry dropdown */
+.popup-tools div {
+	border: solid 2px silver;
+	background-color: #f5f5f5;
+	padding: 3px;
+}
+/* To be applied for anchor tag of popup enquiry dropdown window */
+.popup-tools a {
+	display: block;
+	white-space: nowrap;
+    font-weight: bolder;
+	text-decoration: none;
+	padding: 3px;
+}
+/* To be applied when the mouse is moved over the anchor tag */
+.popup-tools a:hover {
+	color: #ffa400;
+}
+/* To be applied for list that are available as a part of enquiry dropdown */
+.popup-tools li {
+	height: 1%;
+}
+
+/* For the general floating popup */
+.popup-view {
+	overflow-x:auto;
+	overflow-y:scroll;
+	border: 1px solid #7f9db9;
+	background-color: white;
+}
+/* For recurrance and frequency controls*/
+.customBackground
+{
+	background-color: #ffecf3;
+	height:100%;
+}
+/* For recurrance and frequency controls*/
+.customImage
+{
+	border-bottom: solid 1px #7f9db9; 
+	background-image: url(../../images/offline/recurrFreqToolbar.gif);
+}
+/*************************************************************************/ 
+/* Horizontal rule styles for enquiry.*/ 
+/* font-size and line-height are required for the 'IE div height problem'*/
+/*************************************************************************/ 
+/* Adds a horizontal rule beneath the header in the enquiry response if attribute UNDERLINE.HEADER.ROW set. */
+.enq-underlineHeaderRow {
+	height:3px;
+	background-color:black;
+	font-size:1px;
+	line-height:0;
+}
+/* Used in enquiry response to add a horizontal rule row if the enquiry has the UNDERLINE.TREE.ROWS attribute set */
+.enq-underlineTreeRows {
+	height:2px;
+	background-color:black;
+	font-size:1px;
+	line-height:0;
+}
+
+/* Horizontal line in enquiries under 'drill rows' if the attribute UNDERLINE.DRILL.ROWS set in enquiry. Works in Firefox*/
+.enq-underlineDrillRows {
+    border-bottom:solid 1px black;
+}
+
+/* Same style as above but works in IE */
+.enq-underlineDrillRows td {
+    border-bottom:solid 1px black;
+}
+
+/* Horizontal line in enquiries under 'all rows' if the attribute UNDERLINE.ALL.ROWS set in enquiry. Works in Firefox*/
+.enq-underlineAllRows {
+    border-bottom:solid 1px black;
+}
+
+/* Same style as above but works in IE */
+.enq-underlineAllRows td {
+    border-bottom:solid 1px black;
+}
+/*************************************************************************/ 
+/* Place all class definitions for Enquiries here */
+/*********** Moved from custom.css **************************************/
+/* Displays the field value in red when field value is greater than 100 */
+.ALERT-HIGH
+{
+    FONT-FAMILY: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+    BACKGROUND-COLOR: #FF0000
+}
+/* Displays the field value in yellow when field value is less than 100 */
+.ALERT-LOW
+{
+    BACKGROUND-COLOR: #FFFF10;
+    FONT-FAMILY: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+}
+/* used to display field value in red */
+.critical
+{
+    BACKGROUND-COLOR: red;
+    text-align: right;
+}
+/* used to display field value in yellow for warning */
+.warning
+{
+    BACKGROUND-COLOR: yellow;
+    text-align: right;
+}
+/* used to display field value in green */
+.nice
+{
+    BACKGROUND-COLOR: #00FF00;
+    text-align: right;
+}
+
+
+/* Place all class definitions for Versions here */
+/* All class names should be preceeeded by 'INPUT.' */
+/* Displays the field value in red when field value is greater than 100  */
+INPUT.ALERT-HIGH
+{
+    FONT-FAMILY: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+    BACKGROUND-COLOR: #FF0000;
+}
+/* Displays the field value in yellow when field value is less than 100 */
+INPUT.ALERT-LOW
+{
+    BACKGROUND-COLOR: #FFFF10;
+    FONT-FAMILY: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+}
+
+/* AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM */
+/* These Styles are required for the AM Valuation Portal.*/
+/* AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM */
+/* Applied for header label when header is not equal to XxxXxxX */
+TD.HdrFieldLabel
+{
+    FONT-WEIGHT: bold;
+    FONT-FAMILY: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+    empty-cells: hide;
+}
+/* Applied for header field content when field content not equal to XXXXXXSSSSXXXXXXX */
+TD.HdrFieldContent
+{
+    FONT-FAMILY: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+    font: oblique;
+    empty-cells: hide;
+}
+/* Applied for header field content when field content contains negative value */
+TD.HdrFieldContentNeg
+{
+    FONT-FAMILY: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+    font: oblique;
+    empty-cells: hide ;
+    color: #FF0000;
+}
+/* Applied for positive values */
+TD.NumPos
+{
+  font-family: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+}
+/* Applied for negative values */
+TD.NumNeg
+{
+  font-family: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+  color: #FF0000;
+  background-image: none;
+}
+/* Applied for positive total */
+TD.TotNumPos
+{
+  font-family: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+  font-weight: bold;
+}
+/* Applied for negative total */
+TD.TotNumNeg
+{
+  font-family: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+  color: #FF0000;
+  font-weight: bold;
+}
+/* Applied when field value contains BUY */
+TD.RateBuy
+{
+  font-family: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+  font-weight: bolder;
+  color: #009900;
+  font-variant: normal;
+}
+/* Applied when field value contains SELL */
+TD.RateSell
+{
+  font-family: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+  font-weight: bolder;
+  color: #FF0000;
+}
+/* Applied to description fields */
+TD.StdFld
+{
+  font-family: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+  color: #000099;
+}
+/* Not used */
+TD.TotStdFld
+{
+  font-family: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+  letter-spacing: 1px;
+}
+
+/* AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM */
+/* These Styles are required for the AM Valuation Portal.*/
+/* AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM AM */
+
+/* PSG PSG PSG PSG PSG PSG PSG PSG PSG PSG  */ 
+/* Product Strategy Group class definitions */
+/* Start                                    */
+/* Used for displaying font in bold   */
+.BOLD
+{
+  FONT-WEIGHT: bold;
+}
+/* Used for displaying font in italic   */
+.ITALIC
+{
+    font: oblique;
+}
+/* Not used */
+.RED
+{
+    COLOR: red;
+}
+/* used to display active status */
+.GREEN
+{
+    COLOR: green;
+}
+/* used to display to be validated status */
+.DARKBLUE
+{
+    COLOR: #00008B;
+}
+/* Used in displaying headings  */
+.COS-HEADING
+{
+	FONT-SIZE: 175%;
+	FONT-WEIGHT: bold;
+	COLOR: White;
+	BACKGROUND-COLOR: #213A7D;
+}
+
+/* Used in displaying headings for noinput  */
+.disabled_COS-HEADING
+{
+	FONT-SIZE: 175%;
+	FONT-WEIGHT: bold;
+	COLOR: White;
+	BACKGROUND-COLOR: #213A7D;
+}
+
+/* Used for displaying data label */
+.COS-HEADING-DATA-LABEL
+{
+	FONT-SIZE: 167%;
+	COLOR: White;
+	BACKGROUND-COLOR: #213A7D;
+}
+
+/* Used for displaying data label for noinput*/
+.disabled_COS-HEADING-DATA-LABEL
+{
+	FONT-SIZE: 167%;
+	COLOR: White;
+	BACKGROUND-COLOR: #213A7D;
+}
+
+/*Used for displaying data value */
+.COS-HEADING-DATA-VALUE
+{
+	FONT-SIZE: 167%;
+	FONT-WEIGHT: bold;
+	COLOR: White;
+	BACKGROUND-COLOR: #213A7D;
+}
+
+/*Used for displaying data value for noinput */
+.disabled_COS-HEADING-DATA-VALUE
+{
+	FONT-SIZE: 167%;
+	FONT-WEIGHT: bold;
+	COLOR: White;
+	BACKGROUND-COLOR: #213A7D;
+}
+
+/* used for displaying sub headings */
+.COS-SUBHEADING
+{
+        FONT-SIZE: 150%;
+        FONT-WEIGHT: bold;
+        COLOR: White;
+        BACKGROUND-COLOR: #8F9CBE;
+}
+
+/* used for displaying sub headings for noinput */
+.disabled_COS-SUBHEADING
+{
+        FONT-SIZE: 150%;
+        FONT-WEIGHT: bold;
+        COLOR: White;
+        BACKGROUND-COLOR: #8F9CBE;
+}
+
+.BOLD-ITALIC
+{
+	FONT-WEIGHT: BOLD;
+	FONT: OBLIQUE;
+}
+
+.BOLD-RED
+{
+	FONT-WEIGHT: BOLD;
+	COLOR: RED;
+}
+/* Used in enquiry  label,id and value display  */
+.ENQ-DATA-LABEL
+{
+	FONT-WEIGHT: bold;
+	COLOR: #336699;
+	BACKGROUND-COLOR: White;
+}
+
+.ENQ-DATA-VALUE
+{
+	BACKGROUND-COLOR: White;
+}
+
+.ENQ-H-TITLE
+{
+    FONT-SIZE: 150%;
+    FONT-WEIGHT: bold;
+    COLOR: #993300;
+}
+
+.ENQ-H-ID-LABEL
+{
+    FONT-SIZE: 125%;
+    FONT-WEIGHT: bold;
+    COLOR: #A0522D;
+}
+
+.ENQ-H-ID
+{
+    FONT-SIZE: 125%;
+    FONT-WEIGHT: Bold;
+    COLOR: #336699;
+}
+
+.ENQ-H-DATA-LABEL
+{
+    FONT-WEIGHT: Bold;
+    COLOR: #A0522D;
+}
+
+.ENQ-H-DATA
+{
+	FONT-WEIGHT: Bold;
+	COLOR: #213A7D;
+}
+
+.ENQ-DATA-ID
+{
+    FONT-WEIGHT: Bold;
+    COLOR: #336699;
+}
+/* used in No records found text */
+.ENQ-NORECS
+{
+    FONT-WEIGHT: bold;
+    COLOR: Red;
+	BACKGROUND-COLOR: White;
+}
+/* Used to display Inactive status */
+.ENQ-NEW
+{
+    COLOR: #336699;
+    FONT: oblique;
+}
+.contract_selection_criteria {
+}
+/* End                                      */
+/* Product Strategy Group class definitions */
+/* PSG PSG PSG PSG PSG PSG PSG PSG PSG PSG  */ 

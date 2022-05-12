@@ -1,0 +1,44 @@
+/* General styles used by all HelpText Files */
+
+html {
+	height: 100%;
+	width: 99%;
+	background-color: #E0EBEA;
+}
+
+body {
+	margin: 2px;
+	height: 98%;
+	font-family: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;	
+	overflow: auto;
+	background-color: #E0EBEA;
+	
+}
+
+table {
+	padding: 0;
+	margin: 0;
+	empty-cells: show; /* forces borders to be displayed for empty cells,used for tabs */
+	border-collapse: collapse; /* equivalent of cellspacing in html */
+	border: 0;
+	font-size: 98%;
+
+}
+
+/* applied for unordered / Main Heading */
+h2,h4,h5
+{
+font-weight:bold;
+color:#324689;
+font-family: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+}
+
+
+/* applied for unordered / para */
+p{
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+	font-size:12px;
+}
+

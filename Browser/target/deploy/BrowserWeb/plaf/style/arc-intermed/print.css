@@ -1,0 +1,63 @@
+@media print {
+	/* applied for body tag */
+	body {
+		font-family:"Times New Roman", Times, serif;
+		overflow: visible;
+	}
+	
+	/* Redefinition of TD in general.css */
+	td,th {
+		font-family:"Times New Roman", Times, serif;
+	}
+	
+	/* Redefinition of value from enquiry.css */
+	.columnheader {
+		font-family:"Times New Roman", Times, serif;
+	}
+	
+	/* The solely fragment that should be printed */
+	.printableFragment {
+		display: block;
+	}
+	/* fragement that will not be printed */
+	.notPrintableFragment {
+		display: none;
+	}
+	
+	/* Hides "drill" button */  
+	.enqdrilldowncell {
+		display: none;
+	}
+	
+	/* Hids "next" button in the version */
+	.belowDealButtonBox {
+		display: none;
+	}
+	 /* Applied for images */
+	img { 
+		display: none;
+	}
+	
+	/* Applied for paging tools */
+	.paging-toolbar {
+		display: none
+	}
+	
+	/* used in enquiry selection */	
+	.noPrint {
+		display: none;
+	}
+}
+
+@media screen {
+/* used for header */
+	#printHeader {
+		display: none;
+		height: 1%;  /*otherwise the the height of the header in IE is proportional */
+	}
+/* used for footer */
+	#printFooter {
+		display: none;
+		height: 1%; /* otherwise the the height of the footer in IE is proportional */
+	}
+}

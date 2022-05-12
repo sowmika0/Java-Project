@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<project name="browser.common.imports" default="build">
+    <!--
+	Contains tasks common to the Browser build files.
+	There is a seperate build for each configuration (Browser, ARC-IB).
+	These build files should override the property 'project.name'.
+    -->
+    
+    <!--
+      Standard installation dir properties can be overridden in a global using the ANT_OPTS:
+      For example, if your glassfish install is in D:/sun/jdk1.5.0_06, set ANT_OPTS=-Djdk.home=D:/sun/jdk1.5.0_06
+    -->
+    
+    <!-- shared build config - std props -->
+    <property name="project.archive.name" value="${project.name}.war" />
+    <property name="project.archive.nolog4j.name" value="${project.name}-RSA.war" />
+    <property name="project.root.dir" location="${basedir}" />
+    <property name="shared.root.dir" location="${project.root.dir}/../should-be-shared" />
+
+    <!-- overrides -->
+    <property name="T24Browser.root.dir" location="${project.root.dir}/T24Browser" />
+    <property name="BrowserWeb.root.dir" location="${project.root.dir}/BrowserWeb" />
+    <property name="project.webapp.dir" location="${BrowserWeb.root.dir}/Web Content" />
+    <property name="project.classes.dir" location="${project.webapp.dir}/WEB-INF/classes" />
+
+    <!-- use non standard deploy directory -->
+    <property name="project.target.dir" location="${project.root.dir}/target" />
+    <property name="project.deploy.exploded.dir" location="${project.target.dir}/deploy/${project.name}" />    
+    
+    <!-- personal property overrides go here -->
+    <property file="${project.root.dir}/build.personal.properties"/>
+
+    <!-- import shared and project properties / paths -->
+    <import file="${shared.root.dir}/config/build/build-common.xml"/>
+
+    <!-- import (if it exists) local properties / paths, based on shared stuff -->
+    <import file="${project.root.dir}/build-common.xml" optional="true"/>
+
+    <!-- General Settings -->
+    <property name="project.deploy.exploded.src" location="${project.webapp.dir}" />
+
+
+    <path id="compile.classpath">
+	<!-- Files included in the project -->
+        <fileset dir="${project.webapp.dir}/WEB-INF/lib/" includes="**/*.jar" />
+
+        <!-- Shared lib files .. -->
+        <pathelement location="${shared.root.dir}/lib/rhino/js.jar" />
+        <pathelement location="${shared.root.dir}/lib/tomcat/5.5/servlet-api.jar" />
+        <pathelement location="${shared.root.dir}/lib/tomcat/5.5/jsp-api.jar" />
+        <pathelement location="${shared.root.dir}/lib/4tress/SS_4TRESS_PUBLIC_Client.jar" />
+    	<pathelement location="${shared.root.dir}/lib/4tress/SS_4TRESS_PUBLIC_Client70.jar"/>
+    	<pathelement location="${shared.root.dir}/lib/4tress/soapclient70.jar"/>
+    	<pathelement location="${shared.root.dir}/lib/4tress/axis.jar"/>
+    	<pathelement location="${shared.root.dir}/lib/4tress/axis-ant.jar"/>
+        <pathelement location="${shared.root.dir}/lib/4tress/commons-codec-1.3.jar" />
+    	<pathelement location="${shared.root.dir}/lib/4tress/commons-discovery.jar" />
+    	<pathelement location="${shared.root.dir}/lib/4tress/commons-logging-1.1.jar" />
+    	<pathelement location="${shared.root.dir}/lib/4tress/jaxrpc.jar" />
+    	<pathelement location="${shared.root.dir}/lib/4tress/javaee.jar" />
+    	<pathelement location="${shared.root.dir}/lib/4tress/wsdl4j.jar" />
+        <pathelement location="${shared.root.dir}/lib/rsa/authapi.jar" />
+        <pathelement location="${shared.root.dir}/lib/temenos_authentication/authentication-webcommon.jar" />
+        <pathelement location="${shared.root.dir}/lib/glassfish/9.0.b48/javaee.jar" />
+    	<pathelement location="${shared.root.dir}/lib/T24RA/tocfT24ra.jar" />
+    	<pathelement location="${shared.root.dir}/lib/jRemote/jremote.jar" />
+	
+		<pathelement location="${shared.root.dir}/lib/rsa71/am-client.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/am-server-o.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/axis-1.3.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/com.bea.core.process_5.3.0.0.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/commons-beanutils-1.7.0.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/commons-discovery-0.2.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/commons-lang-2.2.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/EccpressoAsn1.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/EccpressoCore.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/EccpressoJcae.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/hibernate-annotations-3.2.1.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/ims-client.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/ims-server-o.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/iScreen-1-1-0rsa-2.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/iScreen-ognl-1-1-0rsa-2.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/jdom-1.0.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/jsafe-3.6.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/jsafeJCE-3.6.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/ognl-2.6.7.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/spring-2.0.7.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/systemfields-o.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/ucm-client.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/ucm-server-o.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/wlcipher.jar" />
+    	<pathelement location="${shared.root.dir}/lib/rsa71/wlfullclient.jar" />
+    </path> 
+
+    <!-- top-level targets (DO NOT invoke these from the common file directly, as the project name needs to be specified) -->
+
+    <target name="clean" description="Cleans the classes + target (exploded/archive)" depends="clean-classes, clean-exploded, clean-archive" />
+
+    <target name="build" description="Compile T24Browser and BrowserWeb classes" depends="BrowserWeb-compile" />
+
+    <target name="package" description="Create the target exploded dir + archive" depends="create-exploded, create-archive" />
+
+    <target name="deploy" description="Standard deploy (glassfish/local/exploded)" depends="deploy-to-glassfish" />
+
+        
+    <target name= "create-exploded" description="Delete then full update of target files" depends="clean-exploded">
+    	<!-- Call the base create-exploded -->
+        <!-- Then, copy in model bank and configuration files ONLY if specified (see include.model.bank property) -->
+        <!-- Start including a parameter for the overwrite - the only thing that separates create from update --> 
+        <antcall>
+            <param name="overwriteTargetFiles" value="true"/>
+            <target name="copy-to-exploded"/>
+            <target name="include-project-config"/>
+            <target name="include-model-bank"/>
+        </antcall>
+    </target>
+
+
+    <target name= "update-exploded" description="Update target files as appropriate">
+    	<!-- Call the base update-exploded -->
+        <!-- Then, copy in model bank and configuration files ONLY if specified (see include.model.bank property) -->
+        <!-- Start including a parameter for the overwrite - the only thing that separates create from update --> 
+        <antcall>
+            <param name="copyVerbose" value="true"/>
+            <target name="copy-to-exploded"/>
+            <target name="include-project-config"/>
+            <target name="include-model-bank"/>
+        </antcall>
+    </target>
+
+
+    <target name="include-project-config">                  
+        <!-- Copy the project-specific config files to the deploy directory-->
+        <copy todir="${project.deploy.exploded.dir}" overwrite="${overwriteTargetFiles}" failonerror="false">
+            <fileset dir="${project.root.dir}/config/configurations/${project.name}"/>
+        </copy>    
+    </target>
+
+    <target name="configure-workspace" description="Update Browser workspace with logging configuration etc.">
+        <!-- For current Browser team -->
+        <!-- Copy the project-specific config files to the workspace directory-->
+        <copy todir="${project.webapp.dir}" overwrite="${overwriteTargetFiles}" failonerror="false">
+            <fileset dir="${project.root.dir}/config/configurations/${project.name}"/>
+        </copy>    
+    </target>
+
+    <target name="include-model-bank" if="include.model.bank">
+	    <echo message="Copying MODELBANK include.model.bank: ${include.model.bank}"/>
+        <!-- Copy the 'model bank' config to the deploy directory-->
+        <copy todir="${project.deploy.exploded.dir}" overwrite="${overwriteTargetFiles}">
+            <fileset dir="${project.root.dir}/config/modelbank"/>
+        </copy>
+
+    	<!-- todo: add code in here to remove all of the files we don't want in the ARC-IB release (e,g, unused servlets) -->	
+    	<echo message="todo: Remove all unused files from the ARC-IB configurations"/>    	
+    </target>
+        
+    
+    <target name="deploy-to-glassfish-as-war" description="Deploy to local Glassfish autodeploy area">
+        <delete file="${glassfish.home}/domains/domain1/autodeploy/${project.archive.name}" />
+        <copy file="${project.archive.name}" todir="${glassfish.home}/domains/domain1/autodeploy" />
+    </target>
+    
+    
+    <!-- Compile BrowserWeb Java source into the Web Content WEB-INF/classes dir -->
+    <target name="BrowserWeb-compile">
+    	<!-- Copy the authentication-webcommon.jar from the shared directory to WEB-INF/lib -->
+    	<copy file="${shared.root.dir}/lib/temenos_authentication/authentication-webcommon.jar" todir="${project.webapp.dir}/WEB-INF/lib" />
+    	<!-- Copy the 4TRESS7.0 jar files from shared directory to WEB-INF/lib -->
+    	<copy file="${shared.root.dir}/lib/4tress/axis.jar" todir="${project.webapp.dir}/WEB-INF/lib" />
+    	<copy file="${shared.root.dir}/lib/4tress/axis-ant.jar" todir="${project.webapp.dir}/WEB-INF/lib" />
+    	<copy file="${shared.root.dir}/lib/4tress/commons-discovery.jar" todir="${project.webapp.dir}/WEB-INF/lib" />
+    	<copy file="${shared.root.dir}/lib/4tress/SS_4TRESS_PUBLIC_Client70.jar" todir="${project.webapp.dir}/WEB-INF/lib" />
+    	<copy file="${shared.root.dir}/lib/4tress/soapclient70.jar" todir="${project.webapp.dir}/WEB-INF/lib" />
+    	<copy file="${shared.root.dir}/lib/4tress/commons-logging-1.1.jar" todir="${project.webapp.dir}/WEB-INF/lib" />
+    	<copy file="${shared.root.dir}/lib/4tress/javaee.jar" todir="${project.webapp.dir}/WEB-INF/lib" />
+    	<copy file="${shared.root.dir}/lib/4tress/jaxrpc.jar" todir="${project.webapp.dir}/WEB-INF/lib" />
+    	<copy file="${shared.root.dir}/lib/4tress/wsdl4j.jar" todir="${project.webapp.dir}/WEB-INF/lib" />
+    	
+    	
+        <mkdir dir="${project.classes.dir}" />
+        
+        <shared.javac srcdir="${BrowserWeb.root.dir}/Java Source" destdir="${project.classes.dir}" source="1.5">
+                <classpath>
+                	<path refid="compile.classpath"/>
+        	</classpath>
+        </shared.javac> 
+
+		<!-- Delete the DebugServlet file as this isn't released -->
+		<delete file="${project.classes.dir}/com/temenos/t24browser/servlets/DebugServlet.class" />        
+    </target>   
+
+    <!-- Create the WAR file from a sync'd up exploded dir -->
+    <target name="create-archive" depends="update-exploded">
+        <jar destfile="${project.archive}" basedir="${project.deploy.exploded.dir}" />
+    </target>
+    
+    <!-- Obfuscates T24 commands in JavaScript files and XSL commands file, creates common T24 commands mapping file-->
+    <target name="internal-obfuscation">
+        <java classname="com.temenos.t24browser.obfuscator.ObfuscatorProcessor">
+            <arg value="${project.webapp.dir}/scripts"/>
+            <arg value="${project.webapp.dir}/transforms/ARC/T24_constants.xsl"/>
+            <arg value="${project.webapp.dir}/WEB-INF/conf/obfuscator/commonCommands.prop"/>
+            <classpath>
+                <pathelement location="${project.webapp.dir}/WEB-INF/lib/xerces.jar"/>
+                <pathelement location="${project.webapp.dir}/WEB-INF/lib/xalan.jar"/>
+                <pathelement path="${project.classes.dir}/"/>
+             </classpath>
+        </java>
+    </target>
+                
+    <!-- Obfuscation and compress of JavaScript files, new all.js file is created which contains all obfuscated code.-->
+    <target name="external-obfuscation">
+        <echo message="Obfuscation + packing of original JS files.  Takes 1 - 2 min .."/>
+        <java classname="com.temenos.t24browser.obfuscator.ExternalObfuscator" fork="yes">
+            <jvmarg value="-Xmn100m"/>
+            <jvmarg value="-Xms256m"/>
+            <jvmarg value="-Xmx256m"/>
+            <arg value="${shared.root.dir}/lib/JSPacker/packer.js"/>
+            <arg value="${project.webapp.dir}/scripts"/>
+            <arg value="${project.webapp.dir}/scripts/all.js"/>
+            <classpath>
+                <pathelement location="${shared.root.dir}/lib/rhino/js.jar "/>
+                <pathelement path="${project.classes.dir}/"/>
+             </classpath>
+        </java>
+    </target>
+
+    <!-- Obfuscation and compress of JavaScript files, new all.js file is created which contains all obfuscated code.-->
+    <target name="both-obfuscation">
+        <echo message="Obfuscation + packing of internal (T24) obfuscated JS files. Takes 1 - 2 min .."/>
+        <java classname="com.temenos.t24browser.obfuscator.ExternalObfuscator" fork="yes">
+            <jvmarg value="-Xmn100m"/>
+            <jvmarg value="-Xms256m"/>
+            <jvmarg value="-Xmx256m"/>
+            <arg value="${shared.root.dir}/lib/JSPacker/packer.js"/>
+            <arg value="${project.webapp.dir}/scripts/obfuscated"/>
+            <arg value="${project.webapp.dir}/scripts/obfuscated/all.js"/>
+            <classpath>
+                <pathelement location="${shared.root.dir}/lib/rhino/js.jar "/>
+                <pathelement path="${project.classes.dir}/"/>
+             </classpath>
+        </java>
+    </target>
+
+	<target name="set-nolog4j">
+		<property name="nolog4j" value="true"/>
+	</target>
+    <!-- ************** Start of JSLint Stuff ********************* -->
+
+    <!-- JSLint each JS file .. just check for semicolons now -->
+    <target name="jslint-run-all" description="Run JSLint over all the JS files">
+        <foreach param="jsfile" target="jslint-run">
+            <path>
+                <fileset dir="${project.webapp.dir}/scripts"
+                         includes="**/*.js"
+                         excludes="**/debug_only/**/*.js,obfuscated/**/*.js"/>
+            </path>
+        </foreach>
+    </target>
+
+    <!-- Run JSLint using the Rhino engine -->
+    <!-- Uses special Rhino version of JSLint which we have customized (unlimited errors) -->
+    <!-- Individual JS files can specify options like /*jslint evil: true */ -->
+    <target name="jslint-run" description="Run JSLint using Rhino">
+        <echo message="Run JSLint over ${jsfile} and test for missing semicolons"/>
+
+        <java classname="org.mozilla.javascript.tools.shell.Main"
+              classpath="${shared.lib.dir}/rhino/js.jar"
+              fork="true"
+              outputproperty="jslint.out">
+            <arg value="${shared.lib.dir}/jslint/jslint-for-rhino-cust-browser.js"/>
+            <arg value="${jsfile}"/>
+        </java>
+
+        <propertyregex property="jslint.semicolon.missing"
+                       input="${jslint.out}"
+                       regexp="(Missing semicolon)"
+                       defaultValue=""
+                       replace="\1 // !!!!! FOUND ONE !!!!!"
+                       casesensitive="false" />
+
+        <fail>
+            <condition>
+                <not>
+                    <equals arg1="${jslint.semicolon.missing}" arg2="" />
+                </not>
+            </condition>
+            ==> &#10;&#10; &gt;&gt;&gt; THE DREADED MISSING SEMICOLON &lt;&lt;&lt; (see in context below) &#10;&#10;${jslint.semicolon.missing}
+        </fail>
+
+    </target>
+
+    <!-- Test target for JSLint to make sure semicolon check is working! -->
+    <target name="jslint-test" description="Test JSLint over dummy JS file">
+        <antcall target="jslint-run">
+            <param name="jsfile" value="${shared.lib.dir}/jslint/jslint-test-file.js"/>
+        </antcall>
+    </target>
+
+    <!-- ************** End of JSLint Stuff ********************* -->
+
+    <!-- ************** Start of JSDoc Stuff ********************* -->
+
+    <!-- Run JSDoc and output to target dir -->
+    <target name="jsdoc-create" description="Generate JSDoc for all the application JS files">
+        <mkdir dir="${project.target.dir}/docs" />
+
+        <if><os family="windows"/>
+            <then>
+                <exec dir="${project.root.dir}/doc" executable="cmd">
+                    <arg line="/c run_jsdoc.bat"/>
+                </exec>
+            </then>
+            <elseif><os family="unix"/>
+                <then>
+                    <exec dir="${project.root.dir}/doc" executable="/bin/sh">
+                        <arg value="-c"/>
+                        <arg value="run_jsdoc.sh"/>
+                    </exec>
+                </then>      
+            </elseif>
+        </if>
+            
+    </target>
+
+	<target name="javadoc-create">
+    <mkdir dir="${project.target.dir}/docs/javadoc" />
+	
+	<javadoc
+		access="public"
+		author="true"
+		classpathref="compile.classpath"
+	destdir="${project.target.dir}/docs/javadoc"
+	nodeprecated="false"
+	nodeprecatedlist="false"
+	noindex="false"
+	nonavbar="false"
+	notree="false"
+	packagenames="com.temenos.*"
+	source="1.5" sourcepath="BrowserWeb/Java Source" splitindex="true" use="true" version="true"/>
+
+	</target>
+	
+    <!-- ************** End of JSDoc Stuff ********************* -->
+
+</project>

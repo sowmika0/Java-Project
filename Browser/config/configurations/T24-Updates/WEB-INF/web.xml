@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<!-- This is the web.xml that will be used by the default - Browser internal - configuration -->
+<web-app id="WebApp">
+	<display-name>BrowserWeb</display-name>
+	<distributable />
+	<!-- Browser parameters file -->
+	<context-param>
+		<param-name>browserParameters</param-name>
+		<param-value>browserParameters.xml</param-value>
+	</context-param>
+	<!-- Help parameters file -->
+	<context-param>
+		<param-name>helpParameters</param-name>
+		<param-value>helpParameters.xml</param-value>
+	</context-param>
+	<!-- Login Page Links file -->
+	<context-param>
+		<param-name>loginPageLinks</param-name>
+		<param-value>loginPageLinks.xml</param-value>
+	</context-param>
+	<!-- nochangeFields list file -->
+	<context-param>
+		<param-name>nochangeFields</param-name>
+		<param-value>nochangeFields.xml</param-value>
+	</context-param>
+	<!-- Updates Repository directory  -->
+	<context-param>
+		<param-name>updatesDir</param-name>
+		<param-value>/storage/T24/updtest/updtest.data/eb/F_T24_UPDATES/</param-value>
+	</context-param>
+	<context-param>
+		<param-name>valid_input_regex</param-name>
+		<!-- Anything that matches this regex will be rejected - the idea is to catch cross site scripting attacks (e.g. see ha.ckers.org/xss.html) -->
+		<!-- NOTE: DO NOT USE 'CDATA' as this is NOT compatible with Oracle Application Server -->
+		<param-value>
+			((?i)&lt; */? *((?i)script|img|form|object|applet|embed|frameset|iframe|a&gt;|a[\s]+)|javascript\:|cookie|href|String\.fromCharCode|expression[\s]*\(|eval[\s]*\(|onAbort|onActivate|onAfter|onBefore|onBlur|onBounce|onCellChange|onChange|onClick|onContextMenu|onControlSelect|onCopy|onCut|onDataAvailable|onDatasetChange|onDatasetComplete|onDblClick|onDeactivate|onDrag|onDrop|onError|onFilterChange|onFinish|onFocus|onHelp|onKey|onLayoutComplete|onLoad|onLoseCapture|onMouse|onMove|onPaste|onPropertyChange|onReadyStateChange|onReset|onResize|onRowEnter|onRowExit|onRowsDelete|onRowsInserted|onScroll|onSelect|onSelectionChange|onSelectStart|onStart|onSubmit|onTimeError|onUnload|onMessage) 
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>valid_input_regex_strict</param-name>
+		<!-- Anything that matches this regex will be rejected - the idea is to catch cross site scripting attacks (e.g. see ha.ckers.org/xss.html) -->
+		<!-- NOTE: DO NOT USE 'CDATA' as this is NOT compatible with Oracle Application Server -->
+		<param-value>
+			((?i)&lt; */? *((?i)script|img|form|object|applet|embed|frameset|iframe|a&gt;|a[\s]+)|javascript\:|cookie|href|String\.fromCharCode|expression|eval[\W]|onAbort|onActivate|onAfter|onBefore|onBlur|onBounce|onCellChange|onChange|onClick|onContextMenu|onControlSelect|onCopy|onCut|onDataAvailable|onDatasetChange|onDatasetComplete|onDblClick|onDeactivate|onDrag|onDrop|onError|onFilterChange|onFinish|onFocus|onHelp|onKey|onLayoutComplete|onLoad|onLoseCapture|onMouse|onMove|onPaste|onPropertyChange|onReadyStateChange|onReset|onResize|onRowEnter|onRowExit|onRowsDelete|onRowsInserted|onScroll|onSelect|onSelectionChange|onSelectStart|onStart|onSubmit|onTimeError|onUnload|onMessage|\"[\s]*\)|\'[\s]*\)|\/\*.*\*\/|\'[\s]*\+|\'[\s]*\,|\'[\s]*\-|\'[\s]*\=|\"[\s]*\,|\"[\s]*\-|\"[\s]*\=|\.\.\/|\.\.\\) 
+		</param-value>
+	</context-param>
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<description>
+			This 'helper' filter ensures the character encoding of the request is UTF-8.
+			This filter *must* be used, and it *should* be called before any other
+			filter or servlet that reads parameters from the request, otherwise
+			data may become corrupt by incorrect encoding.
+		</description>
+		<filter-class>
+			com.temenos.t24browser.servlets.EncodingFilter
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>ObfuscationServletFilter</filter-name>
+		<description>
+			This filter handles obfuscated requests and translates them
+			to un-obfuscated.
+		</description>
+		<filter-class>
+			com.temenos.t24browser.servlets.ObfuscationServletFilter
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>CachingFilter</filter-name>
+		<description>
+			This filter will apply the 'Cache-Control:max-age' http header to resources 
+			it covers to indicate to web browsers that the content should be cached.
+			Should only be applied to non-sensitive 'static' content like images or stylesheets.
+			MaxAgeInSeconds default value is 86400 (1 day).
+			Only integer values from 1 to 2147483647 (approx 68 years) are understood.
+		</description>
+		<filter-class>
+			com.temenos.t24browser.servlets.CachingFilter
+		</filter-class>
+		<init-param>
+			<param-name>MaxAgeInSeconds</param-name>
+			<param-value></param-value>
+		</init-param>
+	</filter>
+
+<!-- 
+	<filter>
+		<filter-name>SingleSignOnFilter</filter-name>
+		<description>
+			This filter handles Single Sign On requests
+		</description>
+		<filter-class>
+			com.temenos.t24browser.security.SingleSignOnFilter
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>BasicAuthenticationFilter</filter-name>
+		<description>
+			This filter handles BASIC Authentication requests
+		</description>
+		<filter-class>
+			com.temenos.t24browser.security.BasicAuthFilter
+		</filter-class>
+	</filter>
+--> 
+
+	<filter>
+		<filter-name>AdminLoginFilter</filter-name>
+		<description>
+			This filter handles Login Requests from the T24 Updates Administrators
+			This is ONLY shipped with the T24-Updates application
+		</description>
+		<filter-class>
+			com.temenos.t24updates.security.AdminLoginFilter
+		</filter-class>
+	</filter>	
+
+	<filter>
+		<filter-name>UrlLoginFilter</filter-name>
+		<description>
+			This filter handles URL Login Requests from the sharepoint portal
+			This is ONLY shipped with the T24-Updates application
+		</description>
+		<filter-class>
+			com.temenos.t24updates.security.UrlLoginFilter
+		</filter-class>
+	</filter>	
+
+	<filter>
+		<filter-name>BrowserFilter</filter-name>
+		<description>
+			This filter handles HTTP requests
+		</description>
+		<filter-class>
+			com.temenos.t24browser.servlets.FormFieldInputFilter
+		</filter-class>
+		<init-param>
+			<param-name>xssPatternName</param-name>
+			<param-value>valid_input_regex</param-value>
+		</init-param>
+		<init-param>
+			<param-name>redirectPage</param-name>
+			<param-value>/jsps/FilterError.jsp</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/servlet/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/jsps/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ObfuscationServletFilter</filter-name>
+		<url-pattern>/servlet/BrowserServlet</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CachingFilter</filter-name>
+		<url-pattern>/plaf/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CachingFilter</filter-name>
+		<url-pattern>/scripts/*</url-pattern>
+	</filter-mapping>
+
+<!-- 
+	<filter-mapping>
+		<filter-name>SingleSignOnFilter</filter-name>
+		<url-pattern>/servlet/BrowserServlet</url-pattern>
+	</filter-mapping>
+ 	<filter-mapping>
+		<filter-name>BasicAuthenticationFilter</filter-name>
+		<url-pattern>/servlet/BrowserServlet</url-pattern>
+	</filter-mapping>
+-->
+
+	<filter-mapping>
+		<filter-name>AdminLoginFilter</filter-name>
+		<url-pattern>/servlet/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>UrlLoginFilter</filter-name>
+		<url-pattern>/servlet/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>BrowserFilter</filter-name>
+		<url-pattern>/servlet/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>BrowserFilter</filter-name>
+		<url-pattern>/jsps/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- The BrowserSessionListener will log when web sessions have been destroyed -->
+	<listener>
+		<listener-class>
+			com.temenos.t24browser.servlets.BrowserSessionListener
+		</listener-class>
+	</listener>
+	
+	<servlet>
+		<servlet-name>portalLogin</servlet-name>
+		<display-name>portalLogin</display-name>
+		<servlet-class>
+			com.temenos.t24updates.servlets.portalLogin
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>BrowserServlet</servlet-name>
+		<display-name>BrowserServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.BrowserServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<display-name>UploadServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.UploadServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DocumentService</servlet-name>
+		<display-name>DocumentService</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.DocumentService
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdatesServlet</servlet-name>
+		<display-name>UpdatesServlet</display-name>
+		<servlet-class>
+			com.temenos.t24browser.servlets.UpdatesServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>portalLogin</servlet-name>
+		<url-pattern>/servlet/portalLogin</url-pattern>
+	</servlet-mapping>	
+				
+	<servlet-mapping>
+		<servlet-name>BrowserServlet</servlet-name>
+		<url-pattern>/servlet/BrowserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/servlet/UploadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdatesServlet</servlet-name>
+		<url-pattern>/servlet/UpdatesServlet</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<mime-mapping>
+   		<extension>svg</extension>
+   		<mime-type>image/svg+xml</mime-type>
+	</mime-mapping>
+	
+ 	<!--  Error pages -->
+	<error-page>
+		<error-code>403</error-code>
+		<location>/html/t24browser.html</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/html/t24browser.html</location>
+	</error-page>	
+	
+	<resource-ref id="ResourceRef_t24ConnectionFactory">
+		<description>T24</description>
+		<res-ref-name>jca/t24ConnectionFactory</res-ref-name>
+		<res-type>com.temenos.tocf.t24ra.T24ConnectionFactory</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	<resource-ref id="ResourceRef_jmsConnectionFactory">
+		<description>Used to get connections to JMS for OFS queues</description>
+		<res-ref-name>jms/jmsConnectionFactory</res-ref-name>
+		<res-type>javax.jms.ConnectionFactory</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	<resource-ref id="ResourceRef_t24OFSQueue">
+		<description>OFS queue</description>
+		<res-ref-name>queue/t24OFSQueue</res-ref-name>
+		<res-type>javax.jms.Queue</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	<resource-ref id="ResourceRef_t24OFSReplyQueue">
+		<description>OFS reply queue</description>
+		<res-ref-name>queue/t24OFSReplyQueue</res-ref-name>
+		<res-type>javax.jms.Queue</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>	
+	
+	<!-- Security Stuff -->
+<!-- 
+	<security-constraint>
+    	<web-resource-collection>
+        	<web-resource-name>BrowserWeb</web-resource-name>
+        	<url-pattern>/*</url-pattern>
+    	</web-resource-collection>
+    	<auth-constraint>
+        	<role-name>t24user</role-name>
+    	</auth-constraint>
+	</security-constraint>
+
+	<login-config>
+	    <auth-method>BASIC</auth-method>
+	    <realm-name>T24</realm-name>
+	</login-config>
+-->
+
+</web-app>

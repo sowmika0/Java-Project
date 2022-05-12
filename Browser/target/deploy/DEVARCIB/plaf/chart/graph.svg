@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="graph.css" type="text/css"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN" "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events"
+     onload="Initialize(evt)" width="625" height="392.5" viewBox="0 0 625 392.5" xml:space="preserve">
+	
+	<defs>
+		<filter id="DropShadowFilter" filterUnits="objectBoundingBox" x="-10%" y="-10%" width="120%" height="120%">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="2" result="BlurAlpha"/>
+			<feOffset in="BlurAlpha" dx="4" dy="4" result="OffsetBlurAlpha"/>
+			<feMerge>
+				<feMergeNode in="OffsetBlurAlpha"/>
+				<feMergeNode in="SourceGraphic"/>
+			</feMerge>
+		</filter>
+	</defs>
+	<script type="text/javascript" xlink:href="graph.js"/>
+	<g id="hiddenGraph">
+		<g>
+			<g id="chart" transform="translate(90, 300)" style="filter:url(#DropShadowFilter)">
+				<g id="loadlayer">
+					<path id="yaxisline" d="" style="fill:none;stroke:black"/>
+					<path id="xaxisline" d="" style="fill:none;stroke:black"/>
+					<path d="" class="line1" id="chartline1"/>
+				</g>
+			</g>
+		</g>
+		<g >
+			<text x="100" y="260">
+				<tspan id="labelitem" style="font-weight:bold"/>
+				<tspan id="labelcolon"/>
+				<tspan id="labelamount"/>
+			</text>
+			<text x="215" y="15" style="font-weight:bold;text-anchor:middle;font-size:16" id="title"/>
+		</g>
+		<g transform="translate(0, 100)">
+			<text x="-125" y="50" style="font-weight:bold;text-anchor:middle;font-size:13" id="yaxis" transform="rotate(-90)"/>
+			<text x="215" y="240" style="font-weight:bold;text-anchor:middle;font-size:13" id="xaxis"/>
+			<text x="110" y="225" style="font-weight:bold;text-anchor:end;font-size:13" id="min"><![CDATA[ ]]></text>
+			<text x="455" y="225" style="font-weight:bold;text-anchor:middle;font-size:13" id="maxX"><![CDATA[ ]]></text>
+			<text x="115" y="-63" style="font-weight:bold;text-anchor:end;font-size:13" id="maxY"><![CDATA[ ]]></text>
+		</g>
+	</g>
+</svg>

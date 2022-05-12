@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project name="ARC-IB-DEBUG" default="all">
+    <!--
+      Build the Browser project using the ARC-IB DEBUG configuration.
+      This is similar to the ARC-IB configuration, but sets logging etc to DEBUG levels, configures
+      browser to use the ARC-IB teams T24 deployment, does NOT enable external obfuscation (for speed). etc
+
+      Standard installation dir properties can be overridden in a global using the ANT_OPTS:
+      For example, if your glassfish install is in D:/sun/jdk1.5.0_06, set ANT_OPTS=-Djdk.home=D:/sun/jdk1.5.0_06
+    -->
+
+    <!-- shared build config - std props -->
+    <property name="project.name" value="ARC-IB-DEBUG" />
+    
+    <!-- Insure the model bank files are included -->
+    <property name="include.model.bank" value="true"/>
+    
+    <!-- import shared and project properties / paths -->
+    <import file="build-browser-common.xml"/>
+    
+    <!-- top-level targets (note that the build etc are in the common build file) -->
+    <target name="all" description="Do a clean build and package (no deploy) of Browser configured for ARC-IB DEBUG" 
+    	depends="clean, build, internal-obfuscation, package"/>
+
+	<!-- top-level targets (note that the build etc are in the common build file) -->
+    <target name="all-nolog4j" description="Do a clean build and package (no deploy) of Browser configured for ARC-IB DEBUG without log4j" 
+    	depends="set-nolog4j, clean, build, internal-obfuscation, package"/>
+</project>

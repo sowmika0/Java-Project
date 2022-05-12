@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:variable name="_API__REQUEST_">BK^l&lt;EZ8Euj</xsl:variable>
+	<xsl:variable name="_ENQ_">ErZ</xsl:variable>
+	<xsl:variable name="_ENQUIRY__SELECT_">ErZ8^&lt;hluEMESj</xsl:variable>
+	<xsl:variable name="_OFS__APPLICATION_">xUulBKKM^SBj^xr</xsl:variable>
+	<xsl:variable name="_OFS__ENQUIRY_">xUulErZ8^&lt;h</xsl:variable>
+	<xsl:variable name="_OFS__OS__DELETE__VALUE_">xUulxulLEMEjElJBM8E</xsl:variable>
+	<xsl:variable name="_OFS__OS__EXPAND__VALUE_">xUulxulEsKBrLlJBM8E</xsl:variable>
+	<xsl:variable name="_OS__ENQUIRY__REQUEST_">xulErZ8^&lt;hl&lt;EZ8Euj</xsl:variable>
+	<xsl:variable name="_OS__NEW__DEAL_">xulrEWlLEBM</xsl:variable>
+	<xsl:variable name="_OS__PROCESS__TAB_">xulK&lt;xSEuuljB2</xsl:variable>
+	<xsl:variable name="_OS__PASSWORD_">xulKBuuWx&lt;L</xsl:variable>
+	<xsl:variable name="_PROCESS_">K&lt;xSEuu</xsl:variable>
+	<xsl:variable name="_SELECTION_">uEMESj^xr</xsl:variable>
+	<xsl:variable name="_UTILITY__ROUTINE_">8j^M^jhl&lt;x8j^rE</xsl:variable>
+	<xsl:variable name="_PRINT__DEAL__SLIP_">K&lt;^rjlLEBMluM^K</xsl:variable>
+	<xsl:variable name="_VALIDATE_">JBM^LBjE</xsl:variable>
+</xsl:stylesheet>

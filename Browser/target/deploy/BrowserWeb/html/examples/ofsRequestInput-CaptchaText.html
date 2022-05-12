@@ -1,0 +1,127 @@
+<html>
+   <head>
+      <title>Example OFS Input Page</title>
+      <script type="text/javascript" src="../../scripts/general.js"></script>
+      <script type="text/javascript" src="../../scripts/captcha.js"></script>
+      <script type="text/javascript" src="../../scripts/customValidation.js"></script>
+      <script type="text/javascript" src="../../scripts/customRequest.js"></script>
+   </head>
+   <body>
+   		<form name="ofsForm" id="ofsForm" method="POST" action="../../servlet/OfsServlet">
+			<input type="hidden" name="requestType" value="OFS">
+			<input type="hidden" name="application" value="INDUSTRY">
+			<input type="hidden" name="version" value="TEST"></input>
+			
+			<p>Please complete the details below</p>
+			<br></br>
+			
+			<table>
+				<tr>
+					<td colspan="3"/>
+				</tr>
+				<tr>
+					<td nowrap="nowrap">
+						<span>
+							<label for="fieldName:FULL.NAME">Full Name</label>
+						</span>
+						<img src="../../plaf/images/default/enquiry/required.gif"/>
+					</td>
+					<td nowrap="nowrap">
+						<input class="input_box" id="fieldName:FULL.NAME" name="fieldName:FULL.NAME" tabindex="1" size="30" onchange="validateString(event)" mandatory="yes" fieldLabel="Full Name"></input>
+					</td>
+					<td width="25%" rowspan="2"/>
+				</tr>
+				<tr>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<td nowrap="nowrap">
+						<span>
+							<label for="fieldName:PHONE.NUMBER">Phone Number</label>
+						</span>
+						<img src="../../plaf/images/default/enquiry/required.gif"/>
+					</td>
+					<td nowrap="nowrap">
+						<input class="input_box" id="fieldName:PHONE.NUMBER" name="fieldName:PHONE.NUMBER" tabindex="2" size="20" onChange="validatePhoneNumber(event)" mandatory="yes" fieldLabel="Phone Number"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<td nowrap="nowrap">
+						<span>
+							<label for="fieldName:MOBILE.NUMBER">Mobile Number</label>
+						</span>
+					</td>
+					<td nowrap="nowrap">
+						<input class="input_box" id="fieldName:MOBILE.NUMBER" name="fieldName:MOBILE.NUMBER" tabindex="2" size="20"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<td nowrap="nowrap">
+						<span>
+							<label for="fieldName:DATE.OF.BIRTH">Date of Birth</label>
+						</span>
+						<img src="../../plaf/images/default/enquiry/required.gif"/>
+					</td>
+					<td nowrap="nowrap">
+						<input class="input_box" id="fieldName:DATE.OF.BIRTH" name="fieldName:DATE.OF.BIRTH" tabindex="2" size="20" mandatory="yes" fieldLabel="Date of Birth"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<td nowrap="nowrap">
+						<span>
+							<label for="fieldName:EMAIL.ADDRESS">Email Address</label>
+						</span>
+					</td>
+					<td nowrap="nowrap">
+						<input class="input_box" id="fieldName:EMAIL.ADDRESS" name="fieldName:EMAIL.ADDRESS" tabindex="2" size="50" onchange="validateEmailAddress(event)"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<td nowrap="nowrap">
+						<span>
+							<label for="repeat:EMAIL.ADDRESS">Repeat Email Address</label>
+						</span>
+					</td>
+					<td nowrap="nowrap">
+						<input class="input_box" id="repeat:EMAIL.ADDRESS" name="repeat:EMAIL.ADDRESS" tabindex="2" size="50" onchange="validateEmailAddress(event)"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"></td>
+				</tr>
+			</table>
+			<br></br>
+			<table>
+				<tr>
+					<td nowrap="nowrap">
+						<p>Please enter the letters shown below</p>
+					</td>
+					<td>
+						<input type='text' name='captchaResponse' id='captchaResponse' value=''>
+					</td>
+					<td>
+						<input type="button" value="Submit" onclick="submitRequest()"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="/BrowserWeb/servlet/CaptchaImageServlet" id="captchaImage">
+						<input type="button" value="Refresh" onclick="refreshCaptchaImage()"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+#Table with paths (in the form of XPath) that select tags from input XML files which are to be obfuscated. Form of each record in the table is A.B=C where A is name of the responseType, B is name of particular XPath selection (for better readability) and C is XPath string in the form of Java String, it means that e.g. character "=" must be encoded to "\=". Each XPath selection applies only to the particular response type defined as A. A can contain ".", actually last "." separates A and B.
+XML.MENU.topic_argument=/ofsSessionResponse/responseData/responseDetails/window/panes/pane/menu/ts/descendant::tar
+XML.FRAMES.topic_argument=/ofsSessionResponse/responseData/responseDetails/window/panes/pane/menu/ts/descendant::tar
+ 
+XML.DEAL.application=/ofsSessionResponse/responseData/responseDetails/window/panes/pane/contract/app
+XML.DEAL.version=/ofsSessionResponse/responseData/responseDetails/window/panes/pane/contract/version
+XML.DEAL.product=/ofsSessionResponse/responseData/responseDetails/window/panes/pane/contract/product
+XML.DEAL.drop_down=/ofsSessionResponse/responseData/responseDetails/window/panes/pane/contract/tabData/descendant::ce/dd
+XML.DEAL.drop_field=/ofsSessionResponse/responseData/responseDetails/window/panes/pane/contract/tabData/descendant::ce/df
+
+XML.ENQSEL.enquiry_name=/ofsSessionResponse/responseData/responseDetails/window/panes/pane/selSection/selDets/enqsel/enqname
+
+XML.ENQSEL.DESTINATION=/ofsSessionResponse/responseData/responseDetails/window/panes/pane/selSection/selDets/enqsel/toolbars/toolbar/tool/options/o/attrib

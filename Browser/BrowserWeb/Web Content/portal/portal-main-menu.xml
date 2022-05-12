@@ -1,0 +1,57 @@
+<?xml-stylesheet type="text/xsl" href="../transforms/help/helpmenu.xsl"?>
+<t24help>
+	<categorymenu>
+		<ts c="T24 Portal">
+			<t>
+				<c>Welcome to the T24 Portal</c>
+				<ty>URL</ty>
+				<tar>portal-welcome.htm</tar>
+				<dest>t24help</dest>
+			</t>
+			<t>
+				<c>How to use the T24 Portal</c>
+				<ty>URL</ty>
+				<tar>portal-help.htm</tar>
+				<dest>t24help</dest>
+			</t>
+
+			<t>
+				<c>User Guides</c>
+				<ty>URL</ty>
+				<tar>../doc/portal-doc-menu.xml</tar>
+				<image>star.gif</image>
+			</t>
+			<t>
+				<c>Help Index</c>
+				<ty>URL</ty>
+				<tar>../help/portal-help-index.xml</tar>
+				<image>star.gif</image>
+			</t>
+			<t>
+				<c>Help by Product</c>
+				<ty>URL</ty>
+				<tar>../help/portal-help-menu.xml</tar>
+				<image>star.gif</image>
+			</t>
+			<t>
+				<c>Release Documentation</c>
+				<ty>URL</ty>
+				<tar>../portal/portal-release-menu.xml</tar>
+				<image>star.gif</image>
+			</t>
+			<t>
+				<c>Direct Technical Support</c>
+				<ty>URL</ty>
+				<tar>portal-dts-welcome.htm</tar>
+				<dest>t24help</dest>
+			</t>
+			<t>
+				<c>T24 Sign On</c>
+				<ty>URL</ty>
+				<tar>../servlet/BrowserServlet</tar>
+				<dest>new</dest>
+			</t>
+		</ts>
+	
+	</categorymenu>
+</t24help>

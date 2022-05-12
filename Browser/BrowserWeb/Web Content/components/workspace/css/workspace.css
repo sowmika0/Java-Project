@@ -1,0 +1,104 @@
+img				{ border:0px;  }
+table			{ cellspacing:0px; cellpadding:0px; }
+body			{ font-family:Arial; }
+.workspace		{ background-color: white;}
+.invis			{ visibility:hidden; }
+.window			{ BACKGROUND-COLOR: white; color: black;}
+#thetabs a 		{font-size:larger;COLOR: #213a7d;}
+.ws_item		{font-size:larger; text-align:right;}
+.ws_link		{font-size:larger; COLOR: #213a7d;}
+.ws_link a		{COLOR: #213a7d;}
+.ws_display_box {
+	margin: 1px;
+	padding: 1px;
+	border: solid 2px silver;
+	background-color: #eaedf4; /* light grey background colour for display boxes */
+	display: table;  /* IE 6 and below don't understand table, so it reverts to inline */
+}
+/***************************************************************************/
+/* General Hyperlink styles */
+A			{ COLOR: #213a7d; }
+A:hover		{COLOR: #333333; }
+A.link		{COLOR: #213a7d; TEXT-DECORATION: none;}
+/***************************************************************************/
+.ws_header_image
+{
+	width:16px;
+	height:16px;
+}
+#ws_loading
+{
+	background-color:Red;
+	color:White;
+	padding: 1px 5px 1px 5px;
+	visibility: hidden;
+}
+.deletetab
+{
+	padding: 3px;
+	vertical-align: middle;
+	display: inline-table;
+}
+.ws_header
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: larger;
+	width:100%;
+}
+/**********tabs***************/
+.tabspacer {width:4px;border-bottom:1px solid #97acd4;}
+.tabspacerend {width:100%;border-bottom:1px solid #97acd4;}
+.tab {padding:0px 15px 0px 15px;text-align:center;text-decoration:none;color:#676767;cursor:pointer;cursor:hand;empty-cells:show;}
+.selectedtab {border:1px solid #97acd4;color:#3366cc;border-bottom:0px;color:#3366cc;font-weight:bold;}
+.unselectedtab {border:1px solid #97acd4;background-color:#e5ecf9;color:#000000;border-bottom-color:#97acd4;}
+.notatab {font-family:arial;color:#000000;border-bottom:1px solid #97acd4;}
+
+/** The workspace items themselves **/
+.ws_paneMover
+{	
+	font-weight:bold;
+	background-color:#e5ecf9;
+	color:#000000;
+	border-bottom-color:silver;
+	width:100%;
+	cursor:move;
+	height:20px;
+}
+
+.workspacehidden{
+	visibility:hidden;
+	position: absolute;
+	
+}
+.refresh_display
+{
+	width:16px;
+	height:16px;
+		border: 0px;
+}
+.workspace_sizechanger{
+	width:16px;
+	height:16px;
+	border:0px;
+	cursor:hand;
+	background-repeat: no-repeat;
+    margin: 0 2px;
+	display:table-cell;
+}
+.workspace_min		{ background-image: url(../images/min.gif); }
+.workspace_restore	{ background-image: url(../images/plus.gif); }
+.workspace_close	{ background-image: url(../images/close.gif); }
+.workspace_footer	{ border:0; background-color:#eee; }
+.workspaceshow		{ position: absolute; }
+.workspace_PaneDiv{
+	border:1px solid silver;
+	border-bottom-color:#777777;
+	border-right-color:#777777;
+	color:#333;
+	filter: alpha(opacity=100);
+	opacity:1;
+}
+
+.movablePane{ position:absolute; }
+
+.tabdelete {font-size:smaller;}

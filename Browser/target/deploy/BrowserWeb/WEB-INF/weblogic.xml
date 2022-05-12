@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app xmlns="http://www.bea.com/ns/weblogic/90" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bea.com/ns/weblogic/90 http://www.bea.com/ns/weblogic/90/weblogic-web-app.xsd http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"> 
+    <resource-description> 
+        <res-ref-name>jca/t24ConnectionFactory</res-ref-name>
+        <jndi-name>jca/t24ConnectionFactory</jndi-name>
+    </resource-description>
+    <resource-description> 
+        <res-ref-name>jms/jmsConnectionFactory</res-ref-name>
+        <jndi-name>jms/t24QueueCxFactory</jndi-name>
+    </resource-description>
+    <resource-description> 
+        <res-ref-name>queue/t24OFSQueue</res-ref-name>
+        <jndi-name>jms/t24OFSQueue</jndi-name>
+    </resource-description>
+    <resource-description> 
+        <res-ref-name>queue/t24OFSReplyQueue</res-ref-name>
+        <jndi-name>jms/t24OFSReplyQueue</jndi-name>
+    </resource-description>
+    <container-descriptor>
+        <show-archived-real-path-enabled>true</show-archived-real-path-enabled>
+    </container-descriptor>
+	<jsp-descriptor>
+        <encoding>utf-8</encoding>
+    </jsp-descriptor>
+	<security-role-assignment>
+	  <role-name>T24AuthUser</role-name>
+	  <principal-name>T24Browser</principal-name>
+	</security-role-assignment>
+</weblogic-web-app>

@@ -1,0 +1,11 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<helpParameters xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance">
+	<helpData>
+		<viewLocation multiple="true"/>
+		<editLocation multiple="true"/>
+		<language multiple="true"/>
+		<imagesDir/>
+		<editable/>
+		<devMode/>
+	</helpData>
+</helpParameters>

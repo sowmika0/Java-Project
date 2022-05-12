@@ -1,0 +1,12 @@
+To use the encryption tool:
+
+java -DARC_CONFIG_PATH=<full path to server.config> -DARC_CONFIG_APP_NAME=ARC -jar crypto.jar E <text to encrypt> Y
+
+
+e.g.
+java -DARC_CONFIG_PATH=C:\T24\Browser\server.config -DARC_CONFIG_APP_NAME=ARC -jar crypto.jar E system01 Y
+java -DARC_CONFIG_PATH=C:\T24\Browser\server.config -DARC_CONFIG_APP_NAME=ARC -jar crypto.jar E password01 Y
+
+
+
+

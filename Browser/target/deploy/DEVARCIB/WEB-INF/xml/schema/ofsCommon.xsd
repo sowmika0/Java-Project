@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Common OFS Message components -->
+<xsd:include schemaLocation="ofsSimpleTypes.xsd"/>
+
+
+
+<xsd:group name ="signOnContext"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en" > A standard GLOBUS sign on context. Consists of a GLOBUS user name and password, 
+		plus an optional member indicating the company (in a multi-company environment). If no company is specified, the default 
+		company is assumed by GLOBUS. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:sequence> 
+  		<xsd:element name ="userName" type ="globusUserName"/> 
+  		<xsd:element name ="password" type ="globusUserPassword"/> 
+  		<xsd:element name ="company" type ="globusCompanyId" nillable ="true" minOccurs ="0"/> 
+  	</xsd:sequence> 
+</xsd:group> 
+
+
+
+
+
+
+<!--  COMPLEX DATATYPE DEFINITIONS --> 
+
+
+<xsd:complexType name ="ofsmlHeader" final ="#all"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en" > The main header of any OFSML instance. Optionally identifies the request date-time 
+		(sending date-time), request expiry time (the actual expiry time, not an offset), the response date-time and the response 
+		expiry time. Also included are the request id (mandatory) and an optional correlation id, used by the messaging transport 
+		to correctly identify and correlate messages. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:all> 
+  		<xsd:element name ="requestId" type ="messageReference"/> 
+  		<xsd:element name ="correlationId" type ="messageReference" nillable ="true" minOccurs ="0"/> 
+  		<xsd:element name ="requestTimeStamp" type ="xsd:dateTime" nillable ="true" minOccurs ="0"/> 
+  		<xsd:element name ="requestExpiryTime" type ="xsd:dateTime" nillable ="true" minOccurs ="0"/> 
+  		<xsd:element name ="responseTimeStamp" type ="xsd:dateTime" nillable ="true" minOccurs ="0"/> 
+  		<xsd:element name ="responseExpiryTime" type ="xsd:dateTime" nillable ="true" minOccurs ="0"/> 
+  	</xsd:all> 
+</xsd:complexType> 
+
+
+
+<xsd:complexType name ="securityContext" > 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en" > Consists of a single mandatory member, either a sign on context (GLOBUS user name and password), 
+		a simple nick-name (from a security sub-system) or an external definition such as an XML Signature (for future use).</xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:choice> 
+  		<xsd:group ref ="signOnContext"/> 
+  		<xsd:element name ="nickName" type ="nickName"/> 
+  		<xsd:any namespace ="##other" processContents ="lax"/> 
+  	</xsd:choice> 
+</xsd:complexType> 
+
+
+<xsd:complexType name="messageData">
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> Encapsulates one or more instances of msgData.</xsd:documentation>   	
+  	</xsd:annotation> 
+	<xsd:sequence>
+        	<xsd:element	name="messageData"	type="msgdata" maxOccurs="unbounded"/>
+    </xsd:sequence>
+</xsd:complexType>
+
+
+<xsd:complexType name="msgdata">
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> A multivalue field definition.  Contains the name of the field, the multi value and sub value, and 
+		the related value.</xsd:documentation>
+  	</xsd:annotation> 
+	<xsd:sequence>
+	<xsd:element	name="fieldName"	 type="fieldName"/>
+	<xsd:element	name="multiValueNumber"	type="ofsPositiveInteger"/>
+	<xsd:element	name="subValueNumber"	 type="ofsPositiveInteger"/>
+	<xsd:element	name="value"	         type="xsd:string"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+
+</xsd:schema>

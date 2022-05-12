@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<browserParameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<messageData>
+		<parameter>
+			<parameterName>Product</parameterName>
+			<parameterValue>ARC-IB</parameterValue>
+			<!-- Options: BROWSER / ARC-IB -->
+		</parameter>
+		<parameter>
+			<parameterName>Server Connection Method</parameterName>
+			<parameterValue>INSTANCE</parameterValue>
+			<!-- Options: INSTANCE / AGENT / JMS / AGENT_JREMOTE -->
+		</parameter>
+		<parameter>
+			<parameterName>ConnectionTimeout</parameterName>
+			<parameterValue>60</parameterValue> <!-- Number of seconds. -->
+		</parameter>
+		<parameter>
+			<parameterName>RetryCount</parameterName>
+			<parameterValue>5</parameterValue> <!-- Counter value -->
+			<!-- This is applicable only for Agent Architecture -->
+		</parameter>
+		<parameter>
+			<parameterName>RetryWait</parameterName>
+			<parameterValue>2</parameterValue> <!-- Number of seconds. -->
+			<!-- This is applicable only for Agent Architecture -->
+		</parameter>
+		<parameter>
+			<parameterName>Show Single Busy</parameterName>
+			<parameterValue>YES</parameterValue><!-- YES / NO -->
+			<!-- This is applicable only for ARC-IB -->
+		</parameter>
+		<parameter>
+			<parameterName>Show User Name</parameterName>
+			<parameterValue>YES</parameterValue><!-- YES / NO -->
+			<!-- Show user name in login screen -->
+		</parameter>
+		<parameter>
+			<parameterName>Instance</parameterName>
+			<parameterValue>production</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>Document Service Channel</parameterName>
+			<parameterValue>downloadChannel</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>Branch</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>Use Transformer</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>Web Server Skins</parameterName>
+			<parameterValue>default:R08default:arc-ib:offline</parameterValue>
+			<!-- Skin Names separated by : character -->
+		</parameter>
+		<parameter>
+			<parameterName>CALL_CENTRE_CLASS</parameterName>
+			<parameterValue>TestAPI</parameterValue>
+		</parameter>
+		<!--
+		Determines whether the no frames param will be stuffed
+		into the frames xml. It will not be required when no frames support is added to T24 and toolbox.
+		-->
+		<parameter>
+			<parameterName>noframes</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<!--
+		Use log4js as a logger, only for debugging.		
+		-->
+		<parameter>
+			<parameterName>clientLogging</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		Determines whether the no new arc-ib skin will be stuffed
+		nto the frames xml in place of the specified skin.
+		-->
+		<parameter>
+			<parameterName>useArcIbSkin</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<!--
+		Determines how the menu is displayed.
+		Options are: DEFAULT, TABBED, POPDOWN, 
+		-->
+		<parameter>
+			<parameterName>menuStyle</parameterName>
+			<parameterValue>TABBED</parameterValue>
+		</parameter>
+		<!--
+		Determines whether obfuscation of T24 commands should
+		be used or not.
+		-->
+		<parameter>
+			<parameterName>useInternalObfuscation</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		Determines whether obfuscation and compression of
+		JavaScript should be used or not.
+		-->
+		<parameter>
+			<parameterName>useExternalObfuscation</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<!--
+		Stops the standard missing help response when we have no help 
+		files, as this fouls up the context-sensitive displays on the page
+		-->
+		<parameter>
+			<parameterName>suppressMissingHelp</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<!--
+		Determines whether the nice printing feature should be active or not
+		-->
+		<parameter>
+			<parameterName>cleanPrint</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<!--
+		Determines whether to enable keepalive
+		-->
+		<parameter>
+			<parameterName>useKeepaliveHandling</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<!--
+		Determines whether to enable automatic holding of contract transactions
+		-->
+		<parameter>
+			<parameterName>useAutoHoldDeals</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<!--
+		Determines whether toolbar buttons and dropdown are present 
+		in fragments (contract applications)
+		-->
+		<parameter>
+			<parameterName>stripFrameToolbars</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<!--
+		Determines whether to disable hot fields
+		-->
+		<parameter>
+			<parameterName>enableHotfields</parameterName>
+			<parameterValue>NO</parameterValue>
+		</parameter>
+		<!--
+		The Reg-ex used as a filter for T24 XML - anything that matches will be stripped out
+		-->
+		<parameter>
+			<parameterName>T24XmlFilterRegEx</parameterName>
+			<parameterValue><![CDATA[< */? *((?i)script|form|object|applet|embed|frameset|iframe) *>]]></parameterValue>
+		</parameter>
+		<!--
+		If set, the T24 user name will be not be sent to the client
+		-->
+		<parameter>
+			<parameterName>stripUserName</parameterName>
+			<parameterValue>YES</parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>showStatusInfo</parameterName>
+			<parameterValue>NO</parameterValue>
+			<!--
+				Options are: YES, NO
+				If 'YES', information will be displayed on the browser Status Bar
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>graphDisplayType</parameterName>
+			<parameterValue>svgObject</parameterValue>
+			<!--
+				Options are: svgObject, pngImage
+				Determines whether charts will be displayed as an SVG graphic or as a PNG image.
+				The SVG graphic supports drilldowns but requires the user to have an SVG viewer installed.
+				The PNG image supports less functionality but can be displayed in browsers that don't have an SVG viewer.
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>doNochangeFieldsCheck</parameterName>
+			<parameterValue>yes</parameterValue>
+			<!--
+				Options are: yes, no
+				If 'yes', will validate that noedit fields sent to the user are not modified on their return.
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>None option</parameterName>
+			<parameterValue>NO</parameterValue>
+			<!-- 
+			Options: NO / YES  
+			NO  - blank option for mandatory combo box will be suppressed
+			YES - blank option for mandatory combo box will appear
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>ASSOC_REQ_COMBO</parameterName>
+			<parameterValue>NO</parameterValue>
+			<!-- 
+			Options: NO / YES  
+			NO  - Default setting.Blank option will appear for assoc mandatory combo box(less than 3 options) 
+			      if None option parameter is set to YES. 
+			YES - Blank option is suppressed for assoc mandatory combo box(less than 3 options)and the first 
+			      value in the list is defaulted if None option parameter is set to YES.
+			-->
+		</parameter>
+		<parameter>
+			<parameterName>IP ADDRESS CHECK</parameterName>
+			<parameterValue>YES</parameterValue>
+			<!-- 
+			Options: NO / YES  
+			NO  - Tampered IP Address check will not be done
+			YES - Tampered IP Address check is done
+			-->
+		</parameter>
+	</messageData>
+</browserParameters>

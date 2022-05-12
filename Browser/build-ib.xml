@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<project name="ARC-IB" default="all">
+    <!--
+      Build the Browser project using the ARC-IB configuration.
+      This will leave out unused files, include Obfuscation, etc
+
+      Standard installation dir properties can be overridden in a global using the ANT_OPTS:
+      For example, if your glassfish install is in D:/sun/jdk1.5.0_06, set ANT_OPTS=-Djdk.home=D:/sun/jdk1.5.0_06
+    -->
+
+    <!-- shared build config - std props -->
+    <property name="project.name" value="ARC-IB" />
+
+    <!-- Insure the model bank files are included -->
+    <property name="include.model.bank" value="true"/>
+    
+    <!-- import shared and project properties / paths -->
+    <import file="build-browser-common.xml"/>
+    
+	<!-- top-level targets (note that the build etc are in the common build file) -->
+	<target name="t24updates" description="Do a clean build and package (no deploy) of Browser configured for ARC-IB" 
+	 	depends="clean, build, internal-obfuscation, external-obfuscation, package-t24updates"/>	
+	
+	<!-- creates expanded web application directory and WAR archive -->
+    <target name="package-t24updates" description="Create the target exploded dir + archive" depends="create-exploded-ib, add-t24updates-servlets, create-archive-ib" />
+	
+    <!-- top-level targets (note that the build etc are in the common build file) -->
+    <target name="all" description="Do a clean build and package (no deploy) of Browser configured for ARC-IB" 
+    	depends="clean, build, internal-obfuscation, external-obfuscation, package-ib"/>
+	
+    <!-- top-level targets without log4j in war (note that the build etc are in the common build file) -->
+    <target name="all-nolog4j" description="Do a clean build and package (no deploy) of Browser configured for ARC-IB without log4j jar" 
+    	depends="set-nolog4j, clean, build, internal-obfuscation, external-obfuscation, package-ib"/>
+
+	<!-- creates expanded web application directory and WAR archive -->
+    <target name="package-ib" description="Create the target exploded dir + archive" depends="create-exploded-ib, create-archive-ib" />
+	
+	<!-- Create the WAR file from a sync'd up exploded dir -->
+    <target name="create-archive-ib" depends="create-exploded-ib">
+        <jar destfile="${project.archive}" basedir="${project.deploy.exploded.dir}" />
+    </target>	
+	
+    <!-- creates expanded web application directory, only necessary files should be copied -->
+    <target name= "create-exploded-ib" description="Delete then full update of target files" depends="clean-exploded,include-log4j,create-exploded-log4j,create-exploded-nolog4j">
+    	<copy 
+    		tofile="${project.deploy.exploded.dir}/transforms/ARC/T24_constants.xsl" 
+    		file="${project.deploy.exploded.src}/transforms/ARC/T24_constants.xsl.OBFUSCATED"/>
+        <antcall>
+            <param name="overwriteTargetFiles" value="true"/>
+            <!-- Copy in model bank and configuration files ONLY if specified (see include.model.bank property) -->
+            <target name="include-project-config"/>
+            <target name="include-model-bank"/>
+        </antcall>
+    </target>
+	<target name="include-log4j"> 
+        <condition property="including-log4j">
+          <not>
+            <or>
+              <equals arg1="${nolog4j}" arg2="true"/>
+            </or>
+          </not>
+        </condition>    	
+		<echo message="${including-log4j}"/>
+	</target>
+	
+    <target name= "add-t24updates-servlets" description="Add the special Servlets for the T24 Updates product" >
+		<!-- copy Servlets required by the T24 Updates system -->
+        <copy todir="${project.deploy.exploded.dir}">
+            <fileset dir="${project.deploy.exploded.src}">
+            	<include name="WEB-INF/classes/com/temenos/t24browser/servlets/UploadServlet.class"/>
+            	<include name="WEB-INF/classes/com/temenos/t24browser/servlets/UpdatesServlet.class"/>
+				<include name="WEB-INF/lib/UploadAPI.jar"/>
+            	<include name="WEB-INF/classes/com/temenos/t24updates/security/UrlLoginFilter.class"/>
+        	</fileset>
+        </copy>
+    	
+        <antcall>
+            <param name="overwriteTargetFiles" value="true"/>
+            <!-- Copy in configuration files AGAIN as project config would have been overwritten by the include-model-bank target -->
+            <target name="include-project-config"/>
+        </antcall>    	
+    	
+    </target>	
+	
+	<target name="create-exploded-log4j" if="including-log4j">
+		<!-- copy with log4j -->
+        <copy todir="${project.deploy.exploded.dir}">
+            <fileset dir="${project.deploy.exploded.src}">
+            	<include name="index.html"/>    
+            	<include name="html/"/>
+               	<include name="META-INF/"/>
+               	<include name="modelbank/"/>
+				<include name="jsps/continue.jsp"/>
+				<include name="jsps/svgInstall.jsp"/>
+				<include name="jsps/changePassword.jsp"/>
+            	<include name="jsps/changePin.jsp"/>
+				<include name="jsps/change_success.jsp"/>
+				<include name="jsps/RSAAuthentication.jsp"/>
+				<include name="jsps/RSANewPin.jsp"/>
+				<include name="jsps/RSANextToken.jsp"/>
+				<include name="jsps/customMessage.jsp"/>
+				<include name="jsps/400.jsp"/>
+				<include name="jsps/authentication_error.jsp"/>
+				<include name="jsps/fileUpload.jsp"/>
+            	<include name="jsps/transaction_password.jsp"/>
+            	<include name="jsps/transaction_pin.jsp"/>
+            	<include name="jsps/transaction_abort.jsp"/>
+            	<include name="jsps/transaction_error.jsp"/>
+            	<include name="jsps/change_expired_password.jsp"/>
+            	<include name="jsps/dropdown.jsp"/>
+               	<include name="plaf/"/>
+              	<include name="scripts/all.js"/>
+            	<include name="scripts/custom.js"/>
+            	<include name="scripts/customRequest.js"/>
+            	<include name="scripts/customValidation.js"/>
+              	<include name="scripts/ARC/Logger.js"/>
+              	<include name="scripts/ARC/unsupportedBrowserCheck.js"/>
+              	<include name="scripts/ARC/javascriptBrowserDetection.js"/>
+            	<include name="scripts/ARC/tools/dhtmlHistory.js"/>
+            	<include name="scripts/charting/svgObject.svg"/>
+            	<include name="scripts/charting/svgcheck.js"/>
+            	<include name="scripts/charting/svgcheck.vbs"/>
+              	<include name="scripts/jsp.js"/>
+            	<include name="scripts/version/version.js"/>
+              	<include name="transforms/"/>
+               	<include name="WEB-INF/"/>
+				<include name="browserParameters.xml"/>
+                <include name="helpParameters.xml"/>
+            	<include name="version.xml"/>
+                <include name="nochangeFields.xml"/>
+            	<exclude name="WEB-INF/lib/xmlparserv2.jar"/>
+            	<exclude name="transforms/ARC/T24_constants*"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/servlets/DebugServlet.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/servlets/AdminServlet.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/servlets/UpdatesServlet.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24updates/security/UrlLoginFilter.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/beans/AdminBean.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/obfuscator/ObfuscatorProcessor.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/obfuscator/ObfuscatedInputStream.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/obfuscator/ExternalObfuscator.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/schema/XMLValidator.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/response/Response.class"/>
+            	<exclude name="html/product/"/>
+            	<exclude name="html/scv/"/>
+            	<exclude name="html/tour/"/>
+            	<exclude name="META-INF/MANIFEST.MF"/>           	
+        	</fileset>
+        </copy>
+    </target>
+	<target name="create-exploded-nolog4j" unless="including-log4j" >
+		<!-- copy without log4j -->
+        <copy todir="${project.deploy.exploded.dir}">
+            <fileset dir="${project.deploy.exploded.src}">
+            	<include name="index.html"/>    
+            	<include name="html/"/>
+               	<include name="META-INF/"/>
+               	<include name="modelbank/"/>
+				<include name="jsps/continue.jsp"/>
+            	<include name="jsps/dropdown.jsp"/>
+               	<include name="plaf/"/>
+              	<include name="scripts/all.js"/>
+            	<include name="scripts/custom.js"/>
+            	<include name="scripts/customRequest.js"/>
+            	<include name="scripts/customValidation.js"/>
+              	<include name="scripts/ARC/Logger.js"/>
+              	<include name="scripts/ARC/unsupportedBrowserCheck.js"/>
+              	<include name="scripts/ARC/javascriptBrowserDetection.js"/>
+            	<include name="scripts/ARC/tools/dhtmlHistory.js"/>
+				<include name="scripts/charting/svgObject.svg"/>
+              	<include name="scripts/jsp.js"/>
+            	<include name="scripts/version/version.js"/>
+              	<include name="transforms/"/>
+               	<include name="WEB-INF/"/>
+				<include name="browserParameters.xml"/>
+                <include name="helpParameters.xml"/>
+				<include name="version.xml"/>
+			    <include name="nochangeFields.xml"/>
+            	<exclude name="WEB-INF/lib/log4j-1.2.9.jar"/>
+            	<exclude name="WEB-INF/lib/xmlparserv2.jar"/>
+            	<exclude name="transforms/ARC/T24_constants*"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/servlets/DebugServlet.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/servlets/AdminServlet.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/servlets/UpdatesServlet.class"/> 
+            	<exclude name="WEB-INF/classes/com/temenos/t24updates/security/UrlLoginFilter.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/beans/AdminBean.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/obfuscator/ObfuscatorProcessor.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/obfuscator/ObfuscatedInputStream.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/obfuscator/ExternalObfuscator.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/schema/XMLValidator.class"/>
+            	<exclude name="WEB-INF/classes/com/temenos/t24browser/response/Response.class"/>
+            	<exclude name="html/scv/"/>
+            	<exclude name="html/tour/"/>
+            	<exclude name="META-INF/MANIFEST.MF"/>           	
+        	</fileset>
+        </copy>
+    </target>
+</project>

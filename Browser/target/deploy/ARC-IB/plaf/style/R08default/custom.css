@@ -1,0 +1,9 @@
+/* Meant for custom style classes 
+ syntax:
+ -------
+<attribute for which style should be applied>
+ {
+ 	property-name:property-value;
+ 	property-name:property-value;
+ }
+*/

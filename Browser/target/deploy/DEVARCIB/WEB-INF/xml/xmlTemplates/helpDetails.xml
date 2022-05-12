@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<t24help xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<header>
+		<product/>
+		<title/>
+		<table/>
+	</header>
+	<overview>
+		<ovdesc/>
+		<ovimage/>
+	</overview>
+	<menu>
+		<t multiple="true">
+			<field/>
+			<desc/>
+			<image/>
+		</t>
+	</menu>
+</t24help>

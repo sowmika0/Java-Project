@@ -1,0 +1,13 @@
+.image_footer {
+    position:relative;
+	margin-left:-4px;
+ 
+}
+.image_footer .text_footer {
+    position:absolute;
+    float:center;
+    top:10px; /* in conjunction with left property, decides the text position */
+    left:250px;
+    width:300px; /* optional, though better have one */
+    text-align:center;
+}

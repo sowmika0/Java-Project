@@ -1,0 +1,14 @@
+# Defaults for (temporary) debugging properties
+
+com.temenos.arc.debug.saveXml=false
+com.temenos.arc.useFrames=true
+com.temenos.arc.useNewSkin=false
+com.temenos.arc.useTabbedMenu=false
+com.temenos.arc.useInternalObfuscation=false
+com.temenos.arc.useExternalObfuscation=false
+com.temenos.arc.stripFrameToolbars=false
+com.temenos.arc.bypassBackButtonFix=true
+com.temenos.arc.suppressMissingHelp=false
+com.temenos.arc.print=false
+com.temenos.arc.hotfields=true
+com.temenos.arc.refresh=true

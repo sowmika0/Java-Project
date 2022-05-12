@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-web>
+<!--
+    <security-domain>java:/jaas/T24</security-domain>
+-->
+    <resource-ref>
+        <res-ref-name>jca/t24ConnectionFactory</res-ref-name>
+        <res-type>com.temenos.tocf.t24ra.T24ConnectionFactory</res-type>
+        <jndi-name>java:jca/t24ConnectionFactory</jndi-name>
+    </resource-ref>
+    <resource-ref>
+        <res-ref-name>jms/jmsConnectionFactory</res-ref-name>
+        <res-type>javax.jms.ConnectionFactory</res-type>
+        <jndi-name>java:/ConnectionFactory</jndi-name>
+    </resource-ref>
+    <resource-ref>
+        <res-ref-name>queue/t24OFSQueue</res-ref-name>
+        <res-type>javax.jms.Queue</res-type>
+        <jndi-name>queue/t24OFSQueue</jndi-name>
+    </resource-ref>
+    <resource-ref>
+        <res-ref-name>queue/t24OFSReplyQueue</res-ref-name>
+        <res-type>javax.jms.Queue</res-type>
+        <jndi-name>queue/t24OFSReplyQueue</jndi-name>
+    </resource-ref>
+</jboss-web>
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+    default-lazy-init="true">
+
+   <!--
+    | Override the definition of PropertyPlaceHolderPostProcessor
+    | to change file location from the default classpath:ims.properties
+    |-->
+   <bean name="PrimaryPropertyPlaceHolderPostProcessor" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <!-- Allow for some order flexibility with other PropertyPlaceHolderPostProcessor bean in CommandClientAppContext.xml files -->
+        <property name="order" value="10"/>
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        <property name="location" value="file:c:\\RSAServer\\config.properties"/>
+        <property name="ignoreUnresolvablePlaceholders" value="false"/>
+        <property name="ignoreResourceNotFound" value="false"/>
+    </bean>
+
+    <!--
+     | Override the definition of ConnectionInfoProvider
+     | to allow accessing the server configuration values
+     | for communication from the same file as the property
+     | placeholder post processor
+     |-->
+    <bean name="ConnectionInfoProvider"
+          class="com.rsa.command.PropertiesConnectionInfoProvider"
+          lazy-init="false">
+          <property name="propertiesFile" value="c:\\RSAServer\\config.properties"/>
+	</bean>
+
+    <!--
+     | Alias to a CommandTarget bean definition that can be used to 
+     | change system configuration options quickly without changing
+     | the code that interfaces with it. To make use of this call
+     | the ConnectionFactory.getConnection("CommandAPIConnection")
+     | method which will create the appropriate bean instance for you. 
+     | Can be set to any of the following:
+     | <alias alias="CommandAPIConnection" name="CacheableCommandTargetBasicAuth"/>
+     | <alias alias="CommandAPIConnection" name="CommandTargetSSLClientAuth"/>
+     | <alias alias="CommandAPIConnection" name="SOAPCommandTargetBasicAuth"/>
+     -->
+    <alias alias="CommandAPIConnection" name="CacheableCommandTargetBasicAuth"/>
+
+    <!-- 
+     | Example CommandTarget definition.
+     | This is a CommandTarget that can be used to access a cluster.
+     | The connection information is retrieved from the config.properties file.
+     -->
+    <bean name="ClusterTarget" lazy-init="true"
+          class="com.rsa.command.RemoteCommandTargetFactoryBean">
+        <property name="providerURL" value="t3s://node1-address,node2-address:7002"/>
+        <property name="connectionInfoProvider" ref="ConnectionInfoProvider"/>
+        <property name="targetClass" value="com.rsa.command.EJBRemoteTarget"/>
+        <property name="cacheable" value="true"/>
+    </bean>
+
+    <!-- 
+     | Example CommandTarget definition.
+     | This is a CommandTarget that can be used to access a specific server in a cluster.
+     | The connection information is retrieved from the config.properties file.
+     -->
+    <bean name="SpecificNodeTarget" lazy-init="true"
+          class="com.rsa.command.RemoteCommandTargetFactoryBean">
+        <property name="providerURL" value="t3s://node2-address:7002"/>
+        <property name="connectionInfoProvider" ref="ConnectionInfoProvider"/>
+        <property name="targetClass" value="com.rsa.command.EJBRemoteTarget"/>
+        <property name="cacheable" value="true"/>
+        <property name="properties">
+            <props>
+                <!-- Force EJBRemoteTarget to stick to the server node specified -->
+                <prop key="com.rsa.naming.pin.to.primary.server">true</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

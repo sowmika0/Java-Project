@@ -1,0 +1,4 @@
+<ivy-module version="1.0">
+	<info organisation="TEMENOS" branch="R09_ALL" module="EB_BrowserClient" revision="0"/>
+	<dependencies/>
+</ivy-module>

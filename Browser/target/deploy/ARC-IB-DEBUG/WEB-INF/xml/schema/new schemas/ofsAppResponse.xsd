@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Include the common OFS Message components -->
+<xsd:include schemaLocation="ofsCommon.xsd"/>
+<xsd:include schemaLocation="ofsSimpleTypes.xsd"/>
+
+
+
+
+<!-- ROOT ELEMENT --> 
+<xsd:element name ="ofsmlResponse"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> The 'ofsmlResponse' element is the ROOT element of the OFSML Schema. Returns the response for an
+		 ofsmlRequest.  The element has the optional member: ofsmlHeader, and the mandatory member: serviceResponse (output message). 
+		The ofsmlHeader element is used by the message transport to identify the message and to add some extended information 
+		such as time stamps.  the serviceResponse details the enquiry return data.</xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:complexType> 
+	<xsd:sequence> 
+		<!-- FOUND IN COMMON SCHEMA -->
+  		<xsd:element name ="ofsmlHeader" type ="ofsmlHeader" nillable = "true" minOccurs ="0" />  
+  		<xsd:element name ="serviceResponse" type ="serviceResponse" /> 
+  	</xsd:sequence> 
+  	<xsd:attribute name="schemaLocation" use="required" type="xsd:string"/>
+  	</xsd:complexType> 
+</xsd:element>
+
+
+
+<!-- COMPLEX DATATYPE DEFINITIONS -->
+
+<xsd:complexType name ="serviceResponse" final ="#all"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> A service response forms the response (or set of responses) from a service request. For each specific
+		 type of request made by the caller (in the service request), there will be a corresponding 'response' in the service response. Any 
+		errors that occur during the processing of a service request are returned in the body of the response. </xsd:documentation> 
+  	</xsd:annotation>
+	<xsd:sequence> 
+  		<xsd:element name ="ofsTransactionResponse" type ="ofsTransactionResponse"/> 
+  	</xsd:sequence>
+  </xsd:complexType> 
+
+
+<xsd:complexType name ="ofsTransactionResponse" final ="#all"> 
+	<xsd:annotation> 
+  		<xsd:documentation xml:lang ="en"> An OFS transaction response is the result of a service request to execute a transaction 
+		(GLOBUS application or version). The transaction response contains a mandatory member indicating the status (return code), 
+		followed by a mandatory group member indicating all the updated transaction-related data. The attributes denote the transaction 
+		type; the success of the transaction; the GLOBUS names for the application and/or versio; and the return status of executing
+		the transaction. </xsd:documentation> 
+  	</xsd:annotation> 
+	<xsd:sequence> 
+  		<xsd:element name ="processingStatus" type ="processingStatus"/> 
+		<xsd:element name ="successFail" type ="successFail" minOccurs="1" maxOccurs="1"/>
+		<xsd:element name ="application" type ="globusApplicationName" minOccurs="1" maxOccurs="1"/> 
+  		<xsd:element name ="version" type ="globusVersionName" nillable ="true" minOccurs ="0" maxOccurs="1"/> 
+  		<xsd:element name ="transactionId" type ="transactionId" nillable ="true" minOccurs ="0" maxOccurs="1"/>  
+  		<xsd:element name ="status" type ="transactionStatus" minOccurs="1" maxOccurs="1"/> 
+		<!-- COMMON -->
+		<xsd:element name ="data" type="messageData" maxOccurs="1"/>
+	</xsd:sequence> 
+</xsd:complexType> 
+
+
+
+</xsd:schema>

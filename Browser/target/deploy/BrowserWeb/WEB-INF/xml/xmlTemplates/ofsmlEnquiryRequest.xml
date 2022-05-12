@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ofsSessionRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="\WEB-INF\xml\schema\ofsEnquiryRequest.xsd">
+	<requestType/>
+	<token/>
+	<detailtag/>
+	<pwprocessid/>
+	<requestArguments>
+		<ofsmlEnquiryRequest>
+			<routineName/>
+			<routineArgs/>
+			<download/>                        
+			<companyId/>
+			<userRole/>
+			<requestType/>
+			<application/>
+			<version/>
+			<windowName/>
+			<reqTabid/>
+			<compScreen/>
+			<operation/>
+			<enqaction/>
+			<enqid/>
+			<drillaction/>
+			<enqname/>
+			<dropfield/>
+			<EnqParentWindow/>
+			<previousEnqs/>
+			<previousEnqTitles/>
+			<clientStyleSheet/>
+			<autoRefresh/>
+			<staticId/>
+			<unlock/>
+			<message>
+				<criteria multiple="true">
+					<fieldName/>
+					<operand/>
+					<value/>
+					<sort/>
+				</criteria>
+			</message>
+		</ofsmlEnquiryRequest>
+	</requestArguments>
+</ofsSessionRequest>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+        <classpathentry kind="src" path="BrowserWeb/Java Source"/>
+        <classpathentry kind="src" path="T24Browser"/>
+        <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/WebSphere v6.1 JRE"/>
+        <classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.ibm.ws.ast.st.runtime.runtimeTarget.v61/was.base.v61"/>
+        <classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+        <classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+        <classpathentry kind="var" path="TEMENOS_SHARED_HOME/lib/rhino/js.jar"/>
+        <classpathentry kind="var" path="TEMENOS_SHARED_HOME/lib/junit/4.1/junit-4.1.jar"/>
+        <classpathentry kind="var" path="TEMENOS_SHARED_HOME/lib/glassfish/9.0.b48/javaee.jar"/>
+        <classpathentry kind="output" path="BrowserWeb/Web Content/WEB-INF/classes"/>
+</classpath>

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<project name="BrowserBuild" default="main">
+	<description>
+		Builds the BrowserWeb.war file
+		Has 2 important targets:
+			main     Use to build a formal release (calls buildWar)
+			buildWar Use to build an interrim war file for eg testing
+	</description>
+
+	<!-- define where formal release builds will go to -->
+	<property name="releaseDir" location="c:/temp/BrowserReleases"/>
+	<!-- directory for temp builds and backup files -->
+	<property name="buildDir"   location="c:/temp/BrowserBuild"/>
+	
+	<!-- -->
+	<target name="init">
+		<!-- Get the date and time stamp -->
+		<tstamp/>
+	</target>
+	
+	<!-- Delete tcclient log files as they shouldn't be shipped -->
+	<target name="clearTCLogFiles">
+		<echo message="Clearing TC log files"/>
+		<delete includeEmptyDirs="true" failonerror="false">
+			<fileset dir="Web Content/WEB-INF/log"/>
+		</delete>
+		<delete file="Web Content/WEB-INF/conf/testfile.properties" failonerror="false"/>
+	</target>
+
+	<!-- Builds a war file out of the current BrowserWeb folder -->
+	<target name="buildWar" depends="clearTCLogFiles" description="Build the war file">
+		<echo message="Starting war file build..."/>
+		<!-- rebuild the project -->
+		<!-- TODO: implement this -->
+		<!-- Delete any existing builds in the build directory -->
+		<delete file="${buildDir}/BrowserWeb.war"/>
+		<!-- Create the build directory if it's not already there -->
+		<mkdir dir="${buildDir}"/>
+		<!-- Create the new build -->
+		<war warfile="${buildDir}/BrowserWeb.war" 
+			webxml="Web Content/WEB-INF/web.xml" 
+			basedir="Web Content"
+			excludes="images/*"/>
+		<echo message="Finished building war file"/>
+	</target>
+	
+	<!-- Backup the users settings as the release should have standard conf -->
+	<target name="bkupConf">
+		<echo message="Backing up configuration files (eg channels.xml)"/>
+		<copy file="Web Content/browserParameters.xml" toDir="${buildDir}/bkups"/>
+		<copy file="Web Content/helpParameters.xml" toDir="${buildDir}/bkups"/>
+		<copy file="Web Content/WEB-INF/conf/channels.xml" toDir="${buildDir}/bkups"/>
+	</target>
+	
+	<!-- Restore the users settings after the build -->
+	<target name="restoreConf">
+		<echo message="Restoring oringinal configuration files"/>
+		<copy file="${buildDir}/bkups/browserParameters.xml" toDir="Web Content"/>
+		<copy file="${buildDir}/bkups/helpParameters.xml" toDir="Web Content"/>
+		<copy file="${buildDir}/bkups/channels.xml" toDir="Web Content/WEB-INF/conf"/>
+	</target>
+	
+	<!-- Sync down the latest source from Perforce -->
+	<target name="p4sync" depends="bkupConf">
+		<echo message="Deleting entire BrowserWeb directory"/>
+<!--		<delete dir="."/> -->
+		<!-- TODO: check and test this -->
+		<echo message="Sync'ing down from Perforce"/>
+		<!-- Run a general sync to head revision - don't force! -->
+		<p4sync view="//temenos/Browser/BrowserWeb/..." force="yes"/>
+		<!-- TODO: check and test this -->
+	</target>
+	
+	<!-- Record the build date in the general.js file -->
+	<target name="recordBuildDate">
+		<echo message="Updating build number in general.js"/>
+		<!-- Check the file out of Perforce -->
+		<p4edit view="//temenos/Browser/BrowserWeb/Web Content/scripts/general.js"/>
+		<!-- TODO: implement this -->
+		<!-- Update the file -->
+		<!-- TODO: implement this -->
+		<!-- Check the file back into Perforce -->
+		<p4change description="Update build date"/>
+		<p4submit change="${p4.change}"/>
+		<!-- TODO: implement this -->
+	</target>
+	
+	<!-- Check for W3C compliance, basic errors etc in the build files -->
+	<target name="checkCode">
+		<echo message="Checking code for warnings and errors..."/>
+		<!-- TODO: implement this -->
+	</target>
+
+	<!-- Main task: create a new release of Browser -->
+	<target name="main" depends="recordBuildDate,buildWar,clean" description="Build a release of Browser">
+		<echo message="Inside main"/>
+		<!-- copy the build into the release directory -->
+		<copy file="${buildDir}/BrowserWeb.war" toDir="releaseDir"/>
+	</target>
+	
+	<!-- Remove the temporary files generated -->
+	<target name="clean" description="Clean up build files">
+		<echo message="Cleaning up temporary files"/>
+		<delete dir="${buildDir}"/>
+	</target>
+
+	<target name="test" depends="init">
+		<echo message="HELLO from echo"/>
+		<echo message="Ant version is ${ant.version}"/>
+		<echo message="Date is ${DSTAMP}"/>
+		<echo message="dir of ${basedir}:"/>
+		<exec dir="${basedir}" executable="cmd.exe">
+			<arg line="/c dir"/>
+		</exec>
+	</target>
+
+	<!-- Tasks to do during the build process:
+d		Back up channels.xml, browserParameters.xml, helpParameters.xml
+		Delete entire existing BrowserWeb directory?
+		Sync BrowserWeb source down from P4
+		Check out general.js from P4
+		Error if P4 is checked out by anybody else
+		Set the build date in general.js
+		Check general.js back into P4
+d		Delete ..\WEB-INF\conf\tcclientlog.properties
+d		Delete ..\WEB-INF\log (entire folder)
+d		Delete ..\\Web Content\images (all files in this folder)
+d			Any IMAGE.MANAGEMENT files could be in here and don't need to be exported
+no		Error if there are any unexpected diretories - we don't want to ship these
+d		Create the WAR file in browser release directory
+		Use a properties file to specify where to bkup the channels.xml etc
+		Run the clean command in a separate JVM so it always runs, even if build crashes halfway
+	-->
+</project>

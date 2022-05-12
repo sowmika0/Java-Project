@@ -1,0 +1,158 @@
+<!DOCTYPE>
+<html>
+   <head>
+      <title>Internet Banking Registration</title>
+      <script type="text/javascript" src="../../scripts/general.js"></script>
+      <script type="text/javascript" src="../../scripts/captcha.js"></script>
+      <script type="text/javascript" src="../../scripts/customValidation.js"></script>
+      <script type="text/javascript" src="../../scripts/customRequest.js"></script>
+      <script type="text/javascript" src="../../scripts/dropdown.js"></script>
+      <link rel='stylesheet' href='./scripts/calendar.css' title='calendar'>
+      <script language="javascript" src="./scripts/selfreg.js"></script>
+
+      <link rel="stylesheet" type="text/css" href="../../plaf/style/arc-ib/banner_arcib.css"/>
+   </head>
+   <body bgcolor="#EAEEF2" style="margin-top:0;padding-top:0;">
+   
+   	<form name="ofsForm" id="ofsForm" method="POST" action="../../servlet/OfsServlet">
+		<input type="hidden" name="requestType" value="OFS">
+		<input type="hidden" name="application" value="AI.SELF.REGISTRATION">
+		<input type="hidden" name="version" value="INPUT"></input>
+		<input type="hidden" name="successPage" value="/selfregister/html/selfregister/regSuccess.html"></input>
+		<input type="hidden" name="failurePage" value="/selfregister/html/selfregister/regFailure.html"></input>
+				
+		<table ALIGN="CENTER" bgcolor="#FFFFFF" width="75%" cellspacing="2" valign="top">
+		
+			<tr><td colspan="3">
+			    <div class="banner_text">
+                    <img border="0" style="margin-left:-80px;margin-top:-40px;" src="../../html/ARC/images/Temenos-Logo.png" align="left"/>
+                    <img border="0" style="margin-right:-80px;margin-top:0px;" src="./images/selfreg_banner.png" align="right"/>
+                </div>
+			</td></tr>		
+			
+			<tr><td>
+				<table align="center" width="80%" cellspacing="6">
+				<tr>
+				   <td colspan="2"><b><p><font color="#324986" face="arial" size="3">Please complete the details below</font></p></b></td>		
+				   <td align="right"><a href="./home.html"><img src="./images/home.jpg" border="0"></a></td> 		
+				</tr>
+				
+				<tr><td colspan="4">
+					<hr color="#ABABAB" size="1"></hr>
+				</td></tr>
+			
+				<tr><td nowrap="nowrap">
+					<span>
+						<font color="#324986" face="arial" size="2"><label for="transactionId">Customer Number</label></font>
+					</span>
+					<img src="../../plaf/images/default/enquiry/required.gif"/>
+				     </td>				     
+				     <td nowrap="nowrap">
+					<input class="input_box" id="transactionId" name="transactionId" tabindex="1" size="30" onchange="getCustomerNo(event)"></input>
+				     </td>				     				
+				</tr>
+				
+				<tr><td nowrap="nowrap" colspan="4">
+					<span>
+						<p style="padding-top:1px;padding-bottom:5px"><font color="#324986" face="arial" size="2"><b><label for="userId" id="userId" name="userId"></label></b></font>
+						<font color="#324986" face="arial" size="2"><label for="userInfo" id="userInfo" name="userInfo">
+		 			</span>
+				</td></tr>
+				
+				
+			
+				<tr>
+					<td nowrap="nowrap">
+					<span>
+						<font color="#324986" face="arial" size="2"><label for="fieldName:PHONE.NUMBER">Phone Number</label></font>
+					</span>
+					<img src="../../plaf/images/default/enquiry/required.gif"/>
+					</td>
+					<td nowrap="nowrap">
+					<input class="input_box" id="fieldName:PHONE.NUMBER" name="fieldName:PHONE.NUMBER" tabindex="2" size="20" onChange="validatePhoneNumber(event)"/>
+					</td>
+				</tr>
+				
+				<tr><td colspan="3"></td></tr>
+							
+				<tr>
+					<td nowrap="nowrap">
+					<span>
+						<font color="#324986" face="arial" size="2"><label for="fieldName:MOBILE.NUMBER">Mobile Number</label></font>
+					</span>
+					</td>
+					<td nowrap="nowrap">
+						<input class="input_box" id="fieldName:MOBILE.NUMBER" name="fieldName:MOBILE.NUMBER" tabindex="2" size="20"/>
+					</td>	
+				</tr>
+				
+				<tr><td colspan="3"></td></tr>
+								
+				<tr>
+					<td nowrap="nowrap">
+					<span>
+						<font color="#324986" face="arial" size="2"><label for="fieldName:DATE.OF.BIRTH">Date of Birth</label></font>
+					</span>
+					<img src="../../plaf/images/default/enquiry/required.gif"/>
+					</td>
+					<td nowrap="nowrap">
+					<input class="input_box" id="txtCalendarFirst" name="fieldName:DATE.OF.BIRTH" tabindex="2" size="20" readonly/>
+					<img src='./images/cal.gif' align='absmiddle' onmouseover="fnInitCalendar(this, 'txtCalendarFirst', 'style=calendar.css,close=true')">
+					</td>
+				</tr>
+			
+				<tr><td colspan="3"></td></tr>
+			
+				<tr>
+					<td nowrap="nowrap">
+					<span>
+						<font color="#324986" face="arial" size="2"><label for="fieldName:EMAIL.ADDRESS">Email Address</label></font>
+					</span>
+					<img src="../../plaf/images/default/enquiry/required.gif"/>
+					</td>
+					
+					<td nowrap="nowrap">
+						<input class="input_box" id="fieldName:EMAIL.ADDRESS" name="fieldName:EMAIL.ADDRESS" tabindex="2" size="50" onchange="validateEmailAddress(event)"/>
+					</td>
+				</tr>
+				<tr><td colspan="3"></td></tr>
+			
+				<tr>	
+					<td nowrap="nowrap">
+					<span>
+						<font color="#324986" face="arial" size="2"><label for="repeat:EMAIL.ADDRESS">Repeat Email Address</label></font>
+					</span>
+					<img src="../../plaf/images/default/enquiry/required.gif"/>
+					</td>
+					<td nowrap="nowrap">
+						<input class="input_box" id="repeat:EMAIL.ADDRESS" name="repeat:EMAIL.ADDRESS" tabindex="2" size="50" onchange="validateEmailAddress(event)"/>					
+					</td>
+				</tr>
+				
+				<tr><td colspan="3"></td></tr>
+				
+			
+				<tr>
+					<td nowrap="nowrap" colspan="3">
+						<font color="#324986" face="arial" size="2"><p>Please click on the centre of the 'Fish Eye' shown in the image below</p></font>
+					</td>
+					<td>
+						<input type="hidden" name='captchaResponse' id='captchaResponse' value=''>
+					</td>
+				</tr>
+				<tr>
+					<td> </td>	
+					<td>	
+						<img src="/selfregister/servlet/CaptchaImageServlet" id="captchaImage" onclick="submitFishEyeRequest(event)">
+						<input type="button" value="Refresh" onclick="refreshCaptchaImage()"/>
+						
+					</td>
+				</tr>
+		                </table>    
+		         </td></tr>
+		</table>
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- Created by User Guide XML Menu Generator on: 03-03-2006-17-18 -->
+<?xml-stylesheet type="text/xsl" href="../transforms/help/helpmenu.xsl"?>
+<t24help>
+	<basedest>t24help</basedest>
+	<categorymenu>
+		<allowscroll>n</allowscroll>
+			<ts c="T24 Help Text Not Installed">
+				<t>
+					<c>How to Install T24 Help Text</c>
+					<ty>URL</ty>
+					<tar>../help/html/help-text-installation.htm</tar>
+				</t>
+			</ts>
+	</categorymenu>
+</t24help>

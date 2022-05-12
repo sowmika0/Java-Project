@@ -1,0 +1,42 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Temenos Banking Online - Accounts Overview</title>
+
+</head>
+
+<body onload="
+  // As this page is loaded into a fragment, JavaScript on the page is ignored but the onload is evaluated (using eval()).
+  // todo: Have this in an external js file and obfuscated
+
+  // Set up listeners to handle the banner text and help as tabs are selected
+  var thisFragment = Fragment.getCurrentFragment();
+
+  var myFunct = function(eventType, eventParam, sourceFragmentName) {
+   
+  	if ((eventParam!=null) && (eventParam!=undefined))
+    thisFragment.populateWithHelpText('/headertext/' + eventParam);
+  };
+
+  FragmentEvent.addEventListener(FragmentEvent.TAB_SELECTED, myFunct);
+
+  // Set the initial text
+  var lastEventParam = FragmentEvent.getLastEventParam();
+  if((lastEventParam!=null) && (lastEventParam!=undefined))
+  thisFragment.populateWithHelpText('/headertext/' +lastEventParam);
+
+  // Set up the help functionality
+  var helpLink = document.getElementById('helpLink');
+if (helpLink !=null)
+ {
+  helpLink.onclick = function() {
+    var url = FragmentUtil.getHelpTextUrl('/helptext/' + FragmentEvent.getLastEventParam())
+  	var n = window.open(url,'name','height=95,width=240');
+  	n.focus();
+  };
+  };
+">
+
+</body>

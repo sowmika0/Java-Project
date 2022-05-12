@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html>
+   <head>
+      <title>Internet Banking Registeration</title>
+      <script type="text/javascript" src="../../scripts/general.js"></script>
+      <script type="text/javascript" src="../../scripts/captcha.js"></script>
+      <script type="text/javascript" src="../../scripts/customValidation.js"></script>
+      <script type="text/javascript" src="../../scripts/customRequest.js"></script>
+      <script type="text/javascript">
+       	function assignValue()
+	        {
+        	  var custNo = window.document.getElementById( "CUSTOMER.NUMBER" ).value;
+          	  window.document.getElementById( "fieldName:@ID:LK" ).value =  custNo + '...';                 
+         	}
+      </script>
+	  <link rel="stylesheet" type="text/css" href="../../plaf/style/arc-ib/banner_arcib.css"/>
+   </head>
+   <body bgcolor="#EAEEF2" style="margin-top:0;padding-top:0;">
+   
+   	<form name="ofsForm" id="ofsForm" method="POST" action="../../servlet/OfsServlet">
+		<input type="hidden" name="requestType" value="OFS">
+		<input type="hidden" name="application" value="ENQUIRY.SELECT">
+		<input type="hidden" name="version" value=""></input>
+		<input type="hidden" name="transactionId" value="AI.USER.LIST"></input>
+		<input type="hidden" id="fieldName:@ID:LK" name="fieldName:@ID:LK" value=""></input>
+                <input type="hidden" name="successPage" value="/selfregister/html/selfregister/selfregEnqSuccess.html"></input>	
+		<input type="hidden" name="failurePage" value="/selfregister/html/selfregister/selfregEnqFailure.html"></input>
+			                			
+		<table ALIGN="CENTER" bgcolor="#FFFFFF" width="75%" cellspacing="7" valign="top">
+	
+
+			<tr><td colspan="3">
+				<div class="banner_text">
+                    <img border="0" style="margin-left:-80px;margin-top:-40px;" src="../../html/ARC/images/Temenos-Logo.png" align="left"/>
+                    <img border="0" style="margin-right:-80px;margin-top:0px;" src="./images/selfreg_banner.png" align="right"/>
+                </div> 
+			</td></tr>
+			
+			<tr><td colspan="2">
+				<b><font color="#324986" face="arial" size="3">Status Enquiry</font></b></td>
+				<td align="right"><a href="./home.html"><img src="./images/home.jpg" border="0"></a></td> 
+			</tr>
+			
+			<tr><td colspan="4"><hr></hr></td></tr>
+		
+			<tr><td>
+			    <table width="80%" align="center">
+								
+			    <tr>
+				<td nowrap="nowrap">
+					<span>
+						<font color="#324986" face="arial" size="2"><label for="fieldName:CUSTOMER.NUMBER">Customer Number</label></font>
+					</span>
+					<img src="../../plaf/images/default/enquiry/required.gif"/>
+				</td>
+				<td nowrap="nowrap">
+					<input class="input_box" id="CUSTOMER.NUMBER" name="CUSTOMER.NUMBER" tabindex="2" size="20" onChange="assignValue()"/>
+				</td>
+			   </tr>
+								
+			   <tr>				
+				<td nowrap="nowrap">
+					<input class="input_box" type="hidden"  id="fieldName:EMAIL.ADDRESS" name="EMAIL.ADDRESS" tabindex="2" size="50" onchange="validateEmailAddress(event)"/>
+				</td>
+		           </tr>			   
+			   <tr>				
+				<td nowrap="nowrap">
+					<input class="input_box"  type="hidden" id="repeat:EMAIL.ADDRESS" name="EMAIL.ADDRESS" tabindex="2" size="50" onchange="validateEmailAddress(event)"/>					
+				</td>
+	                   </tr>			   
+			   <tr>
+				<td nowrap="nowrap" colspan="3">
+					<font color="#324986" face="arial" size="2">Please click on the centre of the 'Fish Eye' shown in the image below</font>
+				</td>
+				<td>
+					<input type="hidden" name='captchaResponse' id='captchaResponse' value=''>
+				</td>
+			</tr>
+			<tr>
+			<td> </td>	
+				<td>
+				 <img src="/selfregister/servlet/CaptchaImageServlet" id="captchaImage" onclick="submitFishEyeRequest(event)">
+				<input type="button" value="Refresh" onclick="refreshCaptchaImage()"/>
+				</td>
+			</tr>
+                     </table></td></tr>		                       
+		</table>
+
+	</body>
+</html>

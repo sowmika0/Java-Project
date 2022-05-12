@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ofsSessionRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="\WEB-INF\xml\schema\ofsApplication.xsd">
+	<requestType/>
+	<token/>
+	<detailtag/>
+	<pwprocessid></pwprocessid>
+	<requestArguments>
+		<ofsApplication>
+			<activeTab/>
+			<companyId/>
+			<userRole/>
+			<requestType/>
+			<editVersion/>
+			<confirmVersion/>
+			<previewVersion/>
+			<application/>
+			<version/>
+			<previousVersion/>
+			<ofsFunction/>
+			<ofsOperation/>
+			<enqaction/>
+			<enqname/>
+			<ofsMessage/>
+			<transactionId/>
+			<EnqParentWindow/>
+			<routineArgs/>
+			<dropfield/>
+			<lockArgs/>
+			<windowName/>
+			<windowUnqRef/>
+			<title/>
+			<compScreen/>
+			<GTSControl/>
+			<noOfAuth/>
+			<toolbarTarget/>
+			<expansionHistory/>
+			<addGroupTab/>
+			<deleteGroupTab/>
+			<expandableTab/>
+			<tabEnri/>
+			<unlock/>
+			<clientStyleSheet/>
+			<changedFields/>
+			<decrypt/>
+			<staticId/>
+			<previousEnqs/>
+			<previousEnqTitles/>
+			<RecordRead/>
+			<cfNavOperation/>
+			<reqTabid/>
+			<overrideUnApproved/>
+			<overrides>
+				<o multiple="true">
+					<overrideText/>
+					<overrideResponse/>
+				</o>
+			</overrides>
+			<warnings>
+				<w multiple="true">
+					<warningText/>
+					<warningResponse/>
+				</w>
+			</warnings>
+      <authentications>
+        <a multiple="true">
+          <authType/>
+          <authResp/>
+          <authValue/>
+        </a>
+      </authentications>
+        <rekeyFields>
+          <rekeyField multiple="true">
+		    <rekeyFieldName/>
+		    <rekeyFieldValue/>
+          </rekeyField>
+         </rekeyFields>
+      
+		   <message>
+				<field multiple="true">
+					<fieldName/>
+					<multiValueNumber/>
+					<subValueNumber/>
+					<value required="true"/>
+				</field>
+			</message>
+		</ofsApplication>
+	</requestArguments>
+</ofsSessionRequest>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<branchParameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<messageData>
+		<parameter>
+			<parameterName>Branch Id</parameterName>
+			<parameterValue></parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>Online Instance</parameterName>
+			<parameterValue></parameterValue>
+		</parameter>
+		<parameter>
+			<parameterName>Offline Instance</parameterName>
+			<parameterValue></parameterValue>
+		</parameter>
+	</messageData>
+</branchParameters>

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<project name="BrowserWeb" default="all">
+    <!--
+      Wrapper build file for the seperate per configuration (Browser / ARC-IB) files.
+    
+      Standard installation dir properties can be overridden in a global using the ANT_OPTS:
+      For example, if your glassfish install is in D:/sun/jdk1.5.0_06, set ANT_OPTS=-Djdk.home=D:/sun/jdk1.5.0_06
+    -->
+    
+    <!-- top-level targets -->
+
+    <property name="overwrite" value="false" />
+    
+    <target name="all" description="Do a clean build and package of all configurations">
+    	<ant antfile="build-ib-authentication.xml" target="build"/>
+    	<ant antfile="build-browser.xml" target="all"/>
+    	<ant antfile="build-browser-basic-authentication.xml" target="build"/>
+        <ant antfile="build-ib-debug.xml" target="all"/>
+        <ant antfile="build-ib.xml" target="all"/>
+    </target>
+
+    <target name="all-nolog4j" description="Do a clean build and package of all configurations, without log4j in the war (this is if log4j is required in the common/lib (tomcat)">
+    	<ant antfile="build-ib-authentication.xml" target="build"/>
+        <ant antfile="build-browser.xml" target="all-nolog4j"/>
+    	<ant antfile="build-browser-basic-authentication.xml" target="build"/>
+        <ant antfile="build-ib-debug.xml" target="all-nolog4j"/>
+        <ant antfile="build-ib.xml" target="all-nolog4j"/>
+    </target>
+
+    <target name="clean" description="Clean all configurations">
+    	<ant antfile="build-ib-authentication.xml" target="clean"/>
+        <ant antfile="build-ib.xml" target="clean"/>
+        <ant antfile="build-browser.xml" target="clean"/>
+    	<ant antfile="build-browser-basic-authentication.xml" target="clean"/>
+        <ant antfile="build-ib-debug.xml" target="clean"/>
+    </target>
+
+    <target name="browser" description="Do a clean build and package of Browser configured for internal use">
+        <ant antfile="build-browser.xml" target="all"/>
+    	<ant antfile="build-browser-basic-authentication.xml" target="build"/>
+    </target>
+    
+    <target name="basic-authentication" description="Do a clean build and package Browser BASIC Authentication">
+   		<ant antfile="build-browser-basic-authentication.xml" target="build"/>
+    </target>	
+
+    <target name="ib-authentication" description="Do a clean build and package of ARC-IB authentication">
+        <ant antfile="build-ib-authentication.xml" target="build"/>
+    </target>    
+
+	<target name="ib" description="Do a clean build and package of Browser configured for ARC-IB">
+        <ant antfile="build-ib.xml" target="all"/>
+    </target>    
+    
+    <target name="ib-debug" description="Do a clean build and package of Browser configured for ARC-IB DEBUGGING">
+        <ant antfile="build-ib-debug.xml" target="all"/>
+    </target>    
+    
+	<target name="t24-updates" description="Do a clean build and package of Browser configured for T24 Updates System">
+		<ant antfile="build-t24-updates.xml" target="all"/>
+	</target>	
+	
+    <target name="eclipse-config" description="Copy in the eclipse project files." depends="check_config">
+        <copy todir="${basedir}" overwrite="${overwrite}" failonerror="true">
+            <fileset dir="${basedir}/config/project_files/eclipse"/>
+        </copy>    
+        <move file="${basedir}/.project_template" tofile=".project"/>
+    </target>
+    
+    <target name="rad-config" description="Copy in the eclipse project files." depends="check_config">
+        <copy todir="${basedir}" overwrite="${overwrite}" failonerror="true">
+            <fileset dir="${basedir}/config/project_files/rad"/>
+        </copy>    
+        <move file="${basedir}/.project_template" tofile=".project"/>
+    </target>        
+    
+    <!-- Fail with a message if a configutation exists already and override flag is not set -->
+    <target name="check_config" description="Copy in the eclipse project files.">
+    <available file="${basedir}/.project" type="file" property="project.exist"/>
+    
+    <fail message="A project file already exists. To overwite, set the overwrite property, e.g: ant rad-config -Doverwrite=true">
+        <condition>
+            <and>
+                <isset property="project.exist"/>
+                <isfalse value="${overwrite}"/>
+            </and>
+        </condition>
+    </fail>
+    </target>        
+
+</project>

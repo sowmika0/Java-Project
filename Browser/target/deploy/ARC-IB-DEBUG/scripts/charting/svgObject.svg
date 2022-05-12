@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN" "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg onload="initSVG(evt)" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>Graph Model</title>
+	<desc>Graph model implementation</desc>
+ 	<script type="text/javascript"><![CDATA[
+ 		function initSVG(evt) {
+ 		    // Get the svg doc object from the event info and set the root_svgDocument for use in later funcs.
+ 
+ 			var svgDoc = evt.target.ownerDocument;
+ 
+            this.parent._svgDocument = svgDoc;
+            
+            // timeout value in milliseconds
+            setTimeout("this.parent.initData()",1000);
+ 		}
+ 	]]></script>
+
+	<g id="MainCanvas" >
+		<g id="titleArea"/>
+		<g id="yAxisArea"/>
+		<g id="xAxisArea"/>
+		<g id="graphArea"/>
+		<g id="legendArea"/>
+	</g>     
+
+</svg>

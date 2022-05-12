@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<project name="t24_basic_authetication" default="build">
+    <property name="authentication.root.dir" value="${basedir}/BASICAuthentication" />
+	<property name="authentication.main.classes.dir" value="${authentication.root.dir}/classes" />
+	<property name="authentication.deployment.dir" value="${basedir}/target/deploy/BASICAuthenticationFiles" />
+	<property name="authentication.server.jar.name" value="t24BasicAuth.jar" />
+	<property name="authentication.config.file.name" value="t24BasicAuth.config" />
+	
+    <!-- Main clean task -->
+    <target name="clean" description="Delete target and class files">
+        <delete includeEmptyDirs="true" quiet="true">
+            <fileset dir="${authentication.target.dir}" />
+        	<fileset dir="${authentication.main.classes.dir}" />
+            <fileset dir="${authentication.deployment.dir}" />
+        </delete>
+    </target>
+
+    <!-- Main build task -->
+	<!-- copy-jar-for-deployment, post-build-clean-up -->
+    <target name="build" description="Run the main build" depends="clean, build-from-source, make-jar, copy-conf-file, package" />
+
+    <!-- Main package task -->
+    <target name="build-from-source" >
+        <mkdir dir="${authentication.main.classes.dir}" />
+        <javac debug="true" srcdir="${authentication.root.dir}/src" destdir="${authentication.main.classes.dir}" source="1.5">
+        </javac>
+    </target>
+
+    <!-- Packaging tasks -->
+    <target name="make-jar" depends="build-from-source" >
+    	<mkdir dir="${authentication.deployment.dir}" />
+        <jar destfile="${authentication.deployment.dir}/${authentication.server.jar.name}" 
+        					basedir="${authentication.main.classes.dir}" 
+        					excludes="**/web/** **/filter/** **/listener/** **/jaas/** **/MockUserManagement.class" />
+    </target>
+
+	<!-- Copy Example Config File -->
+	<target name="copy-conf-file">
+		<mkdir dir="${authentication.deployment.dir}" />
+    	<copy file="${authentication.root.dir}/${authentication.config.file.name}" todir="${authentication.deployment.dir}" />
+	</target>
+	
+	<!-- Create a Tar File -->
+	<target name="package">
+		<mkdir dir="${authentication.deployment.dir}" />
+		<tar basedir="${authentication.deployment.dir}" destfile="${basedir}/target/BASIC_authentication_files.tar"/>
+	</target>
+</project>

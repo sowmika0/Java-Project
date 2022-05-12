@@ -1,0 +1,1 @@
+Files in the configurations directory are copied in to the target by the ANT scripts when building the appropriate configuration.
